@@ -2,7 +2,7 @@
 @import "color-palette";
 @import "element-depth";
 @import "text-depth";
-@import 'bourbon/bourbon'; 
+@import 'bourbon/bourbon';
 
 @function em($px, $base: 16) {
     @return ($px / $base) + em;
@@ -206,7 +206,7 @@ h5 {
 #portfolio {
     .columns{
         border-bottom: 1px dotted $body_color;
-        padding-bottom: 16px;
+        padding-bottom: 24px;
         margin-bottom: 16px;
         margin-top: 16px;
 
@@ -216,6 +216,7 @@ h5 {
     .panel {
         overflow: visible;
     }
+
 
     .gallery {
         position: relative;
@@ -263,15 +264,18 @@ h5 {
         color: $body_color;
 
 
+
         & > p
         {
             overflow: hidden;
             font-size: 16px;
             line-height: 24px;
             margin: 0;
+            width: 100;
             color: $body_color;
             font-weight: 500;
             float: left;
+            display: block;
 
             span {
                 float: right;
@@ -279,8 +283,19 @@ h5 {
                 color: $body_color;
                 font-size: 14px;
                 font-weight: 300;
+                display: block;
 
                 &.strike {text-decoration: line-through;}
+            }
+
+        }
+
+        a {
+            .t {
+                font-weight: 900;
+            }
+            .d {
+                font-size: .8em;
             }
         }
 
@@ -840,7 +855,7 @@ $nav-height:calc(100vh - 0px);
         }
 
         &.flat{
-            border: 1px solid transparent;
+            border: 1px solid rgba(black, .05);
             background-color: $bk_color;
             color: rgba(black, .87);
             box-shadow:none;
