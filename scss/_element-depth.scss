@@ -1,0 +1,49 @@
+// height values for elements
+
+@mixin element-depth($value){
+    // $value can be from 1 - 5
+    @if ($value == 1) {
+        box-shadow: 0 1px 1.5px rgba(#000, .12), 0 1px 1px rgba(#000, .24);
+    }
+    @if ($value == 2) {
+        box-shadow: 0 0px 3px rgba(#000, .16), 0 3px 3px rgba(#000, .23);
+    }
+    @if ($value == 3) {
+        box-shadow: 0 10px 10px rgba(#000, .19), 0 6px 3px rgba(#000, .23);
+    }
+    @if ($value == 4) {
+        box-shadow: 0 14px 14px rgba(#000, .25), 0 10px 5px rgba(#000, .22);
+    }
+    @if ($value == 5) {
+        box-shadow: 0 19px 19px rgba(#000, .3), 0 15px 6px rgba(#000, .22);
+    }
+    
+    // insets, negative numbers
+    @if ($value == -1) {
+        box-shadow: inset 0 -1px 1.5px rgba(#000, .12), inset 0 1px 1px rgba(#000, .24);
+    }
+    @if ($value == -2) {
+        box-shadow: inset 0 0px 3px rgba(#000, .16), inset 0 -3px 3px rgba(#000, .23);
+    }
+    @if ($value == -3) {
+        box-shadow: inset 0 -10px 10px rgba(#000, .19), inset 0 -6px 3px rgba(#000, .23);
+    }
+    @if ($value == -4) {
+        box-shadow: inset 0 -14px 14px rgba(#000, .25), inset 0 -10px 5px rgba(#000, .22);
+    }
+    @if ($value == -5) {
+        box-shadow: inset 0 -19px 19px rgba(#000, .3), inset 0 -15px 6px rgba(#000, .22);
+    }
+    
+    @if ($value == 0) {
+        box-shadow: none;
+    }
+}
+
+@mixin fBlur($blur){
+    -webkit-filter: blur(#{$blur}px) !important;
+    -moz-filter: blur(#{$blur}px) !important;
+    -o-filter: blur(#{$blur}px) !important;
+    -ms-filter: blur(#{$blur}px) !important;
+    filter: blur(#{$blur}px) !important;
+}
