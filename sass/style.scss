@@ -2,7 +2,7 @@
 @import "color-palette";
 @import "element-depth";
 @import "text-depth";
-@import 'bourbon/bourbon';
+@import 'bourbon/bourbon'; 
 
 @function em($px, $base: 16) {
     @return ($px / $base) + em;
