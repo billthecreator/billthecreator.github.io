@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>billthecreator</title>
+        <link type="image/x-icon" href="images/favicon.ico" rel="shortcut icon">
+        <link type="image/x-icon" href="images/favicon.ico" rel="icon">
+
+        <link href="css/style.css" rel="stylesheet"/>
+        <link href="css/foundation.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+        <script type="text/javascript" src="js/scrollEffect.js" async></script>
+        <script type="text/javascript" src="js/events.js" async></script>
+        <script type="text/javascript" src="js/instafeed.js" ></script>
+
+        <script type="text/javascript">
+            var lastImage = new Instafeed({
+                get: 'user',
+                userId: 39777276,
+                clientId: '9ed9ea183d064fc9a93be89a5165046a',
+                template:'' +
+                    '<div class="item" style="background-image:url({{image}});"></div>' +
+                    '<a href="{{link}}" target="_blank"><div class="inLikes">' +
+                    '   <i class="fa fa fa-instagram fa-fw"></i><i class="fa fa fa-heart fa-fw"></i>{{likes}}<i class="fa fa fa-comment fa-fw"></i>{{comments}}' +
+                    '</div></a>',
+                resolution: 'standard_resolution',
+                accessToken: '39777276.9ed9ea1.c0371a9c36f347258b1ebf2ee69496b5',
+                sortBy: 'random',
+                limit: 1});
+            lastImage.run();
+        </script>
+
+        <script type="text/javascript">
+          function calcAge(dateString) {
+              var birthday = +new Date(dateString);
+              return~~ ((Date.now() - birthday) / (31557600000));
+            }
+        </script>
+    </head>
+    <body>
+
+<!--
+        <section id="toTopButton">
+            <div class="button round top">
+                <i class="sbo fa fa-3x fa-angle-double-up"></i>
+            </div>
+        </section>
+-->
+
+        <section id="drawer">
+            <div class="nav_Header">
+                    <div class="nav_H_bk">
+                        <div id="instafeed"></div>
+                    </div>
+                    <div class="nav_H_image">
+                    </div>
+                <a class="scrollTo" href="#about">
+                    <div class="nav_H_text">Bill the Creator</div>
+                </a>
+            </div>
+
+            <ul>
+                <li class="ii"><a href="#skills"    class="button scrollTo"><i class="fa fa fa-star fa-fw"></i>Skills</a></li>
+                <li class="ii"><a href="#school"    class="button scrollTo"><i class="fa fa fa-graduation-cap fa-fw"></i>Education</a></li>
+                <li class="ii"><a href="#portfolio" class="button scrollTo"><i class="fa fa fa-suitcase fa-fw"></i>Portfolio</a></li>
+                <li class="ii"><a href="#contact"   class="button scrollTo"><i class="fa fa fa-envelope fa-fw"></i>Contact</a></li>
+
+                <li class="ii"><a href="https://plus.google.com/100576085101917235918" target="_blank" ><i class="fa fa fa-google-plus fa-fw"></i>Google +</a></li>
+                <li class="ii"><a href="https://www.twitter.com/breithmeyer" target="_blank" ><i class="fa fa fa-twitter fa-fw"></i>Twitter</a></li>
+                <li class="ii"><a href="http://instagram.com/billthecreator" target="_blank" ><i class="fa fa fa-instagram fa-fw"></i>Instagram</a></li>
+            </ul>
+        </section>
+
+        <section id="nav">
+            <div class="banner"></div>
+            <h1>Bill the Creator</h1>
+
+            <div class="hamburger">
+                <span></span>
+            </div>
+        </section>
+
+
+        <section id="darkOverlay">
+        </section>
+
+        <section id="side_bar" class="topbar">
+            <section id="cover">
+                <div class="sub_container">
+                    <h1></h1>
+                    <div class="hamburger">
+
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="cards">
+            <section class="card" id="about">
+                <div class="sub_container">
+                    <div class="card_title">
+                        <h2>Who am I?</h2>
+                    </div>
+                    <div class="card_content">
+                        <div class="row collapse">
+                            <div class="large-12 columns">
+                                <div class="row ">
+                                    <div class="large-12 medium-12 small-12 columns">
+
+                                        <h5>Hey there! My name is William Reithmeyer and I'm a <script type="text/javascript">document.write(calcAge("1989-08-29"));</script> year old web designer, programmer, and now an Android Developer.</h5>
+                                        <h5><a href="#tips" class="scrollTo">Click here</a> to see my latest Andriod App -- Tip$</h5>
+
+
+                                        <div class="extraAbout" style="display:none;">
+                                            <h5>My strongest memory as a child is my curiosity for how
+                                            things worked. I spent many hours taking things apart and
+                                            reassembling them. In high school I was introduced to
+                                            Autoit Script and became interested in computer
+                                            programming. I began writing programs, designing web pages
+                                            and working in Photoshop before going away to college.</h5>
+
+                                            <h5>My college career started in the Engineering department
+                                            at the University of Pittsburgh. While I did well in
+                                            engineering courses, I quickly realized that my early
+                                            passion for computer programming was still very strong. I
+                                            then made Computer Science the focus of my education.</h5>
+
+                                            <h5>I earned an Associate of Arts degree in Computer Science
+                                            in 2011. I later moved and established residency in Florida
+                                            where I am now finishing my BS in Information System Technology and
+                                            expect to have that completed this year.</h5>
+
+                                            <h5>I've worked as a cook most of my college years to
+                                            support myself. I consider myself a fair golfer and I truly
+                                            enjoy playing my guitar whenever I get a chance.</h5>
+
+                                            <h5>I am an honest hard worker and would be an asset to any
+                                            organization. The following is a list of my skills;</h5>
+                                        </div>
+
+                                        <div id="extendBio" class="button accent square more flat">Read more</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="skills">
+                <div class="sub_container">
+                    <div class="card_title">
+                        <h2>Proficiencies</h2>
+                    </div>
+
+                    <div class="card_content">
+                        <div class="row collapse">
+                            <div class="large-12 columns">
+                                <div class="row ">
+                                    <div class="large-4 medium-4 small-12 columns">
+                                        <h4>Web</h4>
+
+                                        <ul class="proficiencies">
+                                            <li><h5>Design</h5></li>
+                                            <li><h5>CSS/Sass</h5></li>
+                                            <li><h5>jQuery</h5></li>
+                                            <li><h5>HTML</h5></li>
+                                            <li><h5>Responsive design</h5></li>
+                                            <li><h5>Servlets/JSP</h5></li>
+                                        </ul>
+                                    </div>
+                                    <div class="large-4 medium-4 small-12 columns">
+                                        <h4>Programming</h4>
+
+                                        <ul class="proficiencies">
+                                            <li><h5>Autoit Script</h5></li>
+                                            <li><h5>Java</h5></li>
+                                            <li><h5>SQL</h5></li>
+                                            <li><h5>Visual Basic</h5></li>
+                                            <!--<li class="almost"><h5>Python</h5></li>-->
+                                        </ul>
+                                    </div>
+                                    <div class="large-4 medium-4 small-12 columns">
+                                        <h4>Other</h4>
+
+                                        <ul class="proficiencies">
+                                            <li><h5>Android Studio</h5></li>
+                                            <li><h5>Github</h5></li>
+                                            <li><h5>Microsoft Office</h5></li>
+                                            <li><h5>Photoshop</h5></li>
+                                            <li><h5>Database</h5></li>
+                                            <li><h5>Win XP/Vista/7/8</h5></li>
+                                            <li><h5>Networking</h5></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="school">
+                <div class="sub_container">
+                    <div class="card_title">
+                        <h2>Places of education</h2>
+                    </div>
+
+                    <div class="card_content">
+                        <div class="row collapse">
+                            <div class="large-12 columns">
+                                <div class="row ">
+                                    <div class="large-6 meduim-6 small-12 columns">
+                                        <h4>Seminole State College, FL</h4>
+
+                                        <ul class="school">
+                                            <li><h5>B.S. Information System Technology, present</h5></li>
+                                        </ul>
+                                    </div>
+                                    <div class="large-6 meduim-6 small-12 columns">
+                                        <h4>Bucks County Community College, PA</h4>
+
+                                        <ul class="school">
+                                            <li><h5>A.A. Computer Science, 2009 - 2011</h5></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="portfolio">
+                <div class="sub_container">
+                    <div class="card_title">
+                        <h2>Portfolio [wip]</h2>
+                    </div>
+
+
+
+                    <div class="card_content">
+
+                        <div class="row collapse">
+                            <div class="small-12 medium-12 large-12 columns">
+
+                                <div class="row">
+
+                                    <div class="large-12 medium-12 small-12 columns">
+                                        <a>
+                                            <div class="panel">
+
+                                                <div class="gallery"  style="background-image:url(images/bottomsUp.png);">
+                                                </div>
+                                                <div class="text-box">
+                                                    <a href="http://group11project.github.io" target="_blank">
+                                                        <p class="t">BottomsUp</p>
+                                                        <p class="d">Project for school (local beer store)</p>
+                                                    </a>
+                                                </div>
+                                                <a href="http://group11project.github.io" target="_blank">
+                                                    <div class="button square raised">BottomsUp</div>
+                                                </a>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="large-12 medium-12 small-12 columns">
+                                        <a>
+                                            <div class="panel">
+
+                                                <div class="gallery"  style="background-image:url(images/wedding%20shots.png);">
+                                                </div>
+                                                <div class="text-box">
+                                                    <a>
+                                                        <p class="t">Huttenlock Wedding</p>
+                                                        <p class="d">coming soon</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="tips" class="large-12 medium-12 small-12 columns">
+                                        <div class="panel">
+
+                                                <div class="gallery" style="background-image:url(images/largebanner.png);">
+                                                </div>
+                                                <div class="text-box">
+                                                    <a>
+                                                        <p class="t">Tip$</p>
+                                                        <p class="d">An easy app to determine the tip of your bill. Also rounds up to closest total dollar.</p>
+                                                    </a>
+                                                </div>
+                                                <a href="http://tips-releases.williamreithmeyer.com/" target="_blank">
+                                                    <div class="button square flat">Release Notes</div>
+                                                </a>
+                                                <a href="https://play.google.com/store/apps/details?id=com.billthecreator.tips" target="_blank">
+                                                    <div class="button square raised">Google Play Store</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    <!-- NOT HAPPENING :(
+                                    <div class="large-6 medium-6 small-12 columns">
+                                        <a>
+                                            <div class="panel">
+                                                <img class="gallery"  src="images/jh-liller-temp.png"/>
+                                                <div class="text-box">
+                                                    <p>J.H. Liller & Associates
+                                                        <span>put on hold</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="large-6 medium-6 small-12 columns">
+                                        <a>
+                                            <div class="panel">
+                                                <img class="gallery"  src="images/coreyConsr.png"/>
+                                                <div class="text-box">
+                                                    <p>Corey Construction
+                                                        <span>coming soon</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    -->
+                                    <!-- template
+                                    <div class="large-6 medium-6 small-12 columns">
+                                        <div class="panel undCnstr">
+
+                                            <img class="gallery"  src="images/gallery-empty.png"/>
+                                            <div class="text-box">
+                                                <p>More to come!</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                     end template -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="contact">
+                <div class="sub_container">
+                    <div class="card_title">
+                        <h2>Contact me</h2>
+                    </div>
+
+                    <div class="card_content">
+                        <div class="row collapse">
+                            <div class="small-12 medium-12 large-12 columns">
+
+                                <h5>You can email me at <a href="mailto:billreithmeyer@gmail.com">billreithmeyer@gmail.com</a>.</h5>
+
+                                <!-- <form action="php/contact.php" method="post" autocomplete="off">
+                                    <div class="row collapse">
+                                        <div class="small-12 medium-6 large-4 columns">
+
+                                            <div class="small-12 medium-12 large-12 columns">
+                                                <div class="field">
+                                                    <input required="required" type="text" name="FirstName" placeholder="Name" />
+                                                </div>
+                                            </div>
+
+                                            <div class="small-12 medium-12 large-12 columns">
+                                                <div class="field">
+                                                    <input required="required" type="text" name="email" placeholder="Email"/>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="small-12 medium-6 large-8 columns">
+                                            <div class="small-12 medium-12 large-12 columns">
+                                                <div class="field">
+                                                    <textarea required="required" name="comments" rows="5" cols="1" placeholder="Comments"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 medium-12 large-12 columns">
+                                            <div class="small-6 medium-3 large-3 columns">
+                                                <input type="checkbox" id="bug" name="bug" value="1"/>
+                                                <label for="bug">Bug Report</label>
+                                            </div>
+                                        </div>
+                                        <div class="small-12 medium-12 large-12 columns">
+                                            <div class="small-12 medium-12 large-12 columns">
+
+                                                <button type="reset" class="button square flat">
+                                                    <i class="fa fa-close fa-1x"></i> clear
+                                                </button>
+
+                                                <button type="submit" class="button square raised">
+                                                    <i class="fa fa-paper-plane fa-1x"></i> submit
+                                                </button>
+                                            </div>
+                                            <div class="small-6 medium-3 large-3 columns">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="footer">
+                <div class="sub_container">
+                    <div class="card_content">
+                        <h5>&copy; Billthecreator. All rights reserved</h5>
+                        <ul>
+                            <li class="sbO"><a href="https://plus.google.com/100576085101917235918" target="_blank" ><i class="fa fa-google-plus fa-3x"></i></a></li>
+                            <li class="sbO"><a href="https://www.twitter.com/breithmeyer" target="_blank" ><i class="fa fa-twitter fa-3x"></i></a></li>
+<!--                            <li class="sbO"><a href="https://github.com/billthecreator" target="_blank" ><i class="fa fa-github fa-3x"></i></a></li>-->
+                            <li class="sbO"><a href="http://instagram.com/billthecreator" target="_blank" ><i class="fa fa-instagram fa-3x"></i></a></li>
+                            <li class="sbO"><a href="#tiger" title="In memory of Tiger" ><i class="fa fa-paw fa-3x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </body>
+</html>
