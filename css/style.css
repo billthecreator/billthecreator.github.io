@@ -14,7 +14,7 @@ body {
   width: 100%;
   max-width: 100%;
   min-width: 60px;
-  background-color: #eeeeee;
+  background-color: #f4f4f4;
   background-attachment: fixed;
   font-size: 16px;
   font-family: "Roboto", "geomanist_regularregular", "Lato", Arial;
@@ -43,7 +43,7 @@ h2 {
   font-weight: 700;
   line-height: 28px;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #eeeeee;
+  background-color: #f4f4f4;
   padding: 0;
   margin: 0;
   text-transform: uppercase;
@@ -104,7 +104,7 @@ h5 {
   min-height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(255, 215, 71, 0.2);
+  background-color: rgba(84, 168, 84, 0.2);
   background-position: center top;
   box-shadow: 0 0 0px rgba(0, 0, 0, 0.4);
   border-radius: 6px;
@@ -331,7 +331,7 @@ h5 {
     display: none; }
   #drawer .nav_Header {
     width: 100%;
-    height: calc(1 * 400px);
+    height: calc(0.75 * 400px);
     display: block;
     position: relative;
     background: white; }
@@ -341,7 +341,7 @@ h5 {
       background-size: contain;
       opacity: 1;
       width: 100%;
-      height: calc(1 * 400px);
+      height: calc(0.75 * 400px);
       display: block;
       position: absolute;
       left: 0;
@@ -357,7 +357,7 @@ h5 {
         top: 0;
         width: 100%;
         text-align: right;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: #0f0f0f;
         color: white;
         font-size: 16px; }
         #drawer .nav_Header .nav_H_bk .inLikes i {
@@ -367,20 +367,13 @@ h5 {
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
-        height: calc(1 * 400px);
+        height: calc(0.75 * 400px);
         border-bottom: 0px solid rgba(0, 0, 0, 0.15);
         display: block;
         position: relative;
         left: 0;
         top: 0;
-        z-index: 1;
-        opacity: .75;
-        -webkit-filter: blur(0px);
-        -moz-filter: blur(0px);
-        -o-filter: blur(0px);
-        -ms-filter: blur(0px);
-        filter: blur(0px);
-        transform: rotate3d(0); }
+        z-index: 1; }
     #drawer .nav_Header .nav_H_image {
       position: relative;
       float: left;
@@ -412,7 +405,7 @@ h5 {
       bottom: 0px;
       left: 0px;
       padding: 0 16px;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: #0f0f0f;
       width: 100%; }
       #drawer .nav_Header .nav_H_text a {
         color: white; }
@@ -423,12 +416,11 @@ h5 {
     padding: 0px;
     margin: 0px;
     width: 100%;
-    background-color: #58B1F2;
-    background-color: rgba(33, 39, 44, 0.95);
+    background-color: #19192f;
     border-radius: 0;
     overflow-y: auto;
     position: relative;
-    height: calc(100vh - (1 * 400px)); }
+    height: calc(100vh - (0.75 * 400px)); }
     #drawer ul i {
       margin-right: 24px;
       transition: margin .15s ease; }
@@ -476,7 +468,7 @@ h5 {
           text-decoration: none;
           color: #fff; }
         #drawer ul li a:hover {
-          background: rgba(88, 177, 242, 0.45);
+          background: rgba(35, 147, 229, 0.45);
           transition: all .15s ease;
           text-decoration: none;
           color: #fff; }
@@ -490,7 +482,7 @@ h5 {
   text-transform: uppercase;
   box-shadow: none;
   cursor: pointer;
-  background: #58b1f2;
+  background: #2393e5;
   outline-width: 0;
   -webkit-font-smoothing: antialiased;
   letter-spacing: .5px; }
@@ -519,13 +511,13 @@ h5 {
       -moz-transition: all 0.3s ease-out;
       transition: all 0.3s ease-out; }
     .button.square:hover {
-      box-shadow: inset 0 0 0 #58b1f2;
-      color: #58b1f2;
+      box-shadow: inset 0 0 0 #2393e5;
+      color: #2393e5;
       -webkit-transition: all 0.3s ease-in;
       -moz-transition: all 0.3s ease-in;
       transition: all 0.3s ease-in; }
       .button.square:hover a {
-        color: #58b1f2;
+        color: #2393e5;
         -webkit-transition: all 0.3s ease-in;
         -moz-transition: all 0.3s ease-in;
         transition: all 0.3s ease-in; }
@@ -581,7 +573,7 @@ h5 {
   .button.accent {
     color: #fa6b5b;
     background-color: #fa6b5b;
-    box-shadow: inset 0 -50px 0 #eeeeee;
+    box-shadow: inset 0 -50px 0 #f4f4f4;
     border-color: #fa6b5b; }
     .button.accent:hover {
       color: #fff;
@@ -605,7 +597,7 @@ h5 {
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 3px rgba(0, 0, 0, 0.23); }
   .button.flat {
     border: 1px solid rgba(0, 0, 0, 0.05);
-    background-color: #eeeeee;
+    background-color: #f4f4f4;
     color: rgba(0, 0, 0, 0.87);
     box-shadow: none; }
     .button.flat:hover, .button.flat :focus {
@@ -677,9 +669,8 @@ h5 {
   overflow: hidden;
   position: relative; }
   .card li:nth-child(2n+2) {
-    background-color: rgba(42, 234, 193, 0.5);
-    background-color: #ffd747;
-    color: black; }
+    background-color: #54a854;
+    color: white; }
   .card li.almost {
     opacity: .2;
     transition: .14s all ease-in; }
@@ -740,7 +731,7 @@ input[type="text"], textarea {
     background-color: rgba(255, 255, 255, 0.9); }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.9) inset, 0 0 0px 1000px #21272c inset;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.9) inset, 0 0 0px 1000px #1b2833 inset;
   -webkit-text-fill-color: black !important; }
 
 ::-webkit-input-placeholder {
@@ -927,7 +918,7 @@ input:-webkit-autofill {
     z-index: 3;
     width: calc(100%);
     height: 56px;
-    background: #21272c; }
+    background: #1b2833; }
     #side_bar #cover h1 {
       box-shadow: none;
       position: absolute;
@@ -1037,7 +1028,7 @@ input:-webkit-autofill {
     z-index: 1; }
 
   .card {
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #f4f4f4;
     margin: 0px;
     box-shadow: none; }
     .card .pic_me {

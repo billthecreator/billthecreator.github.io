@@ -86,7 +86,7 @@ function openNav(){
 function topbarChange(){
     if ($(document).innerWidth() <= 960){
 
-        $('#side_bar #cover').css('background-color', "rgba(33, 39, 44, " + ($(document).scrollTop()/300) + ")");
+        $('#side_bar #cover').css('background-color', "rgba(25, 25, 47, " + ($(document).scrollTop()/300) + ")");
 
     }
 
