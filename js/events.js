@@ -10,7 +10,7 @@ $(document).ready(function(){
         var _lastScroll = $(document).scrollTop();
 
         if ($(document).innerWidth() >= 1000){
-            $('#nav .banner').css('background-position', '0px ' + ($(document).scrollTop()/1.15) + 'px');
+//            $('#nav .banner').css('background-position', '0px ' + ($(document).scrollTop()/1.15) + 'px');
         }
 
         topbarChange();
