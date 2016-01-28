@@ -311,8 +311,8 @@ h5 {
 
 #drawer {
   width: 90%;
-  max-width: 400px;
-  left: calc(-400px);
+  max-width: 360px;
+  left: calc(-360px);
   background: transparent;
   float: left;
   height: calc(100vh - 0px);
@@ -330,7 +330,6 @@ h5 {
     display: none; }
   #drawer .nav_Header {
     width: 100%;
-    height: calc(0.75 * 400px);
     display: block;
     position: relative;
     background: white; }
@@ -340,7 +339,6 @@ h5 {
       background-size: contain;
       opacity: 1;
       width: 100%;
-      height: calc(0.75 * 400px);
       display: block;
       position: absolute;
       left: 0;
@@ -349,24 +347,25 @@ h5 {
       overflow: hidden; }
       #drawer .nav_Header .nav_H_bk .inLikes {
         position: absolute;
-        padding: 16px;
+        padding: 0 22px;
         z-index: 1401;
         opacity: 1;
         right: 0;
         top: 0;
         width: 100%;
         text-align: right;
-        background-color: #0f0f0f;
+        background-color: rgba(30, 30, 30, 0.51);
         color: white;
-        font-size: 16px; }
+        font-size: 13px;
+        line-height: 32px; }
         #drawer .nav_Header .nav_H_bk .inLikes i {
-          margin-left: 8px; }
+          margin-left: 8px;
+          margin-right: 6px; }
       #drawer .nav_Header .nav_H_bk .item {
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
-        height: calc(0.75 * 400px);
         border-bottom: 0px solid rgba(0, 0, 0, 0.15);
         display: block;
         position: relative;
@@ -378,33 +377,33 @@ h5 {
       float: left;
       top: 0;
       left: 0;
-      margin: 16px;
-      width: 60px;
-      height: 60px;
+      margin: 16px 22px;
+      width: 70px;
+      height: 70px;
       opacity: 1;
       background-image: url("../images/me.jpeg");
       background-position: 60% 30%;
       background-size: 150% auto;
       background-repeat: no-repeat;
       background-color: transparent;
-      box-shadow: none;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 3px rgba(0, 0, 0, 0.23);
       display: block;
       border-radius: 50%;
-      border: 2px solid white;
+      border: 3px solid white;
       z-index: 2;
       transition: all 0.3s ease 0s;
       z-index: 2; }
     #drawer .nav_Header .nav_H_text {
-      line-height: 56px;
+      line-height: 32px;
       color: white;
       position: absolute;
       font-family: "Berkshire Swash";
-      font-size: 30px;
+      font-size: 22px;
       z-index: 2;
       bottom: 0px;
       left: 0px;
       padding: 0 16px;
-      background-color: #0f0f0f;
+      background-color: rgba(30, 30, 30, 0.51);
       width: 100%; }
       #drawer .nav_Header .nav_H_text a {
         color: white; }
@@ -418,8 +417,7 @@ h5 {
     background-color: #19192f;
     border-radius: 0;
     overflow-y: auto;
-    position: relative;
-    height: calc(100vh - (0.75 * 400px)); }
+    position: relative; }
     #drawer ul i {
       margin-right: 24px;
       transition: margin .15s ease; }
@@ -472,7 +470,7 @@ h5 {
           text-decoration: none;
           color: #fff; }
           #drawer ul li a:hover > i {
-            margin-right: 32px;
+            margin-right: 42px;
             transition: margin .15s ease; }
 
 .button {
@@ -972,18 +970,8 @@ input:-webkit-autofill {
     opacity: 1;
     box-shadow: 19px 0px 19px rgba(0, 0, 0, 0.3), 0 15px 6px rgba(0, 0, 0, 0.22); }
 
-  #drawer {
-    -webkit-transition: all 0.2s ease-out 0s;
-    -moz-transition: all 0.2s ease-out 0s;
-    transition: all 0.2s ease-out 0s; }
-    #drawer .nav_Header {
-      height: calc(0.3125 * 400px); }
-      #drawer .nav_Header .nav_H_bk {
-        height: calc(0.3125 * 400px); }
-    #drawer h1 {
-      display: none; }
-    #drawer ul {
-      height: calc(100vh - (0.3125 * 400px)); } }
+  #drawer h1 {
+    display: none; } }
 @media screen and (max-width: 480px) {
   .button.small {
     width: 100%; }
@@ -1055,7 +1043,6 @@ input:-webkit-autofill {
     left: calc(0px - 100%); }
     #drawer .nav_Header {
       width: 100%;
-      height: calc((12/16) * (100vw - 56px));
       display: block;
       position: relative;
       background: black; }
@@ -1063,7 +1050,6 @@ input:-webkit-autofill {
         background-position: center;
         background-size: cover;
         width: 100%;
-        height: calc((12/16) * (100vw - 56px));
         display: block;
         position: absolute;
         left: 0;

@@ -2,6 +2,7 @@
 var _static = $(document).scrollTop();
 var _lastScrollTemp = $(document).scrollTop();
 topbarChange();
+changeInstaPicSize();
 $(document).ready(function(){
 
     $(window).scroll(function () {
@@ -71,6 +72,8 @@ function closeNav(){
     $('body').css('overflow-y', 'scroll');
 
     _static = $(document).scrollTop();
+    $('#nav').animate({left: '0'}, 100, function(){} );
+    $('#cards').animate({left: '0'}, 100, function(){} );
 }
 
 function openNav(){
@@ -81,7 +84,16 @@ function openNav(){
     $('body').css('overflow-y', 'hidden');
 
     _static = $(document).scrollTop();
+    $('#nav').animate({left: '+=100'}, 100, function(){} );
+    $('#cards').animate({left: '+=100'},100, function(){} );
+    changeInstaPicSize();
+
 }
+
+$( window ).resize(function() {
+    changeInstaPicSize();
+
+});
 
 function topbarChange(){
     if ($(document).innerWidth() <= 960){
@@ -91,4 +103,19 @@ function topbarChange(){
     }
 
 }
+function changeInstaPicSize(){
 
+    var _instaPic = '#drawer .nav_Header .nav_H_bk .item';
+    var _instaPicContainer = '#drawer .nav_Header';
+    var _instaPicWidth = $(_instaPic).attr('data-width');
+    var _instaPicHeight = $(_instaPic).attr('data-height');
+    var _drawerWidth = $('#drawer').width();
+
+    var _instaHeight = ((_instaPicHeight / _instaPicWidth) * _drawerWidth);
+
+
+    $(_instaPic).css('height', _instaHeight + "px");
+    $(_instaPicContainer).css('height', _instaHeight + "px");
+    $("#drawer ul").css('height', "calc(100vh - " + _instaHeight + "px)");
+
+}
