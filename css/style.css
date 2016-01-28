@@ -258,7 +258,7 @@ h5 {
   z-index: 102; }
 
 #darkOverlay.showNav {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.45);
   display: block; }
 
 #nav {
