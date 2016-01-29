@@ -1,8 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300|Roboto:400,300,500,700,900|PT+Sans:400,700|Lato:400,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One|Satisfy|Philosopher|Montserrat:400,700);
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans"; }
+
+a {
+  color: #1e77d0; }
+  a, a:hover, a:active, a:focus {
+    text-decoration: none; }
+
+div {
+  display: block; }
 
 .header {
   width: 100%;
@@ -17,19 +31,34 @@ body {
     background-position: center;
     width: 100%;
     height: 60vh; }
+    @media only screen and (max-width: 500px) {
+      .header .photo {
+        height: 20vh; } }
   .header .nav {
     position: absolute;
     display: inline-block;
     padding: 24px;
     bottom: 0;
-    background-color: rgba(8, 160, 91, 0.9);
-    width: calc(100% - 48px); }
+    background-color: rgba(96, 101, 35, 0.95);
+    width: calc(100%); }
+    @media only screen and (max-width: 500px) {
+      .header .nav {
+        position: relative;
+        padding: 0 12px; } }
     .header .nav .title {
       display: inline;
       float: left;
-      font-family: "Lato";
-      font-size: 34px;
+      font-family: "Poiret One";
+      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+      font-size: 42px;
       line-height: 40px; }
+      @media only screen and (max-width: 500px) {
+        .header .nav .title {
+          font-size: 30px;
+          padding: 12px 0;
+          line-height: 1.3em;
+          text-align: center;
+          width: 100%; } }
     .header .nav ul {
       display: inline;
       list-style: none;
@@ -38,11 +67,34 @@ body {
       font-weight: 600;
       font-size: 15px;
       margin: 0;
+      padding: 0;
       line-height: 40px; }
+      @media only screen and (max-width: 500px) {
+        .header .nav ul {
+          line-height: 1.5em;
+          float: left;
+          text-align: center;
+          width: 100%;
+          padding: 6px 0; } }
       .header .nav ul li {
         float: left;
-        margin: 0 4px;
+        margin: 0 0 0 10px;
         cursor: pointer; }
+        @media only screen and (max-width: 500px) {
+          .header .nav ul li {
+            margin: 6px;
+            line-height: 1.1em;
+            font-size: 1.1em;
+            padding: 4px 8px; } }
+        .header .nav ul li a {
+          color: rgba(255, 255, 255, 0.7);
+          transition: color .1s ease; }
+          .header .nav ul li a:hover {
+            color: white; }
+          @media only screen and (max-width: 500px) {
+            .header .nav ul li a {
+              color: white;
+              border-bottom: 2px solid rgba(255, 255, 255, 0.53); } }
 
 .container {
   margin: 0;
@@ -51,9 +103,6 @@ body {
     max-width: 900px;
     width: 100%;
     margin: 12px auto;
-    border: 1px solid #d7d7d7;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     display: block;
     overflow: hidden; }
@@ -61,10 +110,16 @@ body {
       .container .panel {
         width: calc(100% - 12px); } }
     .container .panel .panel_title {
-      padding: 12px;
-      font-size: 20px; }
+      padding: 6px 12px;
+      font-size: 16px;
+      font-weight: 600; }
+      .container .panel .panel_title a {
+        font-size: 15px;
+        font-weight: 600;
+        color: #3281d0;
+        padding: 0 4px; }
     .container .panel .panel_desc {
-      padding: 12px; }
+      padding: 6px 12px; }
       .container .panel .panel_desc .badge_case {
         margin: 0;
         width: 100%;
@@ -83,20 +138,80 @@ body {
           @media only screen and (max-width: 800px) {
             .container .panel .panel_desc .badge_case .badges {
               width: calc(50%); } }
+          @media only screen and (max-width: 500px) {
+            .container .panel .panel_desc .badge_case .badges {
+              width: calc(100%); } }
           .container .panel .panel_desc .badge_case .badges .content {
             margin: 8px;
-            border: 1px solid #ddd;
+            border: 0px solid #eee;
             overflow: hidden;
             border-radius: 2px;
-            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all .1s ease; }
+            .container .panel .panel_desc .badge_case .badges .content:hover {
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
             .container .panel .panel_desc .badge_case .badges .content .img {
               width: 100%;
               height: 200px;
-              background-color: lightcoral; }
+              background-color: #235665; }
             .container .panel .panel_desc .badge_case .badges .content .b_desc {
-              padding: 8px;
-              line-height: 1.2em;
+              padding: 12px 0;
+              line-height: 1.1em;
               font-size: 13px; }
+      .container .panel .panel_desc p {
+        font-size: 15px;
+        letter-spacing: .6px;
+        line-height: 22px;
+        text-indent: 16px; }
+      .container .panel .panel_desc table {
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 15px;
+        border-collapse: separate;
+        border-spacing: 8px; }
+        .container .panel .panel_desc table tr:nth-of-type(2n) td {
+          background-color: rgba(0, 0, 0, 0.05); }
+        .container .panel .panel_desc table tr td {
+          padding: 4px; }
+          .container .panel .panel_desc table tr td.price {
+            min-width: 100px;
+            text-align-last: right; }
+            .container .panel .panel_desc table tr td.price .coin {
+              color: #888;
+              vertical-align: super;
+              font-size: .8em;
+              border-bottom: 1px solid #ccc; }
+
+.footer {
+  font-size: 12px;
+  color: #767676;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: block; }
+  .footer .nav {
+    border-top: 1px solid #eee;
+    position: relative;
+    display: block;
+    margin: 40px 0 0;
+    padding: 40px 0; }
+    .footer .nav ul {
+      list-style: none;
+      display: block;
+      padding: 0;
+      margin: 0; }
+      @media only screen and (max-width: 800px) {
+        .footer .nav ul {
+          padding-left: 12px; } }
+      .footer .nav ul li {
+        position: relative;
+        margin: 0 10px 0 0;
+        display: inline-block;
+        line-height: 18px; }
+        .footer .nav ul li a {
+          color: #1e77d0; }
 
 .flex-container {
   margin: 10px auto;
