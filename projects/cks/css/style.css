@@ -11,7 +11,7 @@ body {
   padding: 0;
   font-family: "Open Sans";
   font-weight: 400;
-  background-color: #f6f6f6; }
+  background-color: #fafafa; }
 
 a {
   color: #1e77d0; }
@@ -133,7 +133,7 @@ h4 {
       width: calc(100% - 12px); } }
   .panel .panel_title {
     padding: 6px 12px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600; }
     .panel .panel_title a {
       font-size: 15px;
@@ -141,7 +141,8 @@ h4 {
       color: #3281d0;
       padding: 0 4px; }
   .panel .panel_desc {
-    padding: 6px 12px; }
+    padding: 6px 12px;
+    color: rgba(0, 0, 0, 0.75); }
     .panel .panel_desc .badge_case {
       margin: 0;
       width: 100%;
@@ -177,25 +178,26 @@ h4 {
           .panel .panel_desc .badge_case .badges .content:hover {
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
             .panel .panel_desc .badge_case .badges .content:hover .img .b_desc {
-              bottom: 0px; }
+              bottom: -36px; }
+              @media only screen and (max-width: 900px) {
+                .panel .panel_desc .badge_case .badges .content:hover .img .b_desc {
+                  bottom: 0px; } }
           .panel .panel_desc .badge_case .badges .content .img {
             width: 100%;
             height: 180px;
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            background-color: #235665;
             overflow: hidden;
             position: relative; }
             .panel .panel_desc .badge_case .badges .content .img .b_desc {
               position: absolute;
               width: calc(100%);
               left: 0px;
-              bottom: -36px;
-              color: white;
+              bottom: 0;
               text-align: left;
-              background-color: rgba(255, 255, 255, 0.9);
-              color: black;
+              background-color: rgba(0, 0, 0, 0.7);
+              color: white;
               padding: 4px 12px;
               font-size: 20px;
               line-height: 28px;
@@ -205,22 +207,31 @@ h4 {
                 .panel .panel_desc .badge_case .badges .content .img .b_desc {
                   bottom: 0px; } }
     .panel .panel_desc p {
-      font-size: 15px;
+      font-size: 13px;
       letter-spacing: .6px;
       line-height: 1.5;
       margin-bottom: 1.5em; }
     .panel .panel_desc table {
       width: 100%;
-      border: 1px solid #ddd;
-      font-size: 15px;
+      border: 0px solid #ddd;
+      font-size: 14px;
       border-collapse: separate;
       border-spacing: 0px;
-      background-color: white;
       margin-bottom: 1.5em; }
-      .panel .panel_desc table tr:nth-of-type(2n) td {
-        background-color: rgba(0, 0, 0, 0.05); }
+      .panel .panel_desc table tr.t_head {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.3);
+        vertical-align: bottom; }
+        .panel .panel_desc table tr.t_head td {
+          padding: 12px 0; }
+          .panel .panel_desc table tr.t_head td.j_right {
+            text-align: right; }
+      .panel .panel_desc table tr:hover:not(.t_head) {
+        background-color: rgba(0, 0, 0, 0.035); }
       .panel .panel_desc table tr td {
-        padding: 6px 12px; }
+        padding: 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
         .panel .panel_desc table tr td.price {
           min-width: 100px;
           text-align-last: right; }
@@ -238,8 +249,11 @@ h4 {
       padding: 12px;
       margin: 0 0 1.5em; }
       .panel .panel_desc .panel_envelope h4.media {
-        display: inline;
-        padding: 0 12px; }
+        display: inline-block;
+        position: relative;
+        padding: 0 12px;
+        margin: 0 0 1.5em;
+        line-height: 1.5em; }
       .panel .panel_desc .panel_envelope p {
         text-indent: 0; }
         .panel .panel_desc .panel_envelope p.media {

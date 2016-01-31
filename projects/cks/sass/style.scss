@@ -6,6 +6,8 @@ $panel-width: 1200px;
 $large-break: $panel-width - 300px;
 $small-break: 500px;
 
+$theme-color: #606523;
+
 
 *{
     box-sizing: border-box;
@@ -17,7 +19,7 @@ body{
     padding: 0;
     font-family: "Open Sans";
     font-weight: 400;
-    background-color: #f6f6f6;
+    background-color: #fafafa;
 }
 
 $link-color:#1e77d0;
@@ -76,7 +78,7 @@ h6{}
         bottom: 0;
         display: inline-block;
         padding: 24px;
-        background-color: #606523;
+        background-color: $theme-color;
         width: calc(100%);
 
 //        position: fixed;
@@ -175,7 +177,7 @@ h6{}
 
         .panel_title{
             padding: 6px 12px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
 
             a{
@@ -188,6 +190,7 @@ h6{}
         }
         .panel_desc{
             padding: 6px 12px;
+            color: rgba(black, .75);
 
             .badge_case{
                 margin: 0;
@@ -229,7 +232,11 @@ h6{}
                             box-shadow: 0 2px 6px rgba(black, .3);
 
                             .img .b_desc{
-                                bottom: 0px;
+                                bottom: -36px;
+
+                                @media only screen and (max-width: $large-break) {
+                                    bottom:0px;
+                                }
                             }
                         }
 
@@ -239,7 +246,6 @@ h6{}
                             background-size: cover;
                             background-position: center center;
                             background-repeat: no-repeat;
-                            background-color: rgb(35, 86, 101);
                             overflow: hidden;
                             position: relative;
 
@@ -248,13 +254,12 @@ h6{}
                                 position: absolute;
                                 width:calc(100%);
                                 left:0px;
-                                bottom:-36px;
-                                color: white;
+                                bottom:0;
 //                                border-radius: 0 0 5px 5px;
                                 text-align: left;
     //                            background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 30%,rgba(0,0,0,0) 90%);
-                                background-color: rgba(white, .9);
-                                color: black;
+                                background-color: rgba(black, .7);
+                                color: white;
                                 padding: 4px 12px;
                                 font-size: 20px;
                                 line-height: 28px;
@@ -271,26 +276,46 @@ h6{}
                 }
             }
             p{
-                font-size: 15px;
+                font-size: 13px;
                 letter-spacing: .6px;
                 line-height: 1.5;
                 margin-bottom: 1.5em;
             }
             table{
                 width: 100%;
-                border: 1px solid #ddd;
-                font-size: 15px;
+                border: 0px solid #ddd;
+                font-size: 14px;
                 border-collapse: separate;
                 border-spacing: 0px;
-                background-color: white;
                 margin-bottom: 1.5em;
 
                 tr{
-                    &:nth-of-type(2n){
-                        td{background-color: rgba(black, .05);}
+                    &.t_head{
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color: rgba(black, .3);
+                        vertical-align: bottom;
+
+                        td{
+                            padding: 12px 0;
+
+                            &.j_right{
+                                text-align: right;
+                            }
+                        }
                     }
+
+                    &:hover:not(.t_head){
+                        background-color: rgba(black, .035);
+                    }
+
+                    &:nth-of-type(2n){
+//                        td{background-color: rgba($theme-color, .25);}
+                    }
+
                     td{
-                        padding: 6px 12px;
+                        padding: 12px;
+                        border-bottom: 1px solid rgba(black, .1);
 
                         &.price{
                             min-width: 100px;
@@ -320,8 +345,11 @@ h6{}
 
                 h4{
                     &.media{
-                        display: inline;
+                        display: inline-block;
+                        position: relative;
                         padding: 0 12px;
+                        margin: 0 0 1.5em;
+                        line-height: 1.5em;
                     }
                 }
 
