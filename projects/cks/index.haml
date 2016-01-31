@@ -1,0 +1,131 @@
+!!! 5
+%html
+    %head
+        %title= "CKS | Home"
+        %link{ :rel => "stylesheet", :href => "css/style.css" }
+        %script{ :src => "//code.jquery.com/jquery-1.11.0.min.js" }
+        %script{ :src => "//code.jquery.com/jquery-migrate-1.2.1.min.j" }
+        %meta{ :name => 'theme-color', :content => "#606523"}
+        %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" }
+    %body
+        .header
+            .photo
+            .nav
+                .title Custom Kitchen Solutions
+                %ul
+                    %li
+                        %a{ :href => "#" } Home
+                    %li
+                        %a{ :href => "#" } About
+                    %li
+                        %a{ :href => "#" } Products
+                    %li
+                        %a{ :href => "#" } Contact
+        // content below
+        .container
+            .panel
+                .panel_desc
+                    .badge_case.flex-container.flex-start.wrap
+                        .badges.flex-item
+                            %a{ :href => "#" }
+                                .content
+                                    .img{ :style => "background-image: url('images/cabinets_01.jpg');" }
+                                    .b_desc Cabinets
+                        .badges.flex-item
+                            %a{ :href => "#" }
+                                .content
+                                    .img{ :style => "background-image: url('images/appliances_02.jpg');" }
+                                    .b_desc Appliances
+                        .badges.flex-item
+                            %a{ :href => "#" }
+                                .content
+                                    .img{ :style => "background-image: url('images/counter-top_01.jpg');" }
+                                    .b_desc Counter Tops
+                        .badges.flex-item
+                            %a{ :href => "#" }
+                                .content
+                                    .img{ :style => "background-image: url('images/sink_01.jpg');" }
+                                    .b_desc Sinks &amp; Faucets
+            .panel
+                .panel_title Lorem ipsum
+                .panel_desc
+                    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sodales pharetra nunc ac auctor. Pellentesque gravida luctus sapien at condimentum. Pellentesque in elit pellentesque, tincidunt nisl sodales, cursus eros. Maecenas gravida sit amet tortor at vehicula. Nullam nibh tortor, vestibulum a euismod et, condimentum vitae arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam dignissim nulla quis leo tincidunt condimentum. Proin ultricies augue tellus, a venenatis quam congue vitae. Ut dapibus eleifend elementum. Vivamus tempus semper purus, in condimentum erat.
+                    %p Vivamus pharetra, leo vitae varius consectetur, tortor nunc congue metus, ut malesuada purus lacus sit amet sapien. Aenean rhoncus enim ac libero pretium commodo. Nullam ultrices eleifend magna tempor scelerisque. Donec laoreet enim lorem, sit amet mollis eros luctus eget. Proin sed tristique sapien. Etiam efficitur est ac venenatis iaculis. Aenean molestie orci sed fringilla varius. In convallis dignissim feugiat. Nulla facilisi. Praesent purus mi, ultrices ut mollis ut, commodo et dui. Quisque ornare ex quis augue efficitur, id laoreet quam posuere. Vivamus hendrerit nisi ut quam hendrerit, nec tincidunt eros dictum. Ut commodo turpis sed metus finibus consectetur. Integer tempus sed urna vel rhoncus. Vivamus fringilla mauris ut justo pulvinar, semper dapibus sem interdum. Donec id porttitor arcu.
+
+            .panel
+                .panel_title Table Title
+                .panel_desc
+                    %table
+                        %tbody
+                            %tr
+                                %td Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin dui nec nunc elementum mollis.
+                                %td.price
+                                    $100
+                                    %span.coin 00
+                            %tr
+                                %td Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin dui nec nunc elementum mollis.
+                                %td.price
+                                    $1,000
+                                    %span.coin 00
+                            %tr
+                                %td Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin dui nec nunc elementum mollis.
+                                %td.price
+                                    $100
+                                    %span.coin 00
+                            %tr
+                                %td Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin dui nec nunc elementum mollis.
+                                %td.price
+                                    $1,000
+                                    %span.coin 00
+                            %tr
+                                %td Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin dui nec nunc elementum mollis.
+                                %td.price
+                                    $100
+                                    %span.coin 00
+                            %tr
+                                %td Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin dui nec nunc elementum mollis.
+                                %td.price
+                                    $1,000
+                                    %span.coin 00
+            .panel
+                .panel_title Pictures and Info Title
+                .panel_desc
+                    .panel_envelope
+                        %img.media.left{ :src => "images/kitchen_01.jpg"}
+                        %h4.media Lorem ipsum dolor sit amet
+                        %p.media Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat mi, elementum laoreet odio quis, aliquet pulvinar ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et nulla eu eros semper vulputate. Aliquam eu odio sed odio porttitor vulputate ut nec ante. Cras feugiat viverra est, quis porttitor diam vestibulum luctus. In sit amet elementum turpis, quis condimentum neque. Ut malesuada metus id arcu dignissim, nec mollis est eleifend. Nam feugiat ornare pharetra. In turpis ex, commodo nec gravida vitae, posuere sed arcu. Sed dignissim, neque id rutrum tincidunt, quam neque laoreet massa, nec feugiat libero nunc et erat. Curabitur quis nisl ut lectus fermentum consectetur.
+                    .panel_envelope
+                        %img.media.right{ :src => "images/kitchen_02.jpg"}
+                        %h4.media Lorem ipsum dolor sit amet
+                        %p.media Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat mi, elementum laoreet odio quis, aliquet pulvinar ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et nulla eu eros semper vulputate. Aliquam eu odio sed odio porttitor vulputate ut nec ante. Cras feugiat viverra est, quis porttitor diam vestibulum luctus. In sit amet elementum turpis, quis condimentum neque. Ut malesuada metus id arcu dignissim, nec mollis est eleifend. Nam feugiat ornare pharetra. In turpis ex, commodo nec gravida vitae, posuere sed arcu. Sed dignissim, neque id rutrum tincidunt, quam neque laoreet massa, nec feugiat libero nunc et erat. Curabitur quis nisl ut lectus fermentum consectetur.
+                    .panel_envelope
+                        %img.media.left{ :src => "images/kitchen_03.jpg"}
+                        %h4.media Lorem ipsum dolor sit amet
+                        %p.media Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat mi, elementum laoreet odio quis, aliquet pulvinar ex.
+            .panel
+                .panel_title Headers Title
+                .panel_desc
+                    %h1 h1 Header
+                    %h2 h2 Header
+                    %h3 h3 Header
+                    %h4 h4 Header
+                    %h5 h5 Header
+                    %h6 h6 Header
+
+
+
+        // footer
+        .footer
+            .nav
+                %ul.left
+                    %li
+                        &copy; CKS Incorporated 2016
+                    %li
+                        %a{ :href => "#" } Policy
+                    %li
+                        %a{ :href => "#" } About
+                %ul.right
+                    %li
+                        %a{ :href => "#" } Contact
+                    %li
+                        %address 555-555-5555

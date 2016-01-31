@@ -42,8 +42,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-*.haml
-projects/cks/.sass-cache/*
-projects/cks/css/style.css.map
-.sass-cache/*
-sass/*
+# *.haml
+*.map
+*.scss
+*.scssc
