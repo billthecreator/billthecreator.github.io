@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300|Roboto:400,300,500,700,900|PT+Sans:400,700|Lato:400,300,700,900);
 @import url(https://fonts.googleapis.com/css?family=Poiret+One|Satisfy|Philosopher|Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700|Titillium+Web:400,600,700,300);
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -55,21 +56,24 @@ h4 {
         height: 30vh; } }
   .header .nav {
     position: absolute;
+    bottom: 0;
     display: inline-block;
     padding: 24px;
-    bottom: 0;
-    background-color: rgba(96, 101, 35, 0.95);
-    width: calc(100%); }
+    background-color: #606523;
+    width: calc(100%);
+    max-width: 1200px;
+    z-index: 200; }
     @media only screen and (max-width: 500px) {
       .header .nav {
         position: relative;
-        padding: 0 12px; } }
+        padding: 0 12px;
+        max-height: 100%; } }
     .header .nav .title {
       display: inline;
       float: left;
-      font-family: "Poiret One";
-      text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-      font-size: 42px;
+      font-family: "Titillium Web";
+      font-weight: 300;
+      font-size: 36px;
       line-height: 40px; }
       @media only screen and (max-width: 500px) {
         .header .nav .title {
@@ -97,8 +101,7 @@ h4 {
           padding: 6px 0; } }
       .header .nav ul li {
         float: left;
-        margin: 0 0 0 10px;
-        cursor: pointer; }
+        margin: 0 0 0 10px; }
         @media only screen and (max-width: 500px) {
           .header .nav ul li {
             margin: 6px;
@@ -164,16 +167,17 @@ h4 {
           color: black; }
         .panel .panel_desc .badge_case .badges .content {
           margin: 8px;
-          border: 0px solid #eee;
           overflow: hidden;
           border-radius: 5px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 0 transparent;
           cursor: pointer;
-          transition: all .1s ease;
+          transition: all .2s ease;
           background-color: white;
           overflow: hidden; }
           .panel .panel_desc .badge_case .badges .content:hover {
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
+            .panel .panel_desc .badge_case .badges .content:hover .img .b_desc {
+              bottom: 0px; }
           .panel .panel_desc .badge_case .badges .content .img {
             width: 100%;
             height: 180px;
@@ -181,19 +185,25 @@ h4 {
             background-position: center center;
             background-repeat: no-repeat;
             background-color: #235665;
-            overflow: hidden; }
-          .panel .panel_desc .badge_case .badges .content .b_desc {
-            position: absolute;
-            width: calc(100% - 16px);
-            left: 8px;
-            bottom: 8px;
-            color: white;
-            border-radius: 0 0 5px 5px;
-            text-align: left;
-            background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.65) 30%, transparent 90%);
-            padding: 2px 12px;
-            font-size: 22px;
-            font-weight: 100; }
+            overflow: hidden;
+            position: relative; }
+            .panel .panel_desc .badge_case .badges .content .img .b_desc {
+              position: absolute;
+              width: calc(100%);
+              left: 0px;
+              bottom: -36px;
+              color: white;
+              text-align: left;
+              background-color: rgba(255, 255, 255, 0.9);
+              color: black;
+              padding: 4px 12px;
+              font-size: 20px;
+              line-height: 28px;
+              font-weight: 100;
+              transition: bottom .2s ease; }
+              @media only screen and (max-width: 900px) {
+                .panel .panel_desc .badge_case .badges .content .img .b_desc {
+                  bottom: 0px; } }
     .panel .panel_desc p {
       font-size: 15px;
       letter-spacing: .6px;

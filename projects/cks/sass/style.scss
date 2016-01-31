@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300|Roboto:400,300,500,700,900|PT+Sans:400,700|Lato:400,300,700,900);
 @import url(https://fonts.googleapis.com/css?family=Poiret+One|Satisfy|Philosopher|Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700|Titillium+Web:400,600,700,300);
 
 $panel-width: 1200px;
 $large-break: $panel-width - 300px;
@@ -72,23 +73,31 @@ h6{}
 
     .nav {
         position: absolute;
+        bottom: 0;
         display: inline-block;
         padding: 24px;
-        bottom: 0;
-        background-color: rgba(96, 101, 35, 0.95);
+        background-color: #606523;
         width: calc(100%);
+
+//        position: fixed;
+//        top:0;
+//        max-height: 84px;
+        max-width: $panel-width;
+        z-index: 200;
 
         @media only screen and (max-width: $small-break) {
             position: relative;
             padding: 0 12px;
+            max-height: 100%;
         }
 
         .title{
             display: inline;
             float: left;
-            font-family: "Poiret One";
-            text-shadow: 2px 2px 3px rgba(black, .3);
-            font-size: 42px;
+            font-family: "Titillium Web";
+            font-weight: 300;
+//            text-shadow: 2px 2px 3px rgba(black, .3);
+            font-size: 36px;
             line-height: 40px;
 
             @media only screen and (max-width: $small-break) {
@@ -123,7 +132,6 @@ h6{}
             li{
                 float: left;
                 margin: 0 0 0 10px;
-                cursor: pointer;
 
                 @media only screen and (max-width: $small-break) {
                     margin: 6px;
@@ -209,17 +217,20 @@ h6{}
                     }
                     .content{
                         margin: 8px;
-                        border: 0px solid #eee;
                         overflow: hidden;
                         border-radius: 5px;
-                        box-shadow: 0 4px 6px rgba(black, .3);
+                        box-shadow: 0 0 0 rgba(black, 0);
                         cursor: pointer;
-                        transition: all .1s ease;
+                        transition: all .2s ease;
                         background-color: white;
                         overflow: hidden;
 
                         &:hover{
                             box-shadow: 0 2px 6px rgba(black, .3);
+
+                            .img .b_desc{
+                                bottom: 0px;
+                            }
                         }
 
                         .img{
@@ -230,20 +241,31 @@ h6{}
                             background-repeat: no-repeat;
                             background-color: rgb(35, 86, 101);
                             overflow: hidden;
+                            position: relative;
 
-                        }
-                        .b_desc{
-                            position: absolute;
-                            width:calc(100% - 16px);
-                            left:8px;
-                            bottom:8px;
-                            color: white;
-                            border-radius: 0 0 5px 5px;
-                            text-align: left;
-                            background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 30%,rgba(0,0,0,0) 90%);
-                            padding: 2px 12px;
-                            font-size: 22px;
-                            font-weight: 100;
+
+                            .b_desc{
+                                position: absolute;
+                                width:calc(100%);
+                                left:0px;
+                                bottom:-36px;
+                                color: white;
+//                                border-radius: 0 0 5px 5px;
+                                text-align: left;
+    //                            background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 30%,rgba(0,0,0,0) 90%);
+                                background-color: rgba(white, .9);
+                                color: black;
+                                padding: 4px 12px;
+                                font-size: 20px;
+                                line-height: 28px;
+                                font-weight: 100;
+                                transition: bottom .2s ease;
+
+                                @media only screen and (max-width: $large-break) {
+                                    bottom:0px;
+                                }
+
+                            }
                         }
                     }
                 }
