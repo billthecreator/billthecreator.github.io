@@ -403,7 +403,7 @@ h6{}
 
                         @media only screen and (max-width: $large-break) {
                             &.left, &.right{clear: both; float: none;}
-                            margin: 12px auto;
+                            margin: 12px 0;
                             display: block;
 
                         }

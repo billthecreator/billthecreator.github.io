@@ -297,7 +297,7 @@ h4 {
           float: right; }
         @media only screen and (max-width: 900px) {
           .panel .panel_desc .panel_envelope img.media {
-            margin: 12px auto;
+            margin: 12px 0;
             display: block; }
             .panel .panel_desc .panel_envelope img.media.left, .panel .panel_desc .panel_envelope img.media.right {
               clear: both;
