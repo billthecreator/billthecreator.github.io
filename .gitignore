@@ -49,3 +49,5 @@ Temporary Items
 projects/cks/images/icon/psd/icon.psd
 projects/cks/images/icon/icon.png
 *.haml
+projects/cks/Gemfile
+*.lock
