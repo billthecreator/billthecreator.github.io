@@ -275,6 +275,8 @@ h4 {
       float: left;
       padding: 12px;
       margin: 0 0 1.5em; }
+      .panel .panel_desc .panel_envelope.flex-item {
+        width: 25%; }
       .panel .panel_desc .panel_envelope h4.media {
         display: inline-block;
         position: relative;
@@ -321,16 +323,26 @@ textarea {
   padding: 8px;
   margin: 4px 0;
   font-size: 13px;
+  width: 300px;
+  max-width: 500px;
+  height: 100px;
   border: 1px solid #ddd;
-  font-family: inherit; }
+  font-family: "Roboto"; }
 
-input[type='text'] {
-  padding: 8px;
-  margin: 4px 0;
-  font-size: 13px;
-  border: 1px solid #ddd; }
-input::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.4); }
+input {
+  font-family: "Roboto";
+  font-weight: 400; }
+  input[type='text'] {
+    padding: 8px;
+    width: 100%;
+    margin: 4px 0;
+    font-size: 13px;
+    border: 1px solid #ddd; }
+  input[type='submit'] {
+    padding: 4px 8px;
+    border: 1px solid #888;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.25); }
 
 .footer {
   font-size: 12px;

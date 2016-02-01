@@ -372,6 +372,10 @@ h6{}
                 padding: 12px;
                 margin: 0 0 1.5em;
 
+                &.flex-item{
+                    width: 25%;
+                }
+
                 h4{
                     &.media{
                         display: inline-block;
@@ -432,21 +436,32 @@ h6{}
 
 textarea{
 
-        padding: 8px;
-        margin: 4px 0;
-        font-size: 13px;
-        border: 1px solid #ddd;
-        font-family: inherit;
+    padding: 8px;
+    margin: 4px 0;
+    font-size: 13px;
+    width: 300px;
+    max-width: 500px;
+    height: 100px;
+    border: 1px solid #ddd;
+    font-family: "Roboto";
 }
 input{
+    font-family: "Roboto";
+    font-weight: 400;
     &[type='text']{
         padding: 8px;
+        width: 100%;
         margin: 4px 0;
         font-size: 13px;
         border: 1px solid #ddd;
     }
-    &::-webkit-input-placeholder {color: rgba(black, .4);}
+    &[type='submit']{
+        padding: 4px 8px;
+        border: 1px solid #888;
+        cursor: pointer;
+        background-color: rgba(black, .25);
 
+    }
 }
 
 .footer {
