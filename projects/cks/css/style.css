@@ -237,6 +237,14 @@ h4 {
       border-collapse: separate;
       border-spacing: 0px;
       margin-bottom: 1.5em; }
+      .panel .panel_desc table.noborder td {
+        border: none !important; }
+      .panel .panel_desc table.noborder tr:hover {
+        background-color: transparent !important; }
+      .panel .panel_desc table.small {
+        width: auto; }
+        .panel .panel_desc table.small td {
+          padding: 0; }
       .panel .panel_desc table tr.t_head {
         font-weight: bold;
         text-transform: uppercase;
@@ -272,7 +280,10 @@ h4 {
         position: relative;
         padding: 0 12px;
         margin: 0 0 1.5em;
-        line-height: 1.5em; }
+        line-height: 1.5em;
+        float: left; }
+        .panel .panel_desc .panel_envelope h4.media.left {
+          text-align: left; }
       .panel .panel_desc .panel_envelope p {
         text-indent: 0; }
         .panel .panel_desc .panel_envelope p.media {
@@ -281,6 +292,9 @@ h4 {
           float: left;
           margin: 0 0 1.5em;
           padding: 0 12px; }
+          .panel .panel_desc .panel_envelope p.media.address {
+            display: block;
+            width: 100%; }
           @media only screen and (max-width: 900px) {
             .panel .panel_desc .panel_envelope p.media {
               width: 100%; } }
@@ -302,6 +316,21 @@ h4 {
             .panel .panel_desc .panel_envelope img.media.left, .panel .panel_desc .panel_envelope img.media.right {
               clear: both;
               float: none; } }
+
+textarea {
+  padding: 8px;
+  margin: 4px 0;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  font-family: inherit; }
+
+input[type='text'] {
+  padding: 8px;
+  margin: 4px 0;
+  font-size: 13px;
+  border: 1px solid #ddd; }
+input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4); }
 
 .footer {
   font-size: 12px;

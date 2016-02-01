@@ -309,6 +309,15 @@ h6{}
                 border-spacing: 0px;
                 margin-bottom: 1.5em;
 
+                &.noborder{
+                    td{border: none !important;}
+                    tr:hover{background-color: transparent !important;}
+                }
+                &.small{
+                    width: auto;
+                    td{padding: 0;}
+                }
+
                 tr{
                     &.t_head{
                         font-weight: bold;
@@ -370,6 +379,9 @@ h6{}
                         padding: 0 12px;
                         margin: 0 0 1.5em;
                         line-height: 1.5em;
+                        float: left;
+
+                        &.left{text-align: left;}
                     }
                 }
 
@@ -382,6 +394,11 @@ h6{}
                         float: left;
                         margin: 0 0 1.5em;
                         padding: 0 12px;
+
+                        &.address{
+                            display: block;
+                            width: 100%;
+                        }
 
                         @media only screen and (max-width: $large-break) {
                             width: 100%;
@@ -412,6 +429,25 @@ h6{}
             }
         }
     }
+
+textarea{
+
+        padding: 8px;
+        margin: 4px 0;
+        font-size: 13px;
+        border: 1px solid #ddd;
+        font-family: inherit;
+}
+input{
+    &[type='text']{
+        padding: 8px;
+        margin: 4px 0;
+        font-size: 13px;
+        border: 1px solid #ddd;
+    }
+    &::-webkit-input-placeholder {color: rgba(black, .4);}
+
+}
 
 .footer {
     font-size: 12px;
