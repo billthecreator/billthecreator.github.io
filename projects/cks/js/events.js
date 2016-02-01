@@ -32,3 +32,26 @@
 //        _navTop = _headerHeight - _navHeight - 48;
 //    });
 //});
+
+
+var value;
+$(document).ready(function(){
+    $('.header .nav .more a').click(function(){
+
+        value = $('.more').text().toLowerCase();
+
+        if (value.indexOf("menu") >= 0) {
+
+            $('.header .nav ul').css('height', 'auto');
+            $('.more a').empty().append("hide <i class='fa fa-chevron-up'></i>");
+
+        }else{
+
+            $('.header .nav ul').css('height', '0');
+            $('.more a').empty().append("menu <i class='fa fa-chevron-down'></i>");
+
+        }
+
+
+    })
+});

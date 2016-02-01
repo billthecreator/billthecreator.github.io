@@ -66,7 +66,7 @@ h4 {
     @media only screen and (max-width: 500px) {
       .header .nav {
         position: relative;
-        padding: 0 12px;
+        padding: 0;
         max-height: 100%; } }
     .header .nav .title {
       display: inline;
@@ -82,13 +82,26 @@ h4 {
           line-height: 1.3em;
           text-align: center;
           width: 100%; } }
+    .header .nav .more {
+      display: none;
+      text-transform: uppercase;
+      font-size: 13px; }
+      @media only screen and (max-width: 500px) {
+        .header .nav .more {
+          display: block;
+          width: 100%;
+          position: relative;
+          text-align: center;
+          color: white; } }
+      .header .nav .more a {
+        color: white; }
     .header .nav ul {
       display: inline;
       list-style: none;
       float: right;
       font-family: "Open Sans";
-      font-weight: 600;
-      font-size: 15px;
+      text-transform: uppercase;
+      font-size: 13px;
       margin: 0;
       padding: 0;
       line-height: 40px; }
@@ -96,17 +109,24 @@ h4 {
         .header .nav ul {
           line-height: 1.5em;
           float: left;
-          text-align: center;
           width: 100%;
-          padding: 6px 0; } }
+          padding: 6px 0;
+          margin: 0;
+          height: 0;
+          overflow: hidden;
+          transition: height .2s ease; } }
       .header .nav ul li {
         float: left;
         margin: 0 0 0 10px; }
         @media only screen and (max-width: 500px) {
           .header .nav ul li {
-            margin: 6px;
-            padding: 4px 8px;
-            clear: left; } }
+            margin: 0px;
+            padding: 8px 0;
+            clear: left;
+            width: 100%;
+            text-align: center; }
+            .header .nav ul li:nth-of-type(2n) {
+              background-color: rgba(0, 0, 0, 0.05); } }
         .header .nav ul li a {
           color: rgba(255, 255, 255, 0.7);
           transition: color .1s ease; }
@@ -114,8 +134,7 @@ h4 {
             color: white; }
           @media only screen and (max-width: 500px) {
             .header .nav ul li a {
-              color: white;
-              border-bottom: 2px solid rgba(255, 255, 255, 0.53); } }
+              color: white; } }
 
 .container {
   margin: 0;
