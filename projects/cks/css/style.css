@@ -276,7 +276,13 @@ h4 {
       padding: 12px;
       margin: 0 0 1.5em; }
       .panel .panel_desc .panel_envelope.flex-item {
-        width: 25%; }
+        width: 20%; }
+        @media only screen and (max-width: 900px) {
+          .panel .panel_desc .panel_envelope.flex-item {
+            width: 33%; } }
+        @media only screen and (max-width: 500px) {
+          .panel .panel_desc .panel_envelope.flex-item {
+            width: 100%; } }
       .panel .panel_desc .panel_envelope h4.media {
         display: inline-block;
         position: relative;

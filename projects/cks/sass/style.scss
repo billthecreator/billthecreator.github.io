@@ -373,7 +373,14 @@ h6{}
                 margin: 0 0 1.5em;
 
                 &.flex-item{
-                    width: 25%;
+                    width: 20%;
+
+                        @media only screen and (max-width: $large-break) {
+                            width: 33%;
+                        }
+                        @media only screen and (max-width: $small-break) {
+                            width: 100%;
+                        }
                 }
 
                 h4{
