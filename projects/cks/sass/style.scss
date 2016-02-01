@@ -66,7 +66,7 @@ h6{}
         background-repeat: no-repeat;
         background-position: center;
         width: 100%;
-        height: 60vh;
+        height: 40vh;
 
         @media only screen and (max-width: $small-break) {
             height: 30vh;
@@ -78,7 +78,7 @@ h6{}
         bottom: 0;
         display: inline-block;
         padding: 24px;
-        background-color: $theme-color;
+        background-color: rgba($theme-color, .9);
         width: calc(100%);
 
 //        position: fixed;
@@ -123,7 +123,7 @@ h6{}
                 color: white;
 
             }
-            a{color: white;}
+            a{color: white; cursor: pointer;}
 
         }
         ul{
@@ -360,84 +360,91 @@ h6{}
                     }
                 }
             }
-            .panel_envelope{
-
-                $image-width: 450px;
-
-                display: block;
-                position: relative;
-                width: 100%;
-                height: auto;
+            .panel_mailbox{
                 float: left;
-                padding: 12px;
-                margin: 0 0 1.5em;
-
-                &.flex-item{
-                    width: 20%;
-
-                        @media only screen and (max-width: $large-break) {
-                            width: 33%;
-                        }
-                        @media only screen and (max-width: $small-break) {
-                            width: 100%;
-                        }
-                }
-
-                h4{
-                    &.media{
-                        display: inline-block;
-                        position: relative;
-                        padding: 0 12px;
-                        margin: 0 0 1.5em;
-                        line-height: 1.5em;
-                        float: left;
-
-                        &.left{text-align: left;}
-                    }
-                }
-
-                p{
-                    text-indent: 0;
-
-                    &.media{
-                        display: inline;
-                        width: calc(100% - #{$image-width});
-                        float: left;
-                        margin: 0 0 1.5em;
-                        padding: 0 12px;
-
-                        &.address{
-                            display: block;
-                            width: 100%;
-                        }
-
-                        @media only screen and (max-width: $large-break) {
-                            width: 100%;
-                        }
-                    }
-                }
-                img{
-                    &.media{
-                        max-width:$image-width;
-                        width:100%;
-                        height: auto;
-                        padding: 8px;
-                        border: 1px solid #ddd;
-                        display: inline-block;
-
-                        &.left{float:left;}
-                        &.right{float: right;}
-
-
-                        @media only screen and (max-width: $large-break) {
-                            &.left, &.right{clear: both; float: none;}
-                            margin: 12px 0;
-                            display: block;
-
-                        }
-                    }
-                }
+                display: inline-block;
+                position: relative;
             }
+
+
+                .panel_envelope{
+
+                    $image-width: 450px;
+
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    float: left;
+                    padding: 12px;
+                    margin: 0 0 1.5em;
+
+                    &.flex-item{
+                        width: 25%;
+                            @media only screen and (max-width: $large-break) {
+                                width: 50%;
+                            }
+                            @media only screen and (max-width: $small-break) {
+                                width: 100%;
+                            }
+                    }
+
+                    h4{
+                        &.media{
+                            display: inline-block;
+                            position: relative;
+                            padding: 0 12px;
+                            margin: 0 0 1.5em;
+                            line-height: 1.5em;
+                            float: left;
+
+                            &.left{text-align: left;}
+                        }
+                    }
+
+                    p{
+                        text-indent: 0;
+
+                        &.media{
+                            display: inline;
+                            width: calc(100% - #{$image-width});
+                            float: left;
+                            margin: 0 0 1.5em;
+                            padding: 0 12px;
+
+                            &.address{
+                                display: block;
+                                width: 100%;
+                            }
+
+                            @media only screen and (max-width: $large-break) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    img{
+                        &.media{
+                            max-width:$image-width;
+                            width:100%;
+                            height: auto;
+                            padding: 8px;
+                            border: 1px solid #ddd;
+                            display: inline-block;
+
+                            &.left{float:left;}
+                            &.right{float: right;}
+
+
+                            @media only screen and (max-width: $large-break) {
+                                &.left, &.right{clear: both; float: none;}
+                                margin: 12px 0;
+                                display: block;
+
+                            }
+                        }
+                    }
+                }
+
         }
     }
 
