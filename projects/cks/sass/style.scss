@@ -51,12 +51,16 @@ h6{}
 
 
 .header{
-    max-width: $panel-width;
-//    max-width: 100%;
+//    max-width: $panel-width;
+    max-width: 100%;
     width: 100%;
     color: white;
     position: relative;
     margin: 0 auto;
+    .container{
+        max-width: $panel-width;
+        margin: 0 auto;
+    }
 
     .photo {
         position: relative;
@@ -84,7 +88,7 @@ h6{}
 //        position: fixed;
 //        top:0;
 //        max-height: 84px;
-        max-width: $panel-width;
+        max-width: 100%;
         z-index: 200;
 
         @media only screen and (max-width: $small-break) {
@@ -154,12 +158,12 @@ h6{}
 
                 @media only screen and (max-width: $small-break) {
                     margin: 0px;
-                    padding: 8px 0;
+                    padding: 0;
                     clear: left;
                     width: 100%;
                     text-align: center;
 
-                    &:nth-of-type(2n){background-color: rgba(black, .05);}
+                    &:nth-of-type(2n-1){background-color: rgba(black, .05);}
                 }
 
                 a{
@@ -170,6 +174,9 @@ h6{}
 
                     @media only screen and (max-width: $small-break) {
                         color:rgba(white, 1);
+                        width: 100%;
+                        display: block;
+                        padding: 8px;
                     }
                 }
 
@@ -367,83 +374,83 @@ h6{}
             }
 
 
-                .panel_envelope{
+            .panel_envelope{
 
-                    $image-width: 450px;
+                $image-width: 450px;
 
-                    display: block;
-                    position: relative;
-                    width: 100%;
-                    height: auto;
-                    float: left;
-                    padding: 12px;
-                    margin: 0 0 1.5em;
+                display: block;
+                position: relative;
+                width: 100%;
+                height: auto;
+                float: left;
+                padding: 12px;
+                margin: 0 0 1.5em;
 
-                    &.flex-item{
-                        width: 25%;
-                            @media only screen and (max-width: $large-break) {
-                                width: 50%;
-                            }
-                            @media only screen and (max-width: $small-break) {
-                                width: 100%;
-                            }
-                    }
-
-                    h4{
-                        &.media{
-                            display: inline-block;
-                            position: relative;
-                            padding: 0 12px;
-                            margin: 0 0 1.5em;
-                            line-height: 1.5em;
-                            float: left;
-
-                            &.left{text-align: left;}
+                &.flex-item{
+                    width: 33%;
+                        @media only screen and (max-width: $large-break) {
+                            width: 33%;
                         }
-                    }
-
-                    p{
-                        text-indent: 0;
-
-                        &.media{
-                            display: inline;
-                            width: calc(100% - #{$image-width});
-                            float: left;
-                            margin: 0 0 1.5em;
-                            padding: 0 12px;
-
-                            &.address{
-                                display: block;
-                                width: 100%;
-                            }
-
-                            @media only screen and (max-width: $large-break) {
-                                width: 100%;
-                            }
+                        @media only screen and (max-width: $small-break) {
+                            width: 100%;
                         }
+                }
+
+                h4{
+                    &.media{
+                        display: inline-block;
+                        position: relative;
+                        padding: 0 12px;
+                        margin: 0 0 1.5em;
+                        line-height: 1.5em;
+                        float: left;
+
+                        &.left{text-align: left;}
                     }
-                    img{
-                        &.media{
-                            max-width:$image-width;
-                            width:100%;
-                            height: auto;
-                            padding: 8px;
-                            border: 1px solid #ddd;
-                            display: inline-block;
+                }
 
-                            &.left{float:left;}
-                            &.right{float: right;}
+                p{
+                    text-indent: 0;
 
+                    &.media{
+                        display: inline;
+                        width: calc(100% - #{$image-width});
+                        float: left;
+                        margin: 0 0 1.5em;
+                        padding: 0 12px;
 
-                            @media only screen and (max-width: $large-break) {
-                                &.left, &.right{clear: both; float: none;}
-                                margin: 12px 0;
-                                display: block;
+                        &.address{
+                            display: block;
+                            width: 100%;
+                        }
 
-                            }
+                        @media only screen and (max-width: $large-break) {
+                            width: 100%;
                         }
                     }
                 }
+                img{
+                    &.media{
+                        max-width:$image-width;
+                        width:100%;
+                        height: auto;
+                        padding: 8px;
+                        border: 1px solid #ddd;
+                        display: inline-block;
+
+                        &.left{float:left;}
+                        &.right{float: right;}
+
+
+                        @media only screen and (max-width: $large-break) {
+                            &.left, &.right{clear: both; float: none;}
+                            margin: 12px 0;
+                            display: block;
+
+                        }
+                    }
+                }
+            }
 
         }
     }
