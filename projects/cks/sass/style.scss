@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700|Titillium+Web:400,600,700,300);
 
 $panel-width: 1000px;
-$large-break: $panel-width - 300px;
+$large-break: $panel-width - 200px;
 $small-break: 500px;
 
 $theme-color: #606523;
@@ -44,8 +44,7 @@ h2{
 h3{
     font-weight: 400;
     color: rgba(black, .94);}
-h4{
-    font-weight: 600;}
+h4{font-weight: 600;}
 h5{}
 h6{}
 
@@ -222,16 +221,24 @@ h6{}
             .breadcrumb{
                 display: inline-block;
                 width: auto;
-                margin: 0;
+                margin: 0 1em 1em 0;
                 font-size: 13px;
                 border-radius: 2px;
-                padding: 4px 8px;
+                padding: 8px 16px;
                 background-color: rgba(black, .05);
+
+                &.future{
+                    li:not(:first-of-type):before{
+                        content: "|";
+                        color: rgba(black, .2);
+                    }
+                }
 
                 li{
                     display: inline;
                     margin: 0;
                     text-align: left;
+                    word-wrap: break-word;
 
                     &.active{
                         color: rgba(black, .5);
@@ -239,7 +246,7 @@ h6{}
 
                     &:not(:first-of-type):before{
                         content: "/";
-                        margin: 0 6px;
+                        margin: 0 8px;
                         color: rgba(black, .2);
                     }
                 }
@@ -254,7 +261,7 @@ h6{}
 
                 &.twenty{
                     .badges{
-                        width: 20%;
+                        width: calc(100% / 3);
 
                         .content .img{height: 130px;}
                         .content .b_desc{font-size: 16px !important;}

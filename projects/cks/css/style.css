@@ -154,7 +154,7 @@ h4 {
   position: relative;
   display: block;
   overflow: hidden; }
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 800px) {
     .panel {
       width: calc(100% - 12px); } }
   .panel .panel_title {
@@ -172,20 +172,24 @@ h4 {
     .panel .panel_desc .breadcrumb {
       display: inline-block;
       width: auto;
-      margin: 0;
+      margin: 0 1em 1em 0;
       font-size: 13px;
       border-radius: 2px;
-      padding: 4px 8px;
+      padding: 8px 16px;
       background-color: rgba(0, 0, 0, 0.05); }
+      .panel .panel_desc .breadcrumb.future li:not(:first-of-type):before {
+        content: "|";
+        color: rgba(0, 0, 0, 0.2); }
       .panel .panel_desc .breadcrumb li {
         display: inline;
         margin: 0;
-        text-align: left; }
+        text-align: left;
+        word-wrap: break-word; }
         .panel .panel_desc .breadcrumb li.active {
           color: rgba(0, 0, 0, 0.5); }
         .panel .panel_desc .breadcrumb li:not(:first-of-type):before {
           content: "/";
-          margin: 0 6px;
+          margin: 0 8px;
           color: rgba(0, 0, 0, 0.2); }
     .panel .panel_desc .badge_case {
       margin: 0;
@@ -193,12 +197,12 @@ h4 {
       padding: 12px 0;
       display: inline-flex; }
       .panel .panel_desc .badge_case.twenty .badges {
-        width: 20%; }
+        width: calc(100% / 3); }
         .panel .panel_desc .badge_case.twenty .badges .content .img {
           height: 130px; }
         .panel .panel_desc .badge_case.twenty .badges .content .b_desc {
           font-size: 16px !important; }
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 800px) {
           .panel .panel_desc .badge_case.twenty .badges {
             width: calc(50%); } }
         @media only screen and (max-width: 500px) {
@@ -218,7 +222,7 @@ h4 {
         width: calc(25%);
         text-align: center;
         height: auto; }
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 800px) {
           .panel .panel_desc .badge_case .badges {
             width: calc(50%); } }
         @media only screen and (max-width: 500px) {
@@ -239,7 +243,7 @@ h4 {
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
             .panel .panel_desc .badge_case .badges .content:hover .img .b_desc {
               bottom: calc(-50%); }
-              @media only screen and (max-width: 700px) {
+              @media only screen and (max-width: 800px) {
                 .panel .panel_desc .badge_case .badges .content:hover .img .b_desc {
                   bottom: 0px; } }
           .panel .panel_desc .badge_case .badges .content .img {
@@ -267,7 +271,7 @@ h4 {
               line-height: 28px;
               font-weight: 100;
               transition: bottom .2s ease; }
-              @media only screen and (max-width: 700px) {
+              @media only screen and (max-width: 800px) {
                 .panel .panel_desc .badge_case .badges .content .img .b_desc {
                   bottom: 0px; } }
     .panel .panel_desc p {
@@ -326,7 +330,7 @@ h4 {
       margin: 0 0 1.5em; }
       .panel .panel_desc .panel_envelope.flex-item {
         width: 33%; }
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 800px) {
           .panel .panel_desc .panel_envelope.flex-item {
             width: 33%; } }
         @media only screen and (max-width: 500px) {
@@ -352,7 +356,7 @@ h4 {
           .panel .panel_desc .panel_envelope p.media.address {
             display: block;
             width: 100%; }
-          @media only screen and (max-width: 700px) {
+          @media only screen and (max-width: 800px) {
             .panel .panel_desc .panel_envelope p.media {
               width: 100%; } }
       .panel .panel_desc .panel_envelope img.media {
@@ -366,7 +370,7 @@ h4 {
           float: left; }
         .panel .panel_desc .panel_envelope img.media.right {
           float: right; }
-        @media only screen and (max-width: 700px) {
+        @media only screen and (max-width: 800px) {
           .panel .panel_desc .panel_envelope img.media {
             margin: 12px 0;
             display: block; }
@@ -429,7 +433,7 @@ input {
           float: left;
           text-align: right;
           margin: 0 0 0 10px; }
-      @media only screen and (max-width: 700px) {
+      @media only screen and (max-width: 800px) {
         .footer .nav ul {
           padding-left: 12px; } }
       .footer .nav ul li {
