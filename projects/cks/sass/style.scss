@@ -117,6 +117,7 @@ h6{}
             display: none;
             text-transform: uppercase;
             font-size: 13px;
+            padding: 8px 0;
 
             @media only screen and (max-width: $small-break) {
                 display: block;
@@ -144,7 +145,7 @@ h6{}
                 line-height: 1.5em;
                 float: left;
                 width: 100%;
-                padding: 6px 0;
+                padding: 0;
                 margin: 0;
                 height: 0;
                 overflow: hidden;
@@ -162,7 +163,8 @@ h6{}
                     width: 100%;
                     text-align: center;
 
-                    &:nth-of-type(2n-1){background-color: rgba(black, .05);}
+                    &:nth-of-type(2n){background-color: rgba(black, .05);}
+                    &:nth-of-type(2n-1){background-color: rgba(black, .075);}
                 }
 
                 a{
@@ -175,7 +177,7 @@ h6{}
                         color:rgba(white, 1);
                         width: 100%;
                         display: block;
-                        padding: 8px;
+                        padding: 12px;
                     }
                 }
 
