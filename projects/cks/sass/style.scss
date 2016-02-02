@@ -219,6 +219,33 @@ h6{}
             padding: 6px 12px;
             color: rgba(black, .75);
 
+            .breadcrumb{
+                display: inline-block;
+                width: auto;
+                margin: 0;
+                font-size: 13px;
+                border-radius: 2px;
+                padding: 4px 8px;
+                background-color: rgba(black, .05);
+
+                li{
+                    display: inline;
+                    margin: 0;
+                    text-align: left;
+
+                    &.active{
+                        color: rgba(black, .5);
+                    }
+
+                    &:not(:first-of-type):before{
+                        content: "/";
+                        margin: 0 6px;
+                        color: rgba(black, .2);
+                    }
+                }
+
+            }
+
             .badge_case{
                 margin: 0;
                 width: 100%;

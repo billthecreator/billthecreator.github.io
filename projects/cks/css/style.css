@@ -169,6 +169,24 @@ h4 {
   .panel .panel_desc {
     padding: 6px 12px;
     color: rgba(0, 0, 0, 0.75); }
+    .panel .panel_desc .breadcrumb {
+      display: inline-block;
+      width: auto;
+      margin: 0;
+      font-size: 13px;
+      border-radius: 2px;
+      padding: 4px 8px;
+      background-color: rgba(0, 0, 0, 0.05); }
+      .panel .panel_desc .breadcrumb li {
+        display: inline;
+        margin: 0;
+        text-align: left; }
+        .panel .panel_desc .breadcrumb li.active {
+          color: rgba(0, 0, 0, 0.5); }
+        .panel .panel_desc .breadcrumb li:not(:first-of-type):before {
+          content: "/";
+          margin: 0 6px;
+          color: rgba(0, 0, 0, 0.2); }
     .panel .panel_desc .badge_case {
       margin: 0;
       width: 100%;
