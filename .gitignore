@@ -51,3 +51,4 @@ projects/cks/images/icon/icon.png
 *.haml
 projects/cks/Gemfile
 *.lock
+projects/cks/Guardfile
