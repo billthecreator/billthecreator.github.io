@@ -648,6 +648,7 @@ input{
             margin: 0 auto;
             text-align: center;
             width: 100%;
+            z-index: -1;
 
             @media only screen and (max-width: $large-break) {
                 top:2em;
