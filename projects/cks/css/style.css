@@ -192,6 +192,16 @@ h4 {
       width: 100%;
       padding: 12px 0;
       display: inline-flex; }
+      .panel .panel_desc .badge_case.twenty .badges {
+        width: 20%; }
+        .panel .panel_desc .badge_case.twenty .badges .content .img {
+          height: 130px; }
+        @media only screen and (max-width: 700px) {
+          .panel .panel_desc .badge_case.twenty .badges {
+            width: calc(50%); } }
+        @media only screen and (max-width: 500px) {
+          .panel .panel_desc .badge_case.twenty .badges {
+            width: calc(100%); } }
       .panel .panel_desc .badge_case.logos .badges .content {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
         .panel .panel_desc .badge_case.logos .badges .content .b_desc {
