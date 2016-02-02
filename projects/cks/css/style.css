@@ -86,7 +86,8 @@ h4 {
       .header .nav .title img {
         display: inline;
         height: 35px;
-        line-height: inherit; }
+        line-height: inherit;
+        margin: 0; }
       @media only screen and (max-width: 500px) {
         .header .nav .title {
           font-size: 30px;
