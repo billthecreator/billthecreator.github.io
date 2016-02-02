@@ -109,12 +109,13 @@ h6{}
 //            text-shadow: 2px 2px 3px rgba(black, .3);
             font-size: 36px;
             line-height: 40px;
+            padding: 0 6px;
 
             img{
                 display: inline;
-                height: 26px;
+                height: 35px;
                 line-height: inherit;
-                margin: auto;
+
 
             }
 
@@ -635,28 +636,31 @@ input{
 
     .nav{
         border-top: 1px solid #dfdfdf;
-        position: relative;
+        position: absolute;
+        width: calc(100% - 24px);
         height: auto;
         display: block;
         margin: 40px 0 0;
         padding: 60px 0;
+        top: calc(50% - 15px);
 
         .logo{
             position: absolute;
-            left: 0;
+            left: calc(50% - 17px);
+            top: calc(50% - 17px);
             display: inline;
             margin: 0 auto;
             text-align: center;
-            width: 100%;
-            z-index: -1;
+//            width: 100%;
+            z-index: 0;
 
             @media only screen and (max-width: $large-break) {
-                top:2em;
+                top:1em;
             }
 
             img{
                 margin: 0 auto;
-                height: 30px;
+                height: 35px;
                 opacity: .5;
             }
         }
@@ -669,6 +673,8 @@ input{
             padding:0;
             padding: 0;
             margin: 0;
+            z-index: 1;
+            position: relative;
 
             &.left{float:left;}
             &.right{
