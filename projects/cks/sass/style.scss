@@ -255,7 +255,10 @@ h6{}
                 &.twenty{
                     .badges{
                         width: 20%;
+
                         .content .img{height: 130px;}
+                        .content .b_desc{font-size: 16px !important;}
+
                         @media only screen and (max-width: $large-break) {
                             width: calc(50%);
                         }
@@ -311,7 +314,7 @@ h6{}
                             box-shadow: 0 2px 6px rgba(black, .3);
 
                             .img .b_desc{
-                                bottom: -36px;
+                                bottom: calc(-50%);
 
                                 @media only screen and (max-width: $large-break) {
                                     bottom:0px;

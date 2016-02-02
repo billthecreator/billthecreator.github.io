@@ -196,6 +196,8 @@ h4 {
         width: 20%; }
         .panel .panel_desc .badge_case.twenty .badges .content .img {
           height: 130px; }
+        .panel .panel_desc .badge_case.twenty .badges .content .b_desc {
+          font-size: 16px !important; }
         @media only screen and (max-width: 700px) {
           .panel .panel_desc .badge_case.twenty .badges {
             width: calc(50%); } }
@@ -236,7 +238,7 @@ h4 {
           .panel .panel_desc .badge_case .badges .content:hover {
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
             .panel .panel_desc .badge_case .badges .content:hover .img .b_desc {
-              bottom: -36px; }
+              bottom: calc(-50%); }
               @media only screen and (max-width: 700px) {
                 .panel .panel_desc .badge_case .badges .content:hover .img .b_desc {
                   bottom: 0px; } }
