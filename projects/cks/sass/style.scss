@@ -277,10 +277,9 @@ h6{}
                 &.logos{
                     .badges{
                         .content{
-                            box-shadow: 0 2px 4px rgba(black, .3);
+                            box-shadow: 0 1px 4px rgba(black, .3);
 
                             .b_desc{
-                                background-color: rgba(black, .6) !important;
                             }
                             .img{}
                         }
@@ -308,23 +307,27 @@ h6{}
                         color: black;
                     }
                     .content{
+                        position: relative;
                         margin: 8px;
                         overflow: hidden;
                         border-radius: 5px;
-                        box-shadow: 0 0 0 rgba(black, 0);
+                        box-shadow: 0 1px 3px rgba(black, .3);
                         cursor: pointer;
                         transition: all .2s ease;
-                        background-color: white;
+                        background-color: rgba(black, 0);
                         overflow: hidden;
+                        display: block;
 
                         &:hover{
                             box-shadow: 0 2px 6px rgba(black, .3);
 
-                            .img .b_desc{
-                                bottom: calc(-50%);
+                            .b_desc{
+                                bottom: -36px;
+                                opacity: 0;
 
                                 @media only screen and (max-width: $large-break) {
                                     bottom:0px;
+                                    opacity: 1;
                                 }
                             }
                         }
@@ -337,6 +340,11 @@ h6{}
                             background-repeat: no-repeat;
                             overflow: hidden;
                             position: relative;
+                            @media only screen and (max-width: $small-break) {
+                                width: 70px;
+                                max-height: 70px;
+                                overflow: visible;
+                            }
 
                             &.logo{
                                 background-color: white;
@@ -344,25 +352,39 @@ h6{}
                                 padding: 4px;
                             }
 
+                        }
 
-                            .b_desc{
-                                position: absolute;
-                                width:calc(100%);
-                                left:0px;
-                                bottom:0;
-                                text-align: left;
-                                background-color: rgba(black, .7);
-                                color: white;
-                                padding: 4px 12px;
-                                font-size: 20px;
-                                line-height: 28px;
-                                font-weight: 100;
-                                transition: bottom .2s ease;
 
-                                @media only screen and (max-width: $large-break) {
-                                    bottom:0px;
-                                }
 
+                        .b_desc{
+                            position: absolute;
+                            width:calc(100%);
+                            left:0px;
+                            bottom:0;
+                            text-align: left;
+                            background-color: transparent;
+                            color: white;
+                            padding: 4px 12px;
+                            font-size: 20px;
+                            line-height: 28px;
+                            font-weight: 100;
+                            background-color: rgba(black, .6);
+                            opacity: 1;
+                            transition: bottom .2s ease, opacity .3s ease;
+
+                            @media only screen and (max-width: $large-break) {
+                                bottom:0px;
+                                opacity: 1;
+                            }
+                            @media only screen and (max-width: $small-break) {
+                                height: 70px;
+                                line-height: 65px;
+                                padding: 0 auto;
+                                left: 70px;
+                                width: calc(100%-70px);
+                                background-color: rgba(black, .025);
+                                color: black;
+                                border-left: 1px solid rgba(black,.075);
                             }
                         }
                     }

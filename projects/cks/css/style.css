@@ -209,9 +209,7 @@ h4 {
           .panel .panel_desc .badge_case.twenty .badges {
             width: calc(100%); } }
       .panel .panel_desc .badge_case.logos .badges .content {
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
-        .panel .panel_desc .badge_case.logos .badges .content .b_desc {
-          background-color: rgba(0, 0, 0, 0.6) !important; }
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
       .panel .panel_desc .badge_case .badges {
         margin: 0;
         padding: 0;
@@ -231,21 +229,25 @@ h4 {
         .panel .panel_desc .badge_case .badges a {
           color: black; }
         .panel .panel_desc .badge_case .badges .content {
+          position: relative;
           margin: 8px;
           overflow: hidden;
           border-radius: 5px;
-          box-shadow: 0 0 0 transparent;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
           cursor: pointer;
           transition: all .2s ease;
-          background-color: white;
-          overflow: hidden; }
+          background-color: transparent;
+          overflow: hidden;
+          display: block; }
           .panel .panel_desc .badge_case .badges .content:hover {
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
-            .panel .panel_desc .badge_case .badges .content:hover .img .b_desc {
-              bottom: calc(-50%); }
+            .panel .panel_desc .badge_case .badges .content:hover .b_desc {
+              bottom: -36px;
+              opacity: 0; }
               @media only screen and (max-width: 800px) {
-                .panel .panel_desc .badge_case .badges .content:hover .img .b_desc {
-                  bottom: 0px; } }
+                .panel .panel_desc .badge_case .badges .content:hover .b_desc {
+                  bottom: 0px;
+                  opacity: 1; } }
           .panel .panel_desc .badge_case .badges .content .img {
             width: 100%;
             height: 170px;
@@ -254,26 +256,44 @@ h4 {
             background-repeat: no-repeat;
             overflow: hidden;
             position: relative; }
+            @media only screen and (max-width: 500px) {
+              .panel .panel_desc .badge_case .badges .content .img {
+                width: 70px;
+                max-height: 70px;
+                overflow: visible; } }
             .panel .panel_desc .badge_case .badges .content .img.logo {
               background-color: white;
               background-size: 60%;
               padding: 4px; }
-            .panel .panel_desc .badge_case .badges .content .img .b_desc {
-              position: absolute;
-              width: calc(100%);
-              left: 0px;
-              bottom: 0;
-              text-align: left;
-              background-color: rgba(0, 0, 0, 0.7);
-              color: white;
-              padding: 4px 12px;
-              font-size: 20px;
-              line-height: 28px;
-              font-weight: 100;
-              transition: bottom .2s ease; }
-              @media only screen and (max-width: 800px) {
-                .panel .panel_desc .badge_case .badges .content .img .b_desc {
-                  bottom: 0px; } }
+          .panel .panel_desc .badge_case .badges .content .b_desc {
+            position: absolute;
+            width: calc(100%);
+            left: 0px;
+            bottom: 0;
+            text-align: left;
+            background-color: transparent;
+            color: white;
+            padding: 4px 12px;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 100;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 1;
+            transition: bottom .2s ease, opacity .3s ease; }
+            @media only screen and (max-width: 800px) {
+              .panel .panel_desc .badge_case .badges .content .b_desc {
+                bottom: 0px;
+                opacity: 1; } }
+            @media only screen and (max-width: 500px) {
+              .panel .panel_desc .badge_case .badges .content .b_desc {
+                height: 70px;
+                line-height: 65px;
+                padding: 0 auto;
+                left: 70px;
+                width: calc(100%-70px);
+                background-color: rgba(0, 0, 0, 0.025);
+                color: black;
+                border-left: 1px solid rgba(0, 0, 0, 0.075); } }
     .panel .panel_desc p {
       font-size: 13px;
       letter-spacing: .6px;
