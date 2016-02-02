@@ -4,7 +4,8 @@
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box; }
+  -moz-box-sizing: border-box;
+  outline: none; }
 
 body {
   margin: 0;
@@ -14,7 +15,10 @@ body {
   background-color: #fafafa; }
 
 a {
-  color: #1e77d0; }
+  color: #1e77d0;
+  transition: color .1s ease; }
+  a:hover {
+    color: rgba(30, 119, 208, 0.7); }
   a, a:hover, a:active, a:focus {
     text-decoration: none; }
 
@@ -78,6 +82,11 @@ h4 {
       font-weight: 300;
       font-size: 36px;
       line-height: 40px; }
+      .header .nav .title img {
+        display: inline;
+        height: 26px;
+        line-height: inherit;
+        margin: auto; }
       @media only screen and (max-width: 500px) {
         .header .nav .title {
           font-size: 30px;
@@ -167,7 +176,6 @@ h4 {
     .panel .panel_title a {
       font-size: 15px;
       font-weight: 600;
-      color: #3281d0;
       padding: 0 4px; }
   .panel .panel_desc {
     padding: 6px 12px;
@@ -180,6 +188,8 @@ h4 {
       border-radius: 2px;
       padding: 8px 16px;
       background-color: rgba(0, 0, 0, 0.05); }
+      .panel .panel_desc .breadcrumb.future li {
+        float: left; }
       .panel .panel_desc .breadcrumb.future li:not(:first-of-type):before {
         content: "|";
         color: rgba(0, 0, 0, 0.2); }
@@ -187,6 +197,7 @@ h4 {
         display: inline;
         margin: 0;
         text-align: left;
+        float: left;
         word-wrap: break-word; }
         .panel .panel_desc .breadcrumb li.active {
           color: rgba(0, 0, 0, 0.5); }
@@ -242,6 +253,10 @@ h4 {
           background-color: transparent;
           overflow: hidden;
           display: block; }
+          @media only screen and (max-width: 500px) {
+            .panel .panel_desc .badge_case .badges .content {
+              margin: 4px;
+              border-radius: 2px; } }
           .panel .panel_desc .badge_case .badges .content:hover {
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
             .panel .panel_desc .badge_case .badges .content:hover .b_desc {
@@ -261,8 +276,8 @@ h4 {
             position: relative; }
             @media only screen and (max-width: 500px) {
               .panel .panel_desc .badge_case .badges .content .img {
-                width: 70px;
-                max-height: 70px;
+                width: 50px;
+                max-height: 50px;
                 overflow: visible; } }
             .panel .panel_desc .badge_case .badges .content .img.logo {
               background-color: white;
@@ -289,14 +304,16 @@ h4 {
                 opacity: 1; } }
             @media only screen and (max-width: 500px) {
               .panel .panel_desc .badge_case .badges .content .b_desc {
-                height: 70px;
-                line-height: 65px;
-                padding: 0 auto;
-                left: 70px;
-                width: calc(100%-70px);
-                background-color: rgba(0, 0, 0, 0.025);
+                height: 50px;
+                line-height: 50px;
+                padding: 0;
+                padding-left: 12px;
+                font-size: 18px;
+                left: 50px;
+                width: calc(100%-$mobile-img-size);
+                background-color: rgba(0, 0, 0, 0.02);
                 color: black;
-                border-left: 1px solid rgba(0, 0, 0, 0.075); } }
+                border-left: 1px solid rgba(0, 0, 0, 0.1); } }
     .panel .panel_desc p {
       font-size: 13px;
       letter-spacing: .6px;
@@ -314,8 +331,10 @@ h4 {
       .panel .panel_desc table.noborder tr:hover {
         background-color: transparent !important; }
       .panel .panel_desc table.small {
-        width: auto; }
+        width: 100%; }
         .panel .panel_desc table.small td {
+          width: 100%;
+          max-width: 500px;
           padding: 0; }
       .panel .panel_desc table tr.t_head {
         font-weight: bold;
@@ -352,10 +371,10 @@ h4 {
       padding: 12px;
       margin: 0 0 1.5em; }
       .panel .panel_desc .panel_envelope.flex-item {
-        width: 33%; }
+        width: 25%; }
         @media only screen and (max-width: 800px) {
           .panel .panel_desc .panel_envelope.flex-item {
-            width: 33%; } }
+            width: 50%; } }
         @media only screen and (max-width: 500px) {
           .panel .panel_desc .panel_envelope.flex-item {
             width: 100%; } }
@@ -402,29 +421,43 @@ h4 {
               float: none; } }
 
 textarea {
+  resize: none;
   padding: 8px;
   margin: 4px 0;
   font-size: 13px;
-  width: 300px;
+  width: 100%;
   max-width: 500px;
   height: 100px;
   border: 1px solid #ddd;
   font-family: "Roboto"; }
+  textarea:focus {
+    border-color: #1e77d0; }
 
 input {
   font-family: "Roboto";
   font-weight: 400; }
   input[type='text'] {
     padding: 8px;
-    width: 100%;
+    width: 300px;
+    max-width: 500px;
     margin: 4px 0;
     font-size: 13px;
     border: 1px solid #ddd; }
+    input[type='text']:focus {
+      border-color: #1e77d0; }
   input[type='submit'] {
-    padding: 4px 8px;
-    border: 1px solid #888;
+    padding: 6px 12px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.25); }
+    background-color: #1e77d0;
+    color: white;
+    box-shadow: 0 0 0 black;
+    transition: all .1s ease; }
+    input[type='submit']:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
+    input[type='submit']:active {
+      box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4); }
 
 .footer {
   font-size: 12px;
@@ -442,6 +475,20 @@ input {
     display: block;
     margin: 40px 0 0;
     padding: 60px 0; }
+    .footer .nav .logo {
+      position: absolute;
+      left: 0;
+      display: inline;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%; }
+      @media only screen and (max-width: 800px) {
+        .footer .nav .logo {
+          top: 2em; } }
+      .footer .nav .logo img {
+        margin: 0 auto;
+        height: 30px;
+        opacity: .5; }
     .footer .nav ul {
       list-style: none;
       display: block;

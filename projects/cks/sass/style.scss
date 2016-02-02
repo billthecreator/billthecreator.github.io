@@ -13,6 +13,7 @@ $theme-color: #606523;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    outline: none;
 }
 body{
     margin: 0;
@@ -26,6 +27,10 @@ $link-color:#1e77d0;
 
 a {
     color: $link-color;
+    transition: color .1s ease;
+    &:hover{
+        color: rgba($link-color, .7);
+    }
     &, &:hover, &:active, &:focus {
         text-decoration: none;
     }
@@ -104,6 +109,14 @@ h6{}
 //            text-shadow: 2px 2px 3px rgba(black, .3);
             font-size: 36px;
             line-height: 40px;
+
+            img{
+                display: inline;
+                height: 26px;
+                line-height: inherit;
+                margin: auto;
+
+            }
 
             @media only screen and (max-width: $small-break) {
                 font-size: 30px;
@@ -211,7 +224,6 @@ h6{}
             a{
                 font-size: 15px;
                 font-weight: 600;
-                color:#3281d0;
                 padding: 0 4px;
 
             }
@@ -230,6 +242,7 @@ h6{}
                 background-color: rgba(black, .05);
 
                 &.future{
+                    li{float: left;}
                     li:not(:first-of-type):before{
                         content: "|";
                         color: rgba(black, .2);
@@ -240,6 +253,7 @@ h6{}
                     display: inline;
                     margin: 0;
                     text-align: left;
+                    float: left;
                     word-wrap: break-word;
 
                     &.active{
@@ -260,6 +274,8 @@ h6{}
                 width: 100%;
                 padding: 12px 0;
                 display: inline-flex;
+
+                $mobile-img-size: 50px;
 
                 &.twenty{
                     .badges{
@@ -320,6 +336,11 @@ h6{}
                         overflow: hidden;
                         display: block;
 
+                        @media only screen and (max-width: $small-break) {
+                            margin: 4px;
+                            border-radius: 2px;
+                        }
+
                         &:hover{
                             box-shadow: 0 2px 6px rgba(black, .3);
 
@@ -343,8 +364,8 @@ h6{}
                             overflow: hidden;
                             position: relative;
                             @media only screen and (max-width: $small-break) {
-                                width: 70px;
-                                max-height: 70px;
+                                width: $mobile-img-size;
+                                max-height: $mobile-img-size;
                                 overflow: visible;
                             }
 
@@ -379,14 +400,16 @@ h6{}
                                 opacity: 1;
                             }
                             @media only screen and (max-width: $small-break) {
-                                height: 70px;
-                                line-height: 65px;
-                                padding: 0 auto;
-                                left: 70px;
-                                width: calc(100%-70px);
-                                background-color: rgba(black, .025);
+                                height: $mobile-img-size;
+                                line-height: $mobile-img-size;
+                                padding: 0;
+                                padding-left: 12px;
+                                font-size: 18px;
+                                left: $mobile-img-size;
+                                width: calc(100%-$mobile-img-size);
+                                background-color: rgba(black, .02);
                                 color: black;
-                                border-left: 1px solid rgba(black,.075);
+                                border-left: 1px solid rgba(black,.1);
                             }
                         }
                     }
@@ -411,8 +434,13 @@ h6{}
                     tr:hover{background-color: transparent !important;}
                 }
                 &.small{
-                    width: auto;
-                    td{padding: 0;}
+                    width: 100%;
+
+                    td{
+                        width: 100%;
+                        max-width: 500px;
+                        padding: 0;
+                    }
                 }
 
                 tr{
@@ -477,9 +505,9 @@ h6{}
                 margin: 0 0 1.5em;
 
                 &.flex-item{
-                    width: 33%;
+                    width: 25%;
                         @media only screen and (max-width: $large-break) {
-                            width: 33%;
+                            width: 50%;
                         }
                         @media only screen and (max-width: $small-break) {
                             width: 100%;
@@ -546,31 +574,51 @@ h6{}
     }
 
 textarea{
-
+    resize: none;
     padding: 8px;
     margin: 4px 0;
     font-size: 13px;
-    width: 300px;
+    width: 100%;
     max-width: 500px;
     height: 100px;
     border: 1px solid #ddd;
     font-family: "Roboto";
+
+    &:focus{
+        border-color: $link-color;
+    }
 }
 input{
     font-family: "Roboto";
     font-weight: 400;
     &[type='text']{
         padding: 8px;
-        width: 100%;
+        width: 300px;
+        max-width: 500px;
         margin: 4px 0;
         font-size: 13px;
         border: 1px solid #ddd;
+
+        &:focus{
+            border-color: $link-color;
+        }
     }
     &[type='submit']{
-        padding: 4px 8px;
-        border: 1px solid #888;
+        padding: 6px 12px;
+        border-radius: 2px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
         cursor: pointer;
-        background-color: rgba(black, .25);
+        background-color: $link-color;
+        color: white;
+        box-shadow: 0 0 0 black;
+        transition: all .1s ease;
+
+        &:hover{
+            box-shadow: 0 2px 4px rgba(black, .4);
+        }
+        &:active{
+            box-shadow: inset 0 0 4px rgba(black, .4);
+        }
 
     }
 }
@@ -592,6 +640,26 @@ input{
         display: block;
         margin: 40px 0 0;
         padding: 60px 0;
+
+        .logo{
+            position: absolute;
+            left: 0;
+            display: inline;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+
+            @media only screen and (max-width: $large-break) {
+                top:2em;
+            }
+
+            img{
+                margin: 0 auto;
+                height: 30px;
+                opacity: .5;
+            }
+        }
+
 
 
         ul{
