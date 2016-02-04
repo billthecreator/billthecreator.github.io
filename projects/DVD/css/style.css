@@ -8,16 +8,22 @@
   -moz-box-sizing: border-box;
   outline: none; }
 
+html {
+  min-height: 100%; }
+
 body {
   margin: 0;
-  height: 100%;
+  width: 100%;
   position: relative;
   display: block;
+  left: 0;
+  top: 0;
   padding: 0;
   font-family: "Open Sans";
   font-weight: 400;
   background-color: #212145;
-  background: -webkit-linear-gradient(top, #212145 0%, black 100%); }
+  background: -webkit-linear-gradient(top, #212145 0%, black 100%);
+  background: linear-gradient(to bottom, #212145 0%, black 100%); }
 
 a {
   color: #1e77d0;
@@ -54,7 +60,7 @@ h4 {
   @media only screen and (max-width: 500px) {
     .header {
       margin-bottom: 150px; } }
-  .header .container {
+  .header .headcontainer {
     max-width: 1080px;
     margin: 0 auto; }
   .header .photo {
@@ -165,15 +171,15 @@ h4 {
 
 .container {
   margin: 0;
-  width: 100%; }
+  width: 100%;
+  overflow: auto; }
 
 .panel {
   max-width: 1080px;
   width: 100%;
   margin: 16px auto;
   position: relative;
-  display: block;
-  overflow: hidden; }
+  display: block; }
   .panel.fullscreen {
     max-width: 100%; }
   @media only screen and (max-width: 1080px) {
@@ -250,6 +256,9 @@ h4 {
         @media only screen and (max-width: 880px) {
           .panel .panel_desc .badge_case .badges {
             width: calc(100% / 5); } }
+        @media only screen and (max-width: 720px) {
+          .panel .panel_desc .badge_case .badges {
+            width: calc(100% / 3); } }
         @media only screen and (max-width: 500px) {
           .panel .panel_desc .badge_case .badges {
             width: calc(100% / 2); } }
@@ -257,12 +266,12 @@ h4 {
           color: black; }
         .panel .panel_desc .badge_case .badges .content {
           position: relative;
-          margin: 8px;
+          margin: 4px;
           overflow: hidden;
           border-radius: 0px;
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
           cursor: pointer;
-          transition: all .2s ease;
+          transition: all .3s ease;
           background-color: transparent;
           overflow: hidden;
           display: block; }
@@ -271,7 +280,8 @@ h4 {
               margin: 4px;
               border-radius: 2px; } }
           .panel .panel_desc .badge_case .badges .content:hover {
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
+            box-shadow: 0 6px 32px 12px rgba(0, 0, 0, 0.9);
+            z-index: 3; }
             .panel .panel_desc .badge_case .badges .content:hover .b_desc {
               opacity: 1;
               bottom: 0; }
@@ -289,24 +299,29 @@ h4 {
               padding: 4px; }
           .panel .panel_desc .badge_case .badges .content .b_desc {
             position: absolute;
-            width: calc(100%);
+            width: 100%;
             left: 0px;
-            bottom: -36px;
+            bottom: -40px;
             text-align: left;
             background-color: transparent;
             color: white;
             padding: 4px 12px;
             font-size: 20px;
-            line-height: 28px;
+            line-height: 1.1em;
             font-weight: 100;
             background-color: black;
             opacity: 0;
-            transition: all .2s ease; }
+            transition: all .3s ease-in-out; }
             .panel .panel_desc .badge_case .badges .content .b_desc .year {
+              margin-top: 8px;
               font-size: 13px;
               line-height: 13px;
               width: 100%;
               float: left; }
+            @media only screen and (max-width: 880px) {
+              .panel .panel_desc .badge_case .badges .content .b_desc {
+                font-size: 1em;
+                line-height: 1.5em; } }
             @media only screen and (max-width: 500px) {
               .panel .panel_desc .badge_case .badges .content .b_desc {
                 font-size: 1em;
