@@ -12,7 +12,7 @@ body {
   padding: 0;
   font-family: "Open Sans";
   font-weight: 400;
-  background-color: #010117; }
+  background-color: #15152c; }
 
 a {
   color: #1e77d0;
@@ -312,7 +312,7 @@ h4 {
                 font-size: 18px;
                 left: 50px;
                 width: calc(100%-$mobile-img-size);
-                background-color: rgba(0, 0, 0, 0.02);
+                background-color: white;
                 color: black;
                 border-left: 1px solid rgba(0, 0, 0, 0.1); } }
     .panel .panel_desc p {
@@ -538,7 +538,7 @@ input {
   display: flex; }
 
 .flex-item {
-  margin: 5px; }
+  margin: 0px; }
 
 .flex-container.space-around {
   -webkit-justify-content: space-around;
