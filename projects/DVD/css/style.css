@@ -174,7 +174,7 @@ h4 {
   position: relative;
   display: block;
   overflow: hidden; }
-  .panel.movieList {
+  .panel.fullscreen {
     max-width: 100%; }
   @media only screen and (max-width: 1080px) {
     .panel {
