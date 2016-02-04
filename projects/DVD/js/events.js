@@ -1,5 +1,4 @@
 var movieWitdh;
-var movieWitdh
 $(document).ready(function(){
     resizeMoviePoster();
 
