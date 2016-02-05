@@ -182,6 +182,11 @@ h4 {
   display: block; }
   .panel.fullscreen {
     max-width: 100%; }
+    .panel.fullscreen .panel_title, .panel.fullscreen .panel_desc {
+      padding: 6px 48px; }
+      @media only screen and (max-width: 880px) {
+        .panel.fullscreen .panel_title, .panel.fullscreen .panel_desc {
+          padding: 6px 12px; } }
   @media only screen and (max-width: 1080px) {
     .panel {
       width: calc(100% - 12px); } }
@@ -247,9 +252,9 @@ h4 {
         float: left;
         position: relative;
         display: inline-block;
-        width: calc(100% / 7);
         text-align: center;
-        height: auto; }
+        height: auto;
+        width: calc(100% / 8); }
         @media only screen and (max-width: 1080px) {
           .panel .panel_desc .badge_case .badges {
             width: calc(100% / 6); } }
@@ -280,7 +285,6 @@ h4 {
               margin: 4px;
               border-radius: 2px; } }
           .panel .panel_desc .badge_case .badges .content:hover {
-            box-shadow: 0 6px 32px 12px rgba(0, 0, 0, 0.9);
             z-index: 3; }
             .panel .panel_desc .badge_case .badges .content:hover .b_desc {
               opacity: 1;
@@ -301,15 +305,17 @@ h4 {
             position: absolute;
             width: 100%;
             left: 0px;
-            bottom: -40px;
+            bottom: 0px;
             text-align: left;
             background-color: transparent;
             color: white;
-            padding: 4px 12px;
-            font-size: 20px;
+            padding: 50px 6px 12px;
+            font-size: 18px;
+            font-weight: 500;
             line-height: 1.1em;
-            font-weight: 100;
             background-color: black;
+            background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
             opacity: 0;
             transition: all .3s ease-in-out; }
             .panel .panel_desc .badge_case .badges .content .b_desc .year {
@@ -317,7 +323,8 @@ h4 {
               font-size: 13px;
               line-height: 13px;
               width: 100%;
-              float: left; }
+              float: left;
+              font-weight: 300; }
             @media only screen and (max-width: 880px) {
               .panel .panel_desc .badge_case .badges .content .b_desc {
                 font-size: 1em;
@@ -327,8 +334,7 @@ h4 {
                 font-size: 1em;
                 line-height: 1.5em;
                 bottom: 0px;
-                opacity: 1;
-                background-color: black; } }
+                opacity: 1; } }
     .panel .panel_desc p {
       font-size: 13px;
       letter-spacing: .6px;
