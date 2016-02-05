@@ -318,13 +318,18 @@ h4 {
             background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
             opacity: 0;
             transition: all .3s ease-in-out; }
-            .panel .panel_desc .badge_case .badges .content .b_desc .year {
+            .panel .panel_desc .badge_case .badges .content .b_desc .title {
+              width: 100%;
+              float: left; }
+            .panel .panel_desc .badge_case .badges .content .b_desc .year, .panel .panel_desc .badge_case .badges .content .b_desc .rating {
               margin-top: 8px;
               font-size: 13px;
               line-height: 13px;
-              width: 100%;
+              width: 50%;
               float: left;
               font-weight: 300; }
+            .panel .panel_desc .badge_case .badges .content .b_desc .rating {
+              text-align: right; }
             @media only screen and (max-width: 880px) {
               .panel .panel_desc .badge_case .badges .content .b_desc {
                 font-size: 1em;
