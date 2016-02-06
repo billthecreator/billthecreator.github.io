@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DVD Inc | Home</title>
+    <title>DVD Inc | Request a DVD</title>
     <link href='css/style.css' rel='stylesheet'>
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'>
     <script src='//code.jquery.com/jquery-1.11.0.min.js'></script>
@@ -44,27 +44,52 @@
     </div>
     <div class='container'>
       <div class='panel'>
-        <div class='panel_title'>Movies and TV Shows</div>
         <div class='panel_desc'>
-          <div class='search'>
-            <div class='search_box'>
-              <input class='searchBar' placeholder='Search title'>
-              <span class='fa fa-search'></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class='panel'>
-        <div class='panel_title'>Welcome</div>
-        <div class='panel_desc'>
-          <p>Thank you for visiting Delectable Video Delicatessen, where you can find all the hard to find rare movies and TV sitcomes on DVD.</p>
-          <p>
-            You may browse the selection of great
-            <a href='filmlist.html'>cult movies or cult TV shows</a>
-            , of if you don't see what you're looking for, you can
-            <a href='request.html'>submit a request</a>
-            , and we'll do our best.
-          </p>
+          <p>Fill out the form below to request a DVD that we don't already stock.</p>
+          <table class='noborder small'>
+            <tbody>
+              <tr>
+                <td>
+                  <input placeholder='Title of DVD' type='text'>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input placeholder='URL to IMDB to help find your DVD' type='text'>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Some personal information to prevent spam</p>
+          <table class='noborder small'>
+            <tbody>
+              <tr>
+                <td>
+                  <input placeholder='Full Name' type='text'>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input placeholder='Email' type='text'>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input placeholder='Phone number' type='text'>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class='g-recaptcha' data-sitekey='6LcojhcTAAAAAGO_kYB52KOYqJs0nbtXVMwSoWwy'></div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type='submit' value='Submit'>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <div class='panel'>
