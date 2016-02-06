@@ -398,11 +398,13 @@ h4 {
         .panel .panel_desc .search .search_box input {
           padding: 8px;
           padding-left: 42px;
-          border: 1px solid rgba(0, 0, 0, 0.3);
+          border: 1px solid rgba(255, 255, 255, 0);
+          background-color: rgba(255, 255, 255, 0.15);
           border-radius: 3px;
-          width: 100%; }
+          width: 100%;
+          color: white; }
         .panel .panel_desc .search .search_box .fa {
-          color: black;
+          color: white;
           position: absolute;
           display: inline;
           left: 8px;
