@@ -361,20 +361,19 @@ h4 {
         width: auto; }
         .panel .panel_desc table.small td {
           max-width: 500px;
-          padding: 12px 6px; }
+          padding: 0 6px; }
       .panel .panel_desc table tr.t_head {
         font-weight: bold;
         text-transform: uppercase;
         color: rgba(0, 0, 0, 0.3);
         vertical-align: bottom; }
         .panel .panel_desc table tr.t_head td {
-          padding: 12px 0; }
+          padding: 0; }
           .panel .panel_desc table tr.t_head td.j_right {
             text-align: right; }
       .panel .panel_desc table tr:hover:not(.t_head) {
         background-color: rgba(0, 0, 0, 0.035); }
       .panel .panel_desc table tr td {
-        padding: 12px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         text-align: left; }
         .panel .panel_desc table tr td.price {
