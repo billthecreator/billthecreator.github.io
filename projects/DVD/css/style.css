@@ -434,8 +434,9 @@ h4 {
         display: inline-block;
         position: relative;
         padding: 0 12px;
-        margin: 0 0 1.5em;
-        line-height: 1.5em;
+        font-size: 1.5em;
+        margin: 0;
+        line-height: 1em;
         float: left; }
         .panel .panel_desc .panel_envelope h4.media.left {
           text-align: left; }
@@ -443,27 +444,27 @@ h4 {
         text-indent: 0; }
         .panel .panel_desc .panel_envelope p.media {
           display: inline;
-          width: calc(100% - 250px);
+          width: calc(100% - 250px - 80px);
           float: left;
           margin: 0 0 1.5em;
           padding: 0 12px; }
           .panel .panel_desc .panel_envelope p.media.address {
             display: block;
             width: 100%; }
-          @media only screen and (max-width: 1080px) {
+          @media only screen and (max-width: 720px) {
             .panel .panel_desc .panel_envelope p.media {
               width: 100%; } }
       .panel .panel_desc .panel_envelope img.media {
         max-width: 250px;
         width: 100%;
         height: auto;
-        padding: 8px;
+        padding: 0px;
         display: inline-block; }
         .panel .panel_desc .panel_envelope img.media.left {
           float: left; }
         .panel .panel_desc .panel_envelope img.media.right {
           float: right; }
-        @media only screen and (max-width: 1080px) {
+        @media only screen and (max-width: 720px) {
           .panel .panel_desc .panel_envelope img.media {
             margin: 12px 0;
             display: block; }
