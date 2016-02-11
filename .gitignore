@@ -54,3 +54,5 @@ projects/cks/Guardfile
 *.psd
 projects/DVD/Guardfile
 projects/DVD/Gemfile
+Guardfile
+Gemfile
