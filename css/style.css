@@ -87,6 +87,126 @@ h5 {
   font-weight: 500;
   color: #FA6B5B; }
 
+.flex-container {
+  margin: 10px auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-item {
+  margin: 5px; }
+
+.flex-container.space-around {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: justify;
+  justify-content: space-around; }
+
+.flex-container.flex-start {
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.flex-container.wrap {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.badge_case {
+  margin: 0;
+  width: 100%;
+  padding: 12px;
+  display: inline-flex; }
+  .badge_case.logos .badges .content {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
+  .badge_case .badges {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: auto;
+    width: calc(100% / 4); }
+    @media only screen and (max-width: 1500px) {
+      .badge_case .badges {
+        width: calc(100% /3); } }
+    @media only screen and (max-width: 1200px) {
+      .badge_case .badges {
+        width: calc(100% / 2); } }
+    @media only screen and (max-width: 750px) {
+      .badge_case .badges {
+        width: calc(100% /1); } }
+    @media only screen and (max-width: 500px) {
+      .badge_case .badges {
+        width: calc(100% / 1); } }
+    .badge_case .badges a {
+      color: white; }
+    .badge_case .badges .content {
+      position: relative;
+      margin: 4px;
+      overflow: hidden;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+      transition: all .3s ease;
+      background-color: transparent;
+      overflow: hidden;
+      display: block;
+      color: white; }
+      @media only screen and (max-width: 500px) {
+        .badge_case .badges .content {
+          margin: 4px;
+          border-radius: 2px; } }
+      .badge_case .badges .content:hover {
+        z-index: 3; }
+        .badge_case .badges .content:hover .b_desc {
+          opacity: 1;
+          bottom: 0; }
+      .badge_case .badges .content .img {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        position: relative; }
+        .badge_case .badges .content .img.logo {
+          background-color: white;
+          background-size: 60%;
+          padding: 4px; }
+      .badge_case .badges .content .b_desc {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        bottom: 0px;
+        text-align: left;
+        background-color: transparent;
+        color: white !important;
+        padding: 50px 12px 12px;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: black;
+        background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
+        opacity: 0;
+        transition: all .3s ease-in-out; }
+        .badge_case .badges .content .b_desc .t {
+          font-size: 1.1em; }
+        @media only screen and (max-width: 1200px) {
+          .badge_case .badges .content .b_desc {
+            font-size: 1em;
+            bottom: 0px;
+            opacity: 1; } }
+        .badge_case .badges .content .b_desc .button {
+          font-size: 13px !important;
+          line-height: 1.2em;
+          padding: 6px;
+          margin: 2px;
+          min-height: auto; }
+
 #portfolio .columns {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.87);
   padding-bottom: 24px;
@@ -134,34 +254,29 @@ h5 {
   overflow: hidden;
   border: 0px solid black;
   background-color: none;
-  color: rgba(0, 0, 0, 0.87); }
+  color: white; }
   #portfolio .text-box > p {
     overflow: hidden;
     font-size: 16px;
-    line-height: 24px;
     margin: 0;
     width: 100;
-    color: rgba(0, 0, 0, 0.87);
+    color: white;
     font-weight: 500;
     float: left;
     display: block; }
     #portfolio .text-box > p span {
       float: right;
       width: 100%;
-      color: rgba(0, 0, 0, 0.87);
+      color: white;
       font-size: 14px;
       font-weight: 300;
       display: block; }
       #portfolio .text-box > p span.strike {
         text-decoration: line-through; }
-  #portfolio .text-box a .t {
-    font-weight: 900; }
-  #portfolio .text-box a .d {
-    font-size: .8em; }
 
 .sub_container {
   padding: 0px 0;
-  max-width: 890px;
+  max-width: 920px;
   width: 100%;
   overflow: hidden;
   display: block;
@@ -172,6 +287,16 @@ h5 {
   border-style: solid;
   padding: 16px 56px;
   box-shadow: none; }
+  .sub_container.fullscreen {
+    max-width: 100%; }
+    .sub_container.fullscreen .card_title {
+      margin: 0 auto;
+      max-width: calc(920px - (56px*2));
+      padding: auto 12px; }
+      @media only screen and (max-width: 920px) {
+        .sub_container.fullscreen .card_title {
+          margin: 0 16px;
+          padding: 0; } }
 
 #side_bar {
   min-width: 100%;
@@ -283,7 +408,7 @@ h5 {
   #nav h1 {
     display: inline-block;
     position: absolute;
-    max-width: 890px;
+    max-width: 920px;
     left: 80px;
     font-size: 64px;
     font-weight: 300;
@@ -490,10 +615,10 @@ h5 {
   .button.fill {
     width: 100%; }
   .button.square {
-    padding: 12px 16px;
-    margin-top: 24px;
+    padding: 8px 16px;
     margin-right: 8px;
-    min-width: 88px;
+    margin-top: 4px;
+    min-width: 48px;
     min-height: 36px;
     border: none;
     float: left;
@@ -532,7 +657,6 @@ h5 {
   .button.round {
     display: inline-block;
     position: relative;
-    padding: 0;
     overflow: hidden;
     box-shadow: 0 0px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
     border-radius: 28px;
@@ -599,9 +723,9 @@ h5 {
     box-shadow: none; }
     .button.flat:hover, .button.flat :focus {
       color: black;
-      background-color: rgba(153, 153, 153, 0.2); }
+      background-color: rgba(255, 255, 255, 0.8); }
     .button.flat:active {
-      background-color: rgba(153, 153, 153, 0.4); }
+      background-color: rgba(255, 255, 255, 0.6); }
 
 #cards {
   width: 100%;
@@ -809,7 +933,7 @@ input:-webkit-autofill {
             transition: all 0.14s ease-out;
             color: rgba(255, 255, 255, 0.9); }
 
-@media screen and (max-width: calc(890px + 1)) {
+@media screen and (max-width: calc(920px + 1)) {
   #side_bar #cover h1 {
     line-height: 400px;
     height: 400px;
@@ -819,7 +943,7 @@ input:-webkit-autofill {
     margin-top: 0px;
     max-width: 1200px;
     width: 100%; } }
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 920px) {
   #nav {
     display: block;
     max-height: 300px; }
@@ -897,7 +1021,6 @@ input:-webkit-autofill {
   .button {
     margin: 5px 0px;
     margin-bottom: 0px;
-    width: calc(100%);
     text-align: center;
     text-indent: 0; }
     .button.square {

@@ -5,6 +5,8 @@ topbarChange();
 changeInstaPicSize();
 $(document).ready(function(){
 
+    resizeMoviePoster();
+
     $(window).scroll(function () {
         var _top = $('#side_bar').height();
         var _navTop = $('#nav').height();
@@ -28,6 +30,13 @@ $(document).ready(function(){
 
         _lastScrollTemp = $(document).scrollTop();
 
+
+    });
+
+
+    $( window ).resize(function() {
+        changeInstaPicSize();
+        resizeMoviePoster();
 
     });
 
@@ -90,11 +99,6 @@ function openNav(){
 
 }
 
-$( window ).resize(function() {
-    changeInstaPicSize();
-
-});
-
 function topbarChange(){
     if ($(document).innerWidth() <= 960){
 
@@ -118,4 +122,9 @@ function changeInstaPicSize(){
     $(_instaPicContainer).css('height', _instaHeight + "px");
     $("#drawer ul").css('height', "calc(100vh - " + _instaHeight + "px)");
 
+}
+
+function resizeMoviePoster() {
+    portCardWitdh = $(".portCard").width();
+    $(".portCard").css("height", portCardWitdh * (978/1860));
 }
