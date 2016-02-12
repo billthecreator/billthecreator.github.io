@@ -50,11 +50,11 @@ h2 {
   -webkit-font-smoothing: antialiased; }
 
 h4 {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: 500;
   text-align: left;
   line-height: 25px;
-  margin: 0px 0;
+  margin: 0px 0 0 6px;
   -webkit-font-smoothing: antialiased; }
 
 h5 {
@@ -776,7 +776,6 @@ h5 {
   margin-bottom: 16px; }
 
 .card ul {
-  margin: 8px 0 16px 0;
   padding: 0;
   text-align: center;
   width: 100%; }
@@ -784,11 +783,12 @@ h5 {
 .card li {
   padding: 4px 8px;
   width: auto;
-  margin: 2px 0;
-  border-radius: 4px;
+  margin: 0px 0;
+  border-radius: 0px;
   line-height: 24px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  background-color: rgba(221, 221, 221, 0.6); }
   .card li:nth-child(2n+2) {
     background-color: #54a854;
     color: white; }
@@ -812,6 +812,28 @@ h5 {
     margin: 0; }
   .card li h5 {
     margin: 0; }
+
+.card .list-flex {
+  width: calc(100% / 3);
+  margin: 0;
+  padding: 8px; }
+  .card .list-flex.half-list {
+    width: calc(100% /2); }
+    @media only screen and (max-width: 750px) {
+      .card .list-flex.half-list {
+        width: calc(100% /1); } }
+  @media only screen and (max-width: 1500px) {
+    .card .list-flex {
+      width: calc(100% /3); } }
+  @media only screen and (max-width: 1200px) {
+    .card .list-flex {
+      width: calc(100% /3); } }
+  @media only screen and (max-width: 750px) {
+    .card .list-flex {
+      width: calc(100% /2); } }
+  @media only screen and (max-width: 500px) {
+    .card .list-flex {
+      width: calc(100% / 1); } }
 
 .field {
   width: 100%;
