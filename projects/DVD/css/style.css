@@ -389,7 +389,8 @@ h4 {
     .panel .panel_desc .panel_mailbox {
       float: left;
       display: inline-block;
-      position: relative; }
+      position: relative;
+      width: 100%; }
     .panel .panel_desc .search {
       width: 100%;
       height: 42px;
