@@ -423,10 +423,10 @@ h4 {
       padding: 12px;
       margin: 0 0 1.5em; }
       .panel .panel_desc .panel_envelope.flex-item {
-        width: 25%; }
+        width: 33%; }
         @media only screen and (max-width: 880px) {
           .panel .panel_desc .panel_envelope.flex-item {
-            width: 25%; } }
+            width: 50%; } }
         @media only screen and (max-width: 500px) {
           .panel .panel_desc .panel_envelope.flex-item {
             width: 100%; } }
