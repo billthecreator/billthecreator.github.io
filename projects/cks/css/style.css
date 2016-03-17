@@ -173,6 +173,9 @@ h4 {
     padding: 60px 0;
     text-align: center;
     background-color: rgba(31, 61, 92, 0.1); }
+    @media only screen and (max-width: 800px) {
+      .panel.fullscreen {
+        width: calc(100%); } }
   @media only screen and (max-width: 800px) {
     .panel {
       width: calc(100% - 12px); } }
