@@ -179,6 +179,9 @@ h4 {
     @media only screen and (max-width: 800px) {
       .panel.fullscreen {
         width: calc(100%); } }
+    .panel.fullscreen p {
+      margin-bottom: 0 !important;
+      padding-bottom: 0; }
   @media only screen and (max-width: 800px) {
     .panel {
       width: calc(100% - 12px); } }
