@@ -607,6 +607,45 @@ h6{}
                 }
             }
 
+            .portal_form{
+                width: 100%;
+                max-width: 350px;
+                position: relative;
+                margin: 0 auto;
+                padding: 12px;
+
+                .login{
+                    background-color: white;
+                    overflow: hidden;
+                    border-radius: 3px;
+                    border: 1px solid rgba(black, 0.15);
+                    box-shadow: 0 1px 3px rgba(black, 0);
+
+                    hr{
+                        border: none;
+                        border-bottom: 1px solid rgba(rgb(26, 26, 26), .1);
+                        margin: 0;
+                    }
+
+                    input[type="text"], input[type="password"]{
+                        border:0;
+                        margin: 0;
+                        padding: 12px;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }
+                input[type="submit"]{
+                    margin: 12px auto;
+                    position: relative;
+                    width: 100%;
+                }
+
+                table{
+                    width: 100%;
+                }
+
+            }
         }
     }
 
@@ -628,7 +667,7 @@ textarea{
 input{
     font-family: "Roboto";
     font-weight: 400;
-    &[type='text']{
+    &[type='text'], &[type='password']{
         padding: 8px;
         width: 100%;
         max-width: 500px;
