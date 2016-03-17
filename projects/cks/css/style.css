@@ -167,11 +167,17 @@ h4 {
   position: relative;
   display: block;
   overflow: hidden; }
+  .panel.fullscreen {
+    max-width: 100%;
+    margin: 0;
+    padding: 60px 0;
+    text-align: center;
+    background-color: rgba(31, 61, 92, 0.1); }
   @media only screen and (max-width: 800px) {
     .panel {
       width: calc(100% - 12px); } }
   .panel .page_title {
-    margin: 24px 12px 12px;
+    margin: 24x 12px 12px;
     padding: 0;
     font-size: 28px;
     font-weight: 700;
@@ -191,15 +197,16 @@ h4 {
       font-weight: 600;
       padding: 0 4px; }
   .panel .panel_desc {
-    padding: 6px 12px;
+    padding: 0px 12px;
     color: rgba(0, 0, 0, 0.75); }
     .panel .panel_desc .breadcrumb {
       display: inline-block;
+      float: left;
       width: auto;
-      margin: 0 1em 1em 0;
+      margin: 0;
       font-size: 13px;
       border-radius: 2px;
-      padding: 8px 16px;
+      padding: 12px 16px;
       background-color: rgba(0, 0, 0, 0.05); }
       .panel .panel_desc .breadcrumb.future li {
         float: left; }
@@ -225,16 +232,46 @@ h4 {
       display: inline-flex; }
       .panel .panel_desc .badge_case.twenty .badges {
         width: calc(100% / 3); }
+        .panel .panel_desc .badge_case.twenty .badges .content {
+          background-color: black; }
+          .panel .panel_desc .badge_case.twenty .badges .content:hover {
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
+            @media only screen and (min-width: 500px) {
+              .panel .panel_desc .badge_case.twenty .badges .content:hover .b_desc {
+                bottom: 0px;
+                opacity: 1; }
+              .panel .panel_desc .badge_case.twenty .badges .content:hover .img {
+                transition: opacity .2s ease;
+                opacity: .55; } }
         .panel .panel_desc .badge_case.twenty .badges .content .img {
-          height: 130px; }
+          height: 130px;
+          opacity: .4;
+          transition: opacity .2s ease; }
         .panel .panel_desc .badge_case.twenty .badges .content .b_desc {
-          font-size: 16px !important; }
+          font-size: 22px !important;
+          height: calc(50% + (22px/2));
+          font-weight: 500;
+          background-color: transparent;
+          padding: 0;
+          text-align: center; }
         @media only screen and (max-width: 800px) {
           .panel .panel_desc .badge_case.twenty .badges {
             width: calc(50%); } }
         @media only screen and (max-width: 500px) {
           .panel .panel_desc .badge_case.twenty .badges {
-            width: calc(100%); } }
+            width: calc(100%); }
+            .panel .panel_desc .badge_case.twenty .badges .content {
+              background-color: white; }
+            .panel .panel_desc .badge_case.twenty .badges .content .img {
+              height: 130px;
+              opacity: 1; }
+            .panel .panel_desc .badge_case.twenty .badges .content .b_desc {
+              font-size: 16px !important;
+              height: auto;
+              font-weight: 500;
+              background-color: transparent;
+              padding: 0 12px;
+              text-align: left; } }
       .panel .panel_desc .badge_case.logos .badges .content {
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
       .panel .panel_desc .badge_case .badges {
@@ -409,10 +446,20 @@ h4 {
         display: inline-block;
         position: relative;
         padding: 0 12px;
-        margin: 0 0 1.5em;
+        margin: 0 0 1em;
         line-height: 1.5em;
         float: left; }
         .panel .panel_desc .panel_envelope h4.media.left {
+          text-align: left; }
+      .panel .panel_desc .panel_envelope h5.media {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding: 0 12px;
+        margin: 0 0 1em;
+        line-height: 1.5em;
+        float: left; }
+        .panel .panel_desc .panel_envelope h5.media.left {
           text-align: left; }
       .panel .panel_desc .panel_envelope p {
         text-indent: 0; }
