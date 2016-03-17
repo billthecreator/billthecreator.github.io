@@ -7,6 +7,7 @@ $large-break: $panel-width - 200px;
 $small-break: 500px;
 
 $theme-color: #606523;
+$theme-color: #1f3d5c;
 
 
 *{
@@ -104,8 +105,8 @@ h6{}
         .title{
             display: inline;
             float: left;
-            font-family: "Titillium Web";
-            font-weight: 300;
+            font-family: "Lato";
+            font-weight: 400;
 //            text-shadow: 2px 2px 3px rgba(black, .3);
             font-size: 36px;
             line-height: 40px;
