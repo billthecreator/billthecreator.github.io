@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300|Roboto:400,300,500,700,900|PT+Sans:400,700|Lato:400,300,700,900);
 @import url(https://fonts.googleapis.com/css?family=Poiret+One|Satisfy|Philosopher|Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lora:400,700|Titillium+Web:400,600,700,300);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700,700italic|Titillium+Web:400,600,700,300);
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -170,10 +170,22 @@ h4 {
   @media only screen and (max-width: 800px) {
     .panel {
       width: calc(100% - 12px); } }
+  .panel .page_title {
+    margin: 24px 12px 12px;
+    padding: 0;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: italic;
+    font-family: 'Lora';
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 3px;
+    width: auto;
+    display: inline-block; }
   .panel .panel_title {
     padding: 6px 12px;
     font-size: 18px;
-    font-weight: 600; }
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8); }
     .panel .panel_title a {
       font-size: 15px;
       font-weight: 600;
@@ -322,10 +334,10 @@ h4 {
       margin-bottom: 1.5em; }
     .panel .panel_desc .faq_box {
       border: 1px solid transparent;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
       border-radius: 6px;
       padding: 0 12px;
-      margin-bottom: 12px;
+      margin-top: 12px;
       cursor: pointer;
       background-color: white; }
       .panel .panel_desc .faq_box:hover h4 {
@@ -375,7 +387,8 @@ h4 {
     .panel .panel_desc .panel_mailbox {
       float: left;
       display: inline-block;
-      position: relative; }
+      position: relative;
+      width: 100%; }
     .panel .panel_desc .panel_envelope {
       display: block;
       position: relative;
@@ -385,7 +398,7 @@ h4 {
       padding: 12px;
       margin: 0 0 1.5em; }
       .panel .panel_desc .panel_envelope.flex-item {
-        width: 25%; }
+        width: 33%; }
         @media only screen and (max-width: 800px) {
           .panel .panel_desc .panel_envelope.flex-item {
             width: 50%; } }
@@ -452,7 +465,7 @@ input {
   font-weight: 400; }
   input[type='text'] {
     padding: 8px;
-    width: 300px;
+    width: 100%;
     max-width: 500px;
     margin: 4px 0;
     font-size: 13px;
