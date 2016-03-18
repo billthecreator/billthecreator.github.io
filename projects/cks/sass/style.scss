@@ -217,7 +217,7 @@ h6{}
     &.fullscreen {
         max-width:100%;
         margin: 0;
-        padding: 60px;
+        padding: 60px 12px;
         display: block;
         position: relative;
         min-height:128px;
@@ -229,6 +229,9 @@ h6{}
          }
         p{margin-bottom:0 !important; padding-bottom:0;}
     }
+
+    &.text_left{text-align: left;}
+    &.background_clear{background-color: transparent;}
 
     @media only screen and (max-width: $large-break) {
         width: calc(100% - 12px);
@@ -685,6 +688,32 @@ h6{}
                 }
             }
 
+            .panel_gallery{
+                padding:0;
+                margin: 0;
+
+                @media only screen and (max-width: $large-break) {
+                    width: 100%;
+                }
+                @media only screen and (max-width: $small-break) {
+                    width: 100%;
+                }
+                img{
+                    height: 300px;
+                    padding: 0;
+                    margin: 4px;
+                    float: left;
+
+                    @media only screen and (max-width: $large-break) {
+                        height: 200px;
+                    }
+                    @media only screen and (max-width: $small-break) {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
             .portal_form{
                 width: 100%;
                 max-width: 350px;
@@ -872,6 +901,9 @@ input{
 }
 .flex-item{
     margin:5px;
+}
+.flex-column{
+    flex-flow: column;
 }
 
 .flex-container.space-around{

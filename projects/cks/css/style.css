@@ -171,7 +171,7 @@ h4 {
   .panel.fullscreen {
     max-width: 100%;
     margin: 0;
-    padding: 60px;
+    padding: 60px 12px;
     display: block;
     position: relative;
     min-height: 128px;
@@ -183,6 +183,10 @@ h4 {
     .panel.fullscreen p {
       margin-bottom: 0 !important;
       padding-bottom: 0; }
+  .panel.text_left {
+    text-align: left; }
+  .panel.background_clear {
+    background-color: transparent; }
   @media only screen and (max-width: 800px) {
     .panel {
       width: calc(100% - 12px); } }
@@ -503,6 +507,27 @@ h4 {
             .panel .panel_desc .panel_envelope img.media.left, .panel .panel_desc .panel_envelope img.media.right {
               clear: both;
               float: none; } }
+    .panel .panel_desc .panel_gallery {
+      padding: 0;
+      margin: 0; }
+      @media only screen and (max-width: 800px) {
+        .panel .panel_desc .panel_gallery {
+          width: 100%; } }
+      @media only screen and (max-width: 500px) {
+        .panel .panel_desc .panel_gallery {
+          width: 100%; } }
+      .panel .panel_desc .panel_gallery img {
+        height: 300px;
+        padding: 0;
+        margin: 4px;
+        float: left; }
+        @media only screen and (max-width: 800px) {
+          .panel .panel_desc .panel_gallery img {
+            height: 200px; } }
+        @media only screen and (max-width: 500px) {
+          .panel .panel_desc .panel_gallery img {
+            width: 100%;
+            height: auto; } }
     .panel .panel_desc .portal_form {
       width: 100%;
       max-width: 350px;
@@ -650,6 +675,9 @@ input {
 
 .flex-item {
   margin: 5px; }
+
+.flex-column {
+  flex-flow: column; }
 
 .flex-container.space-around {
   -webkit-justify-content: space-around;
