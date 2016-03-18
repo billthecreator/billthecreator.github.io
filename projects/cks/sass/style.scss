@@ -702,7 +702,9 @@ h6{}
                     height: 300px;
                     padding: 0;
                     margin: 4px;
-                    float: left;
+                    padding: 8px;
+                    border: 1px solid #ddd;
+                    display: inline-block;
 
                     @media only screen and (max-width: $large-break) {
                         height: 200px;

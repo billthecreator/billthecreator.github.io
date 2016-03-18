@@ -520,7 +520,9 @@ h4 {
         height: 300px;
         padding: 0;
         margin: 4px;
-        float: left; }
+        padding: 8px;
+        border: 1px solid #ddd;
+        display: inline-block; }
         @media only screen and (max-width: 800px) {
           .panel .panel_desc .panel_gallery img {
             height: 200px; } }
