@@ -740,45 +740,56 @@ h6{}
                 }
             }
 
-            .panel_quote_box{
-                display: block;
-                position: relative;
-
+            .panel_quote_container{
+                margin: 0;
                 width: 100%;
-                margin: 12px auto;
-                border: 1px solid rgba(black, .1);
-                border-radius: 3px;
                 padding: 12px 0;
-                padding-left: 32px;
-                font-size: 15px;
+                display: inline-flex;
+            }
+            .panel_quote_box{
+                    margin: 0px;
+                    width: calc(100% / 3);
+                .quote_container{
+                    margin: 8px;
+                    display: block;
+                    position: relative;
+                    background-color: rgba(white, 1.05);
+                    border: 1px solid rgba(black, .1);
+                    box-shadow: 0 1px 2px rgba(black, .1);
+                    margin: 8px;
+                    border-radius: 5px;
+                    padding: 12px 32px;
+                    font-size: 15px;
 
-                .quote_text{
-                    line-height: 22px;
-                    padding: 12px;
-                    font-style: italic;
-
-                    &:before{
-                        position: absolute;
-                        left: 12px;
-                        content: "\201C";
-                        font-size: 40px;
-                        font-weight: bold;
-                        font-family: "Source Sans Pro";
-                        text-shadow: 2px 2px 0 rgba(black, .1);
-
-                    }
-
-                    .quotee{
-
-                        float: right;
+                    .quote_text{
+                        line-height: 22px;
+                        padding: 12px;
                         font-style: italic;
-                        color: rgba(black, .46);
 
                         &:before{
-                            content: "\2014";
+                            position: absolute;
+                            left: 12px;
+                            content: "\201C";
+                            font-size: 40px;
+                            font-weight: bold;
+                            font-family: "Source Sans Pro";
+                            text-shadow: 2px 2px 0 rgba(black, .1);
+
+                        }
+
+                        .quotee{
+
+                            text-align: right;
+                            font-style: italic;
+                            color: rgba(black, .46);
+
+                            &:before{
+                                content: "\2014";
+                            }
                         }
                     }
                 }
+
             }
 
             .portal_form{

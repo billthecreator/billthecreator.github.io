@@ -549,34 +549,43 @@ h4 {
           .panel .panel_desc .panel_gallery img {
             width: 100%;
             height: auto; } }
-    .panel .panel_desc .panel_quote_box {
-      display: block;
-      position: relative;
+    .panel .panel_desc .panel_quote_container {
+      margin: 0;
       width: 100%;
-      margin: 12px auto;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 3px;
       padding: 12px 0;
-      padding-left: 32px;
-      font-size: 15px; }
-      .panel .panel_desc .panel_quote_box .quote_text {
-        line-height: 22px;
-        padding: 12px;
-        font-style: italic; }
-        .panel .panel_desc .panel_quote_box .quote_text:before {
-          position: absolute;
-          left: 12px;
-          content: "\201C";
-          font-size: 40px;
-          font-weight: bold;
-          font-family: "Source Sans Pro";
-          text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); }
-        .panel .panel_desc .panel_quote_box .quote_text .quotee {
-          float: right;
-          font-style: italic;
-          color: rgba(0, 0, 0, 0.46); }
-          .panel .panel_desc .panel_quote_box .quote_text .quotee:before {
-            content: "\2014"; }
+      display: inline-flex; }
+    .panel .panel_desc .panel_quote_box {
+      margin: 0px;
+      width: calc(100% / 3); }
+      .panel .panel_desc .panel_quote_box .quote_container {
+        margin: 8px;
+        display: block;
+        position: relative;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        margin: 8px;
+        border-radius: 5px;
+        padding: 12px 32px;
+        font-size: 15px; }
+        .panel .panel_desc .panel_quote_box .quote_container .quote_text {
+          line-height: 22px;
+          padding: 12px;
+          font-style: italic; }
+          .panel .panel_desc .panel_quote_box .quote_container .quote_text:before {
+            position: absolute;
+            left: 12px;
+            content: "\201C";
+            font-size: 40px;
+            font-weight: bold;
+            font-family: "Source Sans Pro";
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1); }
+          .panel .panel_desc .panel_quote_box .quote_container .quote_text .quotee {
+            text-align: right;
+            font-style: italic;
+            color: rgba(0, 0, 0, 0.46); }
+            .panel .panel_desc .panel_quote_box .quote_container .quote_text .quotee:before {
+              content: "\2014"; }
     .panel .panel_desc .portal_form {
       width: 100%;
       max-width: 350px;
