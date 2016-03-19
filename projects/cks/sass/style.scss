@@ -716,6 +716,47 @@ h6{}
                 }
             }
 
+            .panel_quote_box{
+                display: block;
+                position: relative;
+
+                width: 100%;
+                margin: 12px auto;
+                border: 1px solid rgba(black, .1);
+                border-radius: 3px;
+                padding: 12px 0;
+                padding-left: 32px;
+                font-size: 15px;
+
+                .quote_text{
+                    line-height: 22px;
+                    padding: 12px;
+                    font-style: italic;
+
+                    &:before{
+                        position: absolute;
+                        left: 12px;
+                        content: "\201C";
+                        font-size: 40px;
+                        font-weight: bold;
+                        font-family: "Source Sans Pro";
+                        text-shadow: 2px 2px 0 rgba(black, .1);
+
+                    }
+
+                    .quotee{
+
+                        float: right;
+                        font-style: italic;
+                        color: rgba(black, .46);
+
+                        &:before{
+                            content: "\2014";
+                        }
+                    }
+                }
+            }
+
             .portal_form{
                 width: 100%;
                 max-width: 350px;
