@@ -778,6 +778,9 @@ h6{}
             .panel_quote_box{
                     margin: 0px;
                     width: calc(100% / 3);
+                @media only screen and (max-width: $large-break) {
+                    width: 100%;
+                }
                 .quote_container{
                     margin: 8px;
                     display: block;

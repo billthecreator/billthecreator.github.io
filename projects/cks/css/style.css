@@ -581,6 +581,9 @@ h4 {
     .panel .panel_desc .panel_quote_box {
       margin: 0px;
       width: calc(100% / 3); }
+      @media only screen and (max-width: 800px) {
+        .panel .panel_desc .panel_quote_box {
+          width: 100%; } }
       .panel .panel_desc .panel_quote_box .quote_container {
         margin: 8px;
         display: block;
