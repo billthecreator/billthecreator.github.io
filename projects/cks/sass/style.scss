@@ -229,6 +229,28 @@ h6{}
          }
         p{margin-bottom:0 !important; padding-bottom:0;}
     }
+    &.with_banner{
+        background-color: rgba($theme-color, 0);
+        color: black;
+        -webkit-transform: translate3d(0, 0, 0);
+        overflow: hidden;
+        border-bottom: 1px solid rgba(black, .2);
+    }
+    .banner{
+        z-index: -1;
+        -webkit-filter: blur(3px);
+        height: calc(100% + 10px);
+        width: calc(100% + 10px);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: -5px;
+        opacity: .3;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 
     &.text_left{text-align: left;}
     &.background_clear{background-color: transparent;}
@@ -238,6 +260,7 @@ h6{}
      }
 
     .page_title{
+        z-index: 2;
         margin: 0;
         padding: 0;
         font-size: 28px;
@@ -560,13 +583,19 @@ h6{}
                 }
                 &.small{
                     width: 100%;
+                    max-width: 500px;
 
                     td{
-                        width: 100%;
-                        max-width: 500px;
+                        width: 50%;
+                        max-width: 250px;
                         padding: 0;
 
-                        &.half{ width: 50%;}
+                        &.half{
+                            max-width: 250px;
+                            &:first-of-type{
+                                padding-right: 5px;
+                            }
+                        }
                     }
                 }
 
@@ -854,8 +883,8 @@ input{
     font-weight: 400;
     &[type='text'], &[type='password']{
         padding: 8px;
+        width: auto;
         width: 100%;
-        max-width: 500px;
         margin: 4px 0;
         font-size: 13px;
         border: 1px solid #ddd;
