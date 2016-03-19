@@ -400,13 +400,15 @@ h6{}
                         @media only screen and (max-width: $small-break) {
                             width: calc(100%);
                             .content {
-                            background-color: white;
+                                box-shadow: 0 1px 3px rgba(black, .3);
+                                background-color: white;
                             }
                             .content .img{
                                 height: 130px;
                                 opacity: 1;
                                 background-size: cover;
                                 border-radius: 0;
+                                        -webkit-filter: blur(0px);
                             }
                             .content .b_desc{
                                 $fontsize:16px;
