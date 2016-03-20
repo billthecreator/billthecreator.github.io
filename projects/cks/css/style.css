@@ -426,6 +426,8 @@ h4 {
       letter-spacing: .6px;
       line-height: 1.5;
       margin-bottom: 1.5em; }
+    .panel .panel_desc ul {
+      list-style: none; }
     .panel .panel_desc .faq_box {
       border: 1px solid transparent;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
