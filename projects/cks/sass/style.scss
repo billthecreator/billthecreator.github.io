@@ -4,6 +4,7 @@
 
 $panel-width: 1000px;
 $large-break: $panel-width - 200px;
+$medium-break: $panel-width - 400px;
 $small-break: 500px;
 
 $theme-color: #606523;
@@ -446,7 +447,10 @@ h6{}
                     height: auto;
 
                     @media only screen and (max-width: $large-break) {
-                        width: calc(50%);
+                        width: calc(100% / 3);
+                    }
+                    @media only screen and (max-width: $medium-break) {
+                        width: calc(100% / 2);
                     }
                     @media only screen and (max-width: $small-break) {
                         width: calc(100%);
@@ -459,7 +463,7 @@ h6{}
                         margin: 8px;
                         overflow: hidden;
                         border-radius: 5px;
-                        box-shadow: 0 1px 3px rgba(black, .3);
+                        box-shadow: 0 0px 2px rgba(black, .2);
                         cursor: pointer;
                         transition: all .2s ease;
                         background-color: rgba(black, 0);
@@ -472,21 +476,23 @@ h6{}
                         }
 
                         &:hover{
-                            box-shadow: 0 2px 6px rgba(black, .3);
+                            box-shadow: 0 1px 8px rgba(black, .6);
 
                             .b_desc{
                                 bottom: -36px;
                                 opacity: 0;
-
-                                @media only screen and (max-width: $large-break) {
+                                @media only screen and (max-width: $small-break) {
                                     bottom:0px;
                                     opacity: 1;
+                                }
+                                @media only screen and (max-width: $large-break) {
+                                    bottom:0px;
                                 }
                             }
                         }
                         .img{
                             width: 100%;
-                            height: 170px;
+                            height: 130px;
                             background-size: 100%;
                             background-position: center center;
                             background-repeat: no-repeat;
@@ -518,17 +524,18 @@ h6{}
                             line-height: 28px;
                             font-weight: 100;
                             background-color: rgba(black, .6);
-                            opacity: 1;
+                            opacity: 0;
                             transition: bottom .2s ease, opacity .3s ease;
 
                             @media only screen and (max-width: $large-break) {
                                 bottom:0px;
-                                opacity: 1;
+                                opacity: 0;
                             }
                             @media only screen and (max-width: $small-break) {
                                 height: $mobile-img-size;
                                 line-height: $mobile-img-size;
                                 padding: 0;
+                                opacity: 1;
                                 padding-left: 12px;
                                 font-size: 18px;
                                 left: $mobile-img-size;
@@ -554,13 +561,17 @@ h6{}
             }
 
             .faq_box{
-                border: 1px solid rgba(black, 0);
-                box-shadow: 0 1px 3px rgba(black, .2);
+                border: 1px solid rgba(black, .2);
                 border-radius: 6px;
                 padding: 0 12px;
                 margin-top: 12px;
                 cursor: pointer;
-                background-color: white;
+
+                &.faq_selected{
+                    background-color: white;
+                    box-shadow: 0 2px 3px rgba(black, .2);
+                    h4{color: $link-color;}
+                }
 
                 &:hover {
                     h4 {
@@ -794,8 +805,8 @@ h6{}
                 display: inline-flex;
             }
             .panel_quote_box{
-                    margin: 0px;
-                    width: calc(100% / 3);
+                margin: 0px;
+                width: calc(100% / 3);
                 @media only screen and (max-width: $large-break) {
                     width: 100%;
                 }
