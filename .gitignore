@@ -56,3 +56,4 @@ projects/DVD/Guardfile
 projects/DVD/Gemfile
 Guardfile
 Gemfile
+*.bat
