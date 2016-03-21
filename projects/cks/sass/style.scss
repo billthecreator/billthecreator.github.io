@@ -90,10 +90,6 @@ h6{}
         padding: 24px;
         background-color: rgba($theme-color, .9);
         width: calc(100%);
-
-//        position: fixed;
-//        top:0;
-//        max-height: 84px;
         max-width: 100%;
         z-index: 200;
 
@@ -101,6 +97,57 @@ h6{}
             position: relative;
             padding: 0;
             max-height: 100%;
+        }
+
+        &.showSearch{
+            li:not(.search){
+                display: none;
+                opacity: 0;
+            }
+
+            .search{
+                input{
+                    display: inline;
+                    width: 300px;
+                    padding: 6px 12px;
+                    opacity: 1;
+                    transition: width .23s ease-in;
+                }
+                a i:after{
+                    content: "\f00d";
+                }
+            }
+        }
+
+        .search{
+
+            @media only screen and (max-width: $small-break) {
+                display: none;
+            }
+            a{
+                cursor: pointer;
+                i:after{
+                    content: "\f002";
+                }
+            }
+            input{
+                display: inline;
+                width: 0px;
+                float: left;
+                margin-right: 8px;
+                padding: 6px 0;
+                border-radius: 3px;
+                opacity: 1;
+                margin-top: 8px;
+                border: 0px solid rgba(black, 0);
+                background-color: rgba(white, .8);
+
+                &:focus {
+                    outline: none;
+                    background-color: rgba(white, 1);
+                }
+            }
+
         }
 
         .title{

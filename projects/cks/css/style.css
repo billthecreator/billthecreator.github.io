@@ -75,6 +75,38 @@ h4 {
         position: relative;
         padding: 0;
         max-height: 100%; } }
+    .header .nav.showSearch li:not(.search) {
+      display: none;
+      opacity: 0; }
+    .header .nav.showSearch .search input {
+      display: inline;
+      width: 300px;
+      padding: 6px 12px;
+      opacity: 1;
+      transition: width .23s ease-in; }
+    .header .nav.showSearch .search a i:after {
+      content: "\f00d"; }
+    @media only screen and (max-width: 500px) {
+      .header .nav .search {
+        display: none; } }
+    .header .nav .search a {
+      cursor: pointer; }
+      .header .nav .search a i:after {
+        content: "\f002"; }
+    .header .nav .search input {
+      display: inline;
+      width: 0px;
+      float: left;
+      margin-right: 8px;
+      padding: 6px 0;
+      border-radius: 3px;
+      opacity: 1;
+      margin-top: 8px;
+      border: 0px solid transparent;
+      background-color: rgba(255, 255, 255, 0.8); }
+      .header .nav .search input:focus {
+        outline: none;
+        background-color: white; }
     .header .nav .title {
       display: inline;
       float: left;

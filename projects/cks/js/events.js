@@ -54,4 +54,10 @@ $(document).ready(function(){
 
 
     })
+
+    $('.nav .search a').click(function(){
+        $('.nav').toggleClass('showSearch');
+        $('.nav .search input').select();
+    })
+
 });
