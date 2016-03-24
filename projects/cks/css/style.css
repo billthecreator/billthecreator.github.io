@@ -518,7 +518,12 @@ h4 {
         background-color: rgba(0, 0, 0, 0.035); }
       .panel .panel_desc table tr td {
         padding: 12px;
+        line-height: 24px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+        .panel .panel_desc table tr td p, .panel .panel_desc table tr td h4 {
+          line-height: inherit;
+          padding: 0;
+          margin: 0; }
         .panel .panel_desc table tr td.price {
           min-width: 100px;
           text-align-last: right; }

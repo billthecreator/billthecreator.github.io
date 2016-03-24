@@ -688,8 +688,14 @@ h6{}
 
                     td{
                         padding: 12px;
+                        line-height: 24px;
                         border-bottom: 1px solid rgba(black, .1);
 
+                        p, h4{
+                            line-height: inherit;
+                            padding: 0;
+                            margin: 0;
+                        }
 
                         &.price{
                             min-width: 100px;
