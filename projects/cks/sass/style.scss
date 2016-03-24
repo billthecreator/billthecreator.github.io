@@ -639,6 +639,14 @@ h6{}
                 border-collapse: separate;
                 border-spacing: 0px;
                 margin-bottom: 1.5em;
+                &.half{
+                    width: 50%;
+                    float: left;
+
+                    @media only screen and (max-width: $small-break) {
+                        width: 100%;
+                    }
+                }
 
                 &.noborder{
                     td{border: none !important;}

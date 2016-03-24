@@ -490,6 +490,12 @@ h4 {
       border-collapse: separate;
       border-spacing: 0px;
       margin-bottom: 1.5em; }
+      .panel .panel_desc table.half {
+        width: 50%;
+        float: left; }
+        @media only screen and (max-width: 500px) {
+          .panel .panel_desc table.half {
+            width: 100%; } }
       .panel .panel_desc table.noborder td {
         border: none !important; }
       .panel .panel_desc table.noborder tr:hover {
