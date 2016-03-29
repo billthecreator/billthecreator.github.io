@@ -65,66 +65,110 @@
       </div>
       <div class='panel'>
         <div class='panel_desc'>
-          <p>Dear {customerName},</p>
+          <p>Dear Gabriel Baker,</p>
           <p>
             Thank you for your order from Custom Kitchen Solutions. You can check your order by
             <a href=''>loggin into your account.</a>
             If you have any questions about your order please contact us
             <a href='locations.html'>here.</a>
           </p>
-          <h4>Your Invoice # for Order # {invoiceNumber}</h4>
+          <h4>Your Invoice # for Order # 3921093823412</h4>
           <table class='half'>
             <tbody>
-              <tr>
+              <tr class='t_head'>
                 <td>
                   <b>Billing Information:</b>
                 </td>
               </tr>
               <tr>
                 <td>
-                  {customerName}<br/>
-                  {address}<br/>
-                  {phoneNumber}
+                  Gabriel Baker<br/>
+                  123 Camelia Avenue<br/>
+                  Myrtle Beach SC, 29588<br/>
+                  915 847-8451
                 </td>
               </tr>
             </tbody>
           </table>
           <table class='half'>
             <tbody>
-              <tr>
+              <tr class='t_head'>
                 <td>
                   <b>Payment Information:</b>
                 </td>
               </tr>
               <tr>
                 <td>
-                  {creditCard}
+                  Credit Card
                 </td>
               </tr>
             </tbody>
           </table>
           <table>
             <tbody>
-              <tr>
+              <tr class='t_head'>
                 <td>Product</td>
                 <td>Serial Number</td>
                 <td>Quantity</td>
+                <td>Discount</td>
                 <td style='text-align: right;'>
                   Subtotal
                 </td>
               </tr>
               <tr>
-                <td>{itemDescription}</td>
-                <td>{serialNumber}</td>
-                <td>{quantity}</td>
+                <td>SS Side-by-Side Refrigerator</td>
+                <td>5897125</td>
+                <td>1</td>
+                <td>0</td>
                 <td style='text-align: right;'>
-                  {subtotal}
+                  $1,959.00
+                </td>
+              </tr>
+              <tr>
+                <td>Dishwasher</td>
+                <td>58344566</td>
+                <td>1</td>
+                <td>0</td>
+                <td style='text-align: right;'>
+                  $899.00
+                </td>
+              </tr>
+              <tr>
+                <td>Stainless 30” Free Convection Range</td>
+                <td>28946667</td>
+                <td>1</td>
+                <td>-$235.90</td>
+                <td style='text-align: right;'>
+                  $2,359.00
+                </td>
+              </tr>
+              <tr>
+                <td>In-Sink Disposer</td>
+                <td>55124791</td>
+                <td>1</td>
+                <td>-$11.45</td>
+                <td style='text-align: right;'>
+                  $229.00
                 </td>
               </tr>
               <tr>
                 <td colspan='4' style='text-align: right;'>
-                  Subtotal {subtotal}<br/>
-                  <b>Grand Total {grandTotal}</b>
+                  Delivery
+                </td>
+                <td style='text-align: right;'>$350</td>
+              </tr>
+              <tr>
+                <td colspan='4' style='text-align: right;'>
+                  Subtotal
+                </td>
+                <td style='text-align: right;'>$5,446.00</td>
+              </tr>
+              <tr>
+                <td colspan='4' style='text-align: right;'>
+                  <b>Grand Total</b>
+                </td>
+                <td style='text-align: right;'>
+                  <b>$5,198.65</b>
                 </td>
               </tr>
             </tbody>
