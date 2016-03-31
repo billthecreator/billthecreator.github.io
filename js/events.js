@@ -74,6 +74,7 @@ $('#darkOverlay').click(function(){
 
 
 function closeNav(){
+    $('#nav').removeClass('showNav');
     $('#drawer').removeClass('showNav');
     $('#side_bar').removeClass('showNav');
     $('#darkOverlay').removeClass('showNav');
@@ -86,6 +87,7 @@ function closeNav(){
 }
 
 function openNav(){
+    $('#nav').toggleClass('showNav');
     $('#drawer').toggleClass('showNav');
     $('#side_bar').toggleClass('showNav');
     $('#darkOverlay').toggleClass('showNav');
