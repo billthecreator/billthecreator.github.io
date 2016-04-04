@@ -4,6 +4,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Courgette|Berkshire+Swash);
 @import url("../fonts/geomanist.css");
+@import url(https://fonts.googleapis.com/css?family=Megrim);
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,17 +37,21 @@ h1 {
   font-weight: 300;
   text-align: left;
   line-height: 1.5em;
-  font-family: "Berkshire Swash"; }
+  font-family: "Open Sans"; }
 
 h2 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 28px;
-  background-color: #f4f4f4;
+  background-color: transparent;
   padding: 0;
   margin: 0;
   text-transform: uppercase;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2196F3), to(#1976D2));
+  -webkit-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; }
 
 h4 {
   font-size: 1em;
@@ -190,9 +195,9 @@ h5 {
         transition: all .3s ease-in-out;
         line-height: 1.5em; }
         .badge_case .badges .content .b_desc .t {
-          font-size: 1.2em;
+          font-size: 1.5em;
           font-weight: 500;
-          margin: 4px 0; }
+          margin: 8px 0; }
         .badge_case .badges .content .b_desc .d {
           font-weight: 300;
           margin: 4px 0; }
@@ -209,7 +214,7 @@ h5 {
           margin: 8px 10px 2px 0;
           min-height: auto;
           color: rgba(0, 0, 0, 0.87);
-          background-color: rgba(0, 0, 0, 0.13);
+          background-color: rgba(0, 0, 0, 0.05);
           transition: background-color .3s ease; }
 
 #portfolio .columns {
@@ -362,17 +367,21 @@ h5 {
   .hamburger.black {
     background-image: url("../images/ic_menu_black_24dp.png");
     transition: background-image .7s ease;
-    opacity: .6; }
+    opacity: .86; }
     .hamburger.black:after {
-      content: "BtC";
+      content: "WR";
+      font-weight: 800;
+      font-size: 1.2em;
       position: absolute;
-      top: 0;
+      top: 12px;
+      padding: 0 4px;
       width: auto;
-      line-height: 56px;
-      height: 52px;
+      line-height: 32px;
+      height: 32px;
       overflow: hidden;
-      color: rgba(0, 0, 0, 0.87);
-      font-family: "Berkshire Swash";
+      background-color: #0a303d;
+      color: #2196F3;
+      font-family: "Open Sans";
       left: 64px; }
   .hamburger:hover {
     opacity: 1; }
@@ -398,40 +407,46 @@ h5 {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #9b9b9b;
-  height: 70vh; }
+  background-color: #0a303d;
+  height: auto; }
   #nav.showNav .banner {
-    -webkit-filter: blur(5px);
-    -webkit-transform: translate3d(0, 0, 0); }
+    -webkit-filter: blur(15px);
+    -webkit-transform: translate3d(0, 0, 0);
+    transition: all 0s ease; }
+  #nav:hover .banner {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-filter: blur(0px);
+    transition: all .2s ease; }
   #nav .banner {
     position: absolute;
     width: 100%;
-    height: 70vh;
+    height: 40vh;
     min-height: 150px;
     background-repeat: no-repeat;
-    background-image: url("../images/golf.jpg");
-    background-image: url("../images/seneca.jpg");
     background-size: cover;
     background-position: center center;
-    -webkit-filter: blur(0px);
+    -webkit-filter: blur(2px);
     -webkit-transform: translate3d(0, 0, 0);
-    opacity: .5; }
+    transition: all .2s ease;
+    opacity: 0; }
   #nav h1 {
     display: inline-block;
-    position: absolute;
+    position: relative;
     max-width: 920px;
     left: 80px;
     z-index: 100;
-    font-size: 64px;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-size: 120px;
+    font-weight: 800;
     color: #fff;
     float: left;
-    text-align: center;
-    bottom: 5px;
-    line-height: 50px;
-    letter-spacing: 1px;
-    text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.2), 0 2px 3px rgba(0, 0, 0, 0.3); }
+    text-align: left;
+    text-transform: uppercase;
+    bottom: 0px;
+    line-height: .8em;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2AEAC1), to(#1976D2));
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; }
   #nav .hamburger {
     position: fixed;
     z-index: 20000; }
@@ -534,7 +549,7 @@ h5 {
       line-height: 32px;
       color: white;
       position: absolute;
-      font-family: "Berkshire Swash";
+      font-family: "Open Sans";
       font-size: 22px;
       z-index: 2;
       bottom: 0px;
@@ -597,17 +612,17 @@ h5 {
         text-transform: uppercase;
         transition: all .15s ease; }
         #drawer ul li a[target="_blank"]:hover {
-          background: rgba(42, 234, 193, 0.45);
+          background: rgba(255, 255, 255, 0.15);
           transition: all .15s ease;
           text-decoration: none;
           color: #fff; }
         #drawer ul li a:hover {
-          background: rgba(35, 147, 229, 0.45);
+          background: rgba(0, 0, 0, 0.45);
           transition: all .15s ease;
           text-decoration: none;
           color: #fff; }
           #drawer ul li a:hover > i {
-            margin-right: 42px;
+            margin-right: 30px;
             transition: margin .15s ease; }
 
 .button {
@@ -1042,10 +1057,11 @@ input:-webkit-autofill {
     width: 500px; }
 
   #side_bar {
+    background-color: #0a303d;
     box-shadow: none; }
 
   #side_bar #cover {
-    background-color: transparent; }
+    background-color: #0a303d; }
     #side_bar #cover h1, #side_bar #cover h1:after {
       font-weight: 300;
       line-height: 50px;
@@ -1055,10 +1071,11 @@ input:-webkit-autofill {
       padding: 0;
       margin: 0;
       background-color: transparent;
-      color: white;
+      color: #2196F3;
       font-size: 32px; }
     #side_bar #cover h1:after {
-      content: "BilltheCreator"; }
+      content: "WILLIAM REITHMEYER";
+      font-weight: 800; }
 
   .social {
     max-width: 200px; }
@@ -1095,8 +1112,7 @@ input:-webkit-autofill {
     left: 0;
     z-index: 3;
     width: calc(100%);
-    height: 56px;
-    background: #1b2833; }
+    height: 56px; }
     #side_bar #cover h1 {
       box-shadow: none;
       position: absolute;
