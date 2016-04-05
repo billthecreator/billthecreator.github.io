@@ -30,7 +30,10 @@ a:link, a:active, a:visited {
   text-decoration: none;
   outline: none;
   background-color: transparent;
-  white-space: nowrap; }
+  white-space: nowrap;
+  color: rgba(25, 118, 210, 0.8); }
+  a:link:hover, a:active:hover, a:visited:hover {
+    color: rgba(33, 150, 243, 0.8); }
 
 h1 {
   font-size: 45px;
@@ -163,7 +166,7 @@ h5 {
           background-color: rgba(25, 118, 210, 0.5) !important;
           transition: background-color .3s ease; }
           .badge_case .badges .content:hover a:hover {
-            background-color: rgba(42, 234, 193, 0.5) !important;
+            background-color: rgba(33, 150, 243, 0.7) !important;
             transition: background-color .3s ease; }
       .badge_case .badges .content .img {
         background-color: #ededed;
@@ -194,7 +197,6 @@ h5 {
         letter-spacing: .5px;
         background-color: rgba(0, 0, 0, 0.05);
         border-radius: 0 0 5px 5px;
-        opacity: 1;
         transition: all .3s ease-in-out;
         line-height: 1.5em; }
         .badge_case .badges .content .b_desc .t {
@@ -213,12 +215,14 @@ h5 {
           position: relative;
           font-size: 13px !important;
           line-height: 2.5em;
-          padding: 8px;
-          margin: 8px 10px 2px 0;
+          padding: 8px 12px;
+          margin: 0px 10px 0px 0;
           min-height: auto;
           color: rgba(0, 0, 0, 0.87);
           background-color: rgba(0, 0, 0, 0.05);
           transition: background-color .3s ease; }
+          .badge_case .badges .content .b_desc a i {
+            margin-right: 4px; }
 
 #portfolio .columns {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.87);
@@ -433,10 +437,11 @@ h5 {
     transition: all .2s ease;
     opacity: 0; }
   #nav h1 {
+    margin: 40px 0;
     display: inline-block;
     position: relative;
     max-width: 920px;
-    left: 80px;
+    left: 40px;
     z-index: 100;
     font-size: 120px;
     font-weight: 800;
@@ -761,12 +766,12 @@ h5 {
   background-color: rgba(25, 118, 210, 0.5);
   width: auto;
   float: left;
-  padding: 8px;
+  padding: 8px 12px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
   transition: background-color .3s ease; }
   #extendBio:hover {
-    background-color: rgba(42, 234, 193, 0.5);
+    background-color: rgba(33, 150, 243, 0.8);
     transition: background-color .3s ease; }
 
 #cards {
@@ -837,7 +842,7 @@ h5 {
   z-index: 2;
   transition: all 0.3s ease 0s; }
   .myFace:hover {
-    box-shadow: 0 0 0px 6px rgba(42, 234, 193, 0.5); }
+    box-shadow: 0 0 0px 6px rgba(33, 150, 243, 0.8); }
 
 .card ul {
   padding: 0;
@@ -1083,8 +1088,6 @@ input:-webkit-autofill {
     #side_bar #cover h1, #side_bar #cover h1:after {
       font-weight: 300;
       line-height: 50px;
-      text-indent: 20px;
-      left: 20px;
       text-align: left;
       padding: 0;
       margin: 0;
@@ -1093,7 +1096,11 @@ input:-webkit-autofill {
       font-size: 32px; }
     #side_bar #cover h1:after {
       content: "WILLIAM REITHMEYER";
-      font-weight: 800; }
+      font-weight: 800;
+      background: -webkit-gradient(linear, left top, left bottom, from(#2AEAC1), to(#1976D2));
+      -webkit-background-clip: text;
+      -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent; }
 
   .social {
     max-width: 200px; }
@@ -1138,7 +1145,7 @@ input:-webkit-autofill {
       line-height: 56px;
       height: 56px;
       text-indent: 0;
-      left: 72px;
+      left: 12px;
       top: 0px;
       display: block;
       font-size: 28px;

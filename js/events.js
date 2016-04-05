@@ -43,7 +43,7 @@ $(document).ready(function(){
     $("#extendBio").click(function(){
         if ($("#extendBio").hasClass("more")){
             $("#about .extraAbout").css('display', 'inline-block');
-            $("#extendBio").text("Read Less");
+            $("#extendBio").text("Show Less");
             $("#extendBio").toggleClass("more");
         } else {
             $("#about .extraAbout").css('display', 'none');
