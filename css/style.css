@@ -160,14 +160,15 @@ h5 {
           opacity: 1;
           bottom: 0; }
         .badge_case .badges .content:hover a {
-          background-color: rgba(235, 104, 65, 0.5) !important;
+          background-color: rgba(25, 118, 210, 0.5) !important;
           transition: background-color .3s ease; }
           .badge_case .badges .content:hover a:hover {
-            background-color: rgba(235, 104, 65, 0.8) !important;
+            background-color: rgba(42, 234, 193, 0.5) !important;
             transition: background-color .3s ease; }
       .badge_case .badges .content .img {
+        background-color: #ededed;
         width: 100%;
-        height: 200px;
+        height: 0;
         background-size: cover;
         background-position: top center;
         background-repeat: no-repeat;
@@ -175,6 +176,8 @@ h5 {
         position: relative;
         border-radius: 5px 5px 0 0;
         border-bottom: 1px solid #b9b9b9; }
+        .badge_case .badges .content .img.noImage {
+          display: none; }
         .badge_case .badges .content .img.logo {
           background-color: white;
           background-size: 60%;
@@ -754,6 +757,18 @@ h5 {
     .button.flat:active {
       background-color: rgba(255, 255, 255, 0.6); }
 
+#extendBio {
+  background-color: rgba(25, 118, 210, 0.5);
+  width: auto;
+  float: left;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color .3s ease; }
+  #extendBio:hover {
+    background-color: rgba(42, 234, 193, 0.5);
+    transition: background-color .3s ease; }
+
 #cards {
   width: 100%;
   position: relative;
@@ -809,7 +824,7 @@ h5 {
   margin: 0px auto 24px;
   width: 150px;
   height: 150px;
-  opacity: .8;
+  opacity: 1;
   background-image: url("../images/me.jpeg");
   background-position: 62% 30%;
   background-size: cover;
@@ -817,9 +832,12 @@ h5 {
   background-color: transparent;
   display: block;
   border-radius: 50%;
-  border: 6px solid #cecece;
+  border: 0px solid rgba(25, 118, 210, 0.5);
+  box-shadow: 0 0 0px 6px rgba(25, 118, 210, 0.5);
   z-index: 2;
   transition: all 0.3s ease 0s; }
+  .myFace:hover {
+    box-shadow: 0 0 0px 6px rgba(42, 234, 193, 0.5); }
 
 .card ul {
   padding: 0;
@@ -842,7 +860,7 @@ h5 {
   position: relative;
   background-color: rgba(221, 221, 221, 0.3); }
   .card li:nth-child(2n+2) {
-    background-color: rgba(84, 168, 84, 0.3); }
+    background-color: rgba(25, 118, 210, 0.3); }
   .card li.almost {
     opacity: .2;
     transition: .14s all ease-in; }
