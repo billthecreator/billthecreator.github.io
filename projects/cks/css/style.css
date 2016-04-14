@@ -336,11 +336,11 @@ h4 {
       .panel .panel_desc .badge_case.twenty .badges {
         width: calc(100% / 3); }
         .panel .panel_desc .badge_case.twenty .badges .content {
-          background-color: black;
+          background-color: grey;
           border-radius: 5px;
           box-shadow: 0 0 0 transparent; }
           .panel .panel_desc .badge_case.twenty .badges .content:hover {
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6); }
             @media only screen and (min-width: 500px) {
               .panel .panel_desc .badge_case.twenty .badges .content:hover .b_desc {
                 bottom: 0px;
@@ -363,12 +363,14 @@ h4 {
           top: calc(50% - (22px/2));
           line-height: 30px;
           height: 30px;
-          font-weight: 500;
+          font-weight: 600;
+          text-shadow: 0px 0px 6px black;
           background-color: transparent;
           padding: 0;
           text-align: center;
           transition: opacity .4s ease;
-          opacity: 1; }
+          opacity: 1;
+          color: white; }
         @media only screen and (max-width: 800px) {
           .panel .panel_desc .badge_case.twenty .badges {
             width: calc(50%); } }
@@ -627,6 +629,10 @@ h4 {
           float: left;
           margin: 0 0 1.5em;
           padding: 0 12px; }
+          .panel .panel_desc .panel_envelope p.media.highlight {
+            color: #1e77d0 !important;
+            font-weight: bold;
+            font-size: 1.5em; }
           .panel .panel_desc .panel_envelope p.media.address {
             display: block;
             width: 100%; }
@@ -697,6 +703,8 @@ h4 {
         border-radius: 5px;
         padding: 12px 32px;
         font-size: 15px; }
+        .panel .panel_desc .panel_quote_box .quote_container:hover {
+          border: 1px solid #1e77d0; }
         .panel .panel_desc .panel_quote_box .quote_container .quote_text {
           line-height: 22px;
           padding: 12px;
