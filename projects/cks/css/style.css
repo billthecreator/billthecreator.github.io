@@ -144,7 +144,8 @@ h4 {
       font-weight: 400;
       font-size: 36px;
       line-height: 40px;
-      padding: 0 6px; }
+      padding: 0 6px;
+      cursor: pointer; }
       .header .nav .title img {
         display: inline;
         height: 35px;
@@ -644,6 +645,18 @@ h4 {
         padding: 8px; }
       .panel .panel_desc .panel_envelope p {
         text-indent: 0; }
+        .panel .panel_desc .panel_envelope p.warning {
+          background-color: rgba(193, 15, 49, 0.87);
+          border: 1px solid #c10f31;
+          padding: 12px;
+          border-radius: 3px;
+          color: white; }
+          .panel .panel_desc .panel_envelope p.warning a, .panel .panel_desc .panel_envelope p.warning a:hover, .panel .panel_desc .panel_envelope p.warning a:active {
+            color: white;
+            text-decoration: underline; }
+          .panel .panel_desc .panel_envelope p.warning .big {
+            font-size: 1.5em;
+            font-weight: 300; }
         .panel .panel_desc .panel_envelope p.media {
           display: inline;
           width: calc(100% - 450px);

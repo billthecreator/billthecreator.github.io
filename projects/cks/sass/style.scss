@@ -198,6 +198,8 @@ h6{}
             font-size: 36px;
             line-height: 40px;
             padding: 0 6px;
+            cursor: pointer;
+
 
             img{
                 display: inline;
@@ -219,7 +221,6 @@ h6{}
             text-transform: uppercase;
             font-size: 13px;
             padding: 8px 0;
-
             @media only screen and (max-width: $small-break) {
                 display: block;
                 width: 100%;
@@ -855,6 +856,24 @@ h6{}
                 }
                 p{
                     text-indent: 0;
+                    &.warning{
+                        background-color: rgba(193, 15, 49, 0.87);
+                        border: 1px solid rgba(193, 15, 49, 1);
+                        padding: 12px;
+                        border-radius: 3px;
+                        color: white;
+
+                        a{
+                            &, &:hover, &:active{
+                                color: white;
+                                text-decoration: underline;
+                            }
+                        }
+                        & .big{
+                            font-size: 1.5em;
+                            font-weight: 300;
+                        }
+                    }
                     &.media{
                         display: inline;
                         width: calc(100% - #{$image-width});
