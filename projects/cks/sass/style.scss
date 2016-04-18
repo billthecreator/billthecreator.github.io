@@ -292,6 +292,30 @@ h6{}
     width: 100%;
 }
 
+.popup-container{
+    $width: calc(100%);
+    margin: 0 auto;
+    padding: 20px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: calc(50% -  $width/2);
+    width:  100%;
+    height: 100%;
+    background-color: rgba(black, .7);
+    z-index: 1000000;
+
+    & .img{
+        display: block;
+        position: relative;
+        background-size: contain;
+        height:  inherit;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
 .panel{
     max-width: $panel-width;
     width: 100%;

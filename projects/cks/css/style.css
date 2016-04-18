@@ -222,6 +222,26 @@ h4 {
   margin: 0;
   width: 100%; }
 
+.popup-container {
+  margin: 0 auto;
+  padding: 20px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: calc(50% -  $width/2);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000000; }
+  .popup-container .img {
+    display: block;
+    position: relative;
+    background-size: contain;
+    height: inherit;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat; }
+
 .panel {
   max-width: 1000px;
   width: 100%;
