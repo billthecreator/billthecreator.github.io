@@ -306,9 +306,9 @@ h4 {
     padding: 0;
     font-size: 28px;
     font-weight: 700;
-    font-style: italic;
-    font-family: 'Lora';
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-style: normal;
+    font-family: 'Titillium Web';
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     padding-bottom: 3px;
     width: auto;
     display: inline-block; }
@@ -323,7 +323,7 @@ h4 {
       padding: 0 4px; }
   .panel .panel_desc {
     padding: 0px 12px;
-    color: rgba(0, 0, 0, 0.75); }
+    color: rgba(0, 0, 0, 0.95); }
     .panel .panel_desc .social {
       list-style: none;
       padding: 0; }
@@ -684,8 +684,8 @@ h4 {
         max-width: 450px;
         width: 100%;
         height: auto;
-        padding: 8px;
-        border: 1px solid #ddd;
+        padding: 4px;
+        border: 4px solid #572377;
         background-color: white;
         display: inline-block; }
         .panel .panel_desc .panel_envelope img.media.left {
