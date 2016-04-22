@@ -22,4 +22,22 @@ $(document).ready(function(){
         $('.nav .search input').select();
     })
 
+    $(".pmp_info .PMP li").click(function(){
+
+        var liName = $(this).text();
+//        alert(liName);
+
+        $(".pmp_info .panel_envelope").hide();
+
+
+        $(".PMP li").removeClass("selected");
+        $(this).addClass("selected");
+
+        $("#" + liName).show();
+
+
+    })
+
+
+
 });

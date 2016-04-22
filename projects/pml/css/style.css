@@ -67,6 +67,7 @@ h4 {
     width: calc(100%);
     max-width: 100%;
     z-index: 2000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     /* The container <div> - needed to position the dropdown content */
     /* Dropdown Content (Hidden by Default) */
     /* Links inside the dropdown */
