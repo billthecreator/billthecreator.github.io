@@ -281,6 +281,7 @@ h4 {
       .panel.fullscreen {
         width: calc(100%); } }
     .panel.fullscreen p {
+      color: rgba(255, 255, 255, 0.95) !important;
       margin-bottom: 0 !important;
       padding-bottom: 0; }
   .panel.with_banner {
@@ -327,7 +328,10 @@ h4 {
       color: white !important; }
   .panel .panel_title {
     padding: 6px 12px;
-    font-size: 18px;
+    font-size: 45px;
+    line-height: 1.5em;
+    font-family: "Lora";
+    text-align: center;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.8); }
     .panel .panel_title a {
@@ -336,7 +340,7 @@ h4 {
       padding: 0 4px; }
   .panel .panel_desc {
     padding: 0px 12px;
-    color: rgba(255, 255, 255, 0.95); }
+    color: #212121; }
     .panel .panel_desc .social {
       list-style: none;
       padding: 0; }
@@ -552,6 +556,11 @@ h4 {
       list-style: none;
       color: black;
       padding: 24px 0; }
+      .panel .panel_desc ul.listed {
+        padding: 0 24px;
+        list-style: inside;
+        font-size: 14px;
+        line-height: 22px; }
       .panel .panel_desc ul.center {
         text-align: center; }
       .panel .panel_desc ul.inline li {
@@ -627,7 +636,7 @@ h4 {
       .panel .panel_desc table tr:hover:not(.t_head) {
         background-color: rgba(0, 0, 0, 0.035); }
       .panel .panel_desc table tr td {
-        padding: 12px;
+        padding: 0 6px;
         line-height: 24px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
         .panel .panel_desc table tr td p, .panel .panel_desc table tr td h4 {
@@ -686,10 +695,21 @@ h4 {
         float: left; }
         .panel .panel_desc .panel_envelope h5.media.left {
           text-align: left; }
-      .panel .panel_desc .panel_envelope .map {
+      .panel .panel_desc .panel_envelope .large_map {
         width: 100%;
         height: 130px;
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        position: relative;
+        float: left;
+        border: 1px solid #1cad7e;
+        padding: 8px; }
+      .panel .panel_desc .panel_envelope .map {
+        width: 100%;
+        height: 130px;
+        background-size: 200%;
         background-repeat: no-repeat;
         background-position: center;
         display: inline-block;
@@ -718,7 +738,7 @@ h4 {
           margin: 0 0 1.5em;
           padding: 0 12px; }
           .panel .panel_desc .panel_envelope p.media.highlight {
-            color: #1e77d0 !important;
+            color: #1cad7e !important;
             font-weight: bold;
             font-size: 1.5em; }
           .panel .panel_desc .panel_envelope p.media.address {
@@ -838,6 +858,9 @@ h4 {
       .panel .panel_desc .portal_form table {
         width: 100%; }
 
+.b {
+  font-weight: bold; }
+
 .copy:after {
   content: '\00AE';
   font-size: .7em;
@@ -848,12 +871,14 @@ textarea {
   resize: none;
   padding: 8px;
   margin: 4px 0;
-  font-size: 13px;
+  font-size: 15px;
+  line-height: 1.5em;
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   height: 100px;
   border: 1px solid #ddd;
-  font-family: "Roboto"; }
+  font-family: "Roboto";
+  border-radius: 5px; }
   textarea:focus {
     border-color: #1e77d0; }
 
@@ -865,19 +890,28 @@ input {
     width: auto;
     width: 100%;
     margin: 4px 0;
-    font-size: 13px;
-    border: 1px solid #ddd; }
+    font-size: 15px;
+    line-height: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center; }
     input[type='text']:focus, input[type='password']:focus {
       border-color: #1e77d0; }
   input[type='submit'] {
     padding: 6px 12px;
-    border-radius: 2px;
+    border-radius: 50px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    background-color: #1e77d0;
+    font-size: 15px;
+    line-height: 1.5em;
+    background-color: #1cad7e;
     color: white;
     box-shadow: 0 0 0 black;
-    transition: all .1s ease; }
+    transition: all .1s ease;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase; }
     input[type='submit']:hover {
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
     input[type='submit']:active {

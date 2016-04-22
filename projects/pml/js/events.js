@@ -27,7 +27,7 @@ $(document).ready(function(){
         var liName = $(this).text();
 //        alert(liName);
 
-        $(".pmp_info .panel_envelope").hide();
+        $(".pmp_info .panel_envelope.pmpHide").hide();
 
 
         $(".PMP li").removeClass("selected");
