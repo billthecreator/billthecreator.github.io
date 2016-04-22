@@ -235,7 +235,7 @@ h4 {
 .container {
   margin: 0;
   width: 100%;
-  box-shadow: 0 -20px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.25);
   z-index: 100;
   background-color: #fafafa; }
 
@@ -538,8 +538,38 @@ h4 {
       letter-spacing: .6px;
       line-height: 1.5;
       margin-bottom: 1.5em; }
+    .panel .panel_desc img.small {
+      width: 150px; }
+    .panel .panel_desc img.center {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      text-align: center; }
     .panel .panel_desc ul {
-      list-style: none; }
+      display: block;
+      position: relative;
+      list-style: none;
+      color: black;
+      padding: 24px 0; }
+      .panel .panel_desc ul.center {
+        text-align: center; }
+      .panel .panel_desc ul.inline li {
+        display: inline; }
+      .panel .panel_desc ul.bubble li {
+        padding: 24px;
+        position: relative;
+        display: inline-block;
+        margin: 0 0 4px 0;
+        border-radius: 3px;
+        background-color: rgba(128, 128, 128, 0.3);
+        transition: background-color .35s ease;
+        color: white;
+        cursor: pointer;
+        font-size: .8em; }
+        .panel .panel_desc ul.bubble li:hover, .panel .panel_desc ul.bubble li.selected {
+          background-color: #572377; }
+      .panel .panel_desc ul.copy li:after {
+        content: '\00AE'; }
     .panel .panel_desc .faq_box {
       border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 6px;
@@ -623,7 +653,8 @@ h4 {
       height: auto;
       float: left;
       padding: 12px;
-      margin: 0 0 1.5em; }
+      margin: 0 0 1.5em;
+      color: #212121; }
       .panel .panel_desc .panel_envelope.flex-item {
         width: 33%; }
         @media only screen and (max-width: 800px) {
@@ -632,14 +663,14 @@ h4 {
         @media only screen and (max-width: 500px) {
           .panel .panel_desc .panel_envelope.flex-item {
             width: 100%; } }
-      .panel .panel_desc .panel_envelope h4.media {
+      .panel .panel_desc .panel_envelope h3.media, .panel .panel_desc .panel_envelope h4.media, .panel .panel_desc .panel_envelope h5.media {
         display: inline-block;
         position: relative;
         padding: 0 12px;
         margin: 0 0 1em;
         line-height: 1.5em;
         float: left; }
-        .panel .panel_desc .panel_envelope h4.media.left {
+        .panel .panel_desc .panel_envelope h3.media.left, .panel .panel_desc .panel_envelope h4.media.left, .panel .panel_desc .panel_envelope h5.media.left {
           text-align: left; }
       .panel .panel_desc .panel_envelope h5.media {
         display: inline-block;
@@ -804,6 +835,12 @@ h4 {
         width: 100%; }
       .panel .panel_desc .portal_form table {
         width: 100%; }
+
+.copy:after {
+  content: '\00AE';
+  font-size: .7em;
+  vertical-align: top;
+  padding: 0 2px; }
 
 textarea {
   resize: none;
