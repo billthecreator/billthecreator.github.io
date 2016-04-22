@@ -327,7 +327,7 @@ h4 {
     .panel .page_title p {
       color: white !important; }
   .panel .panel_title {
-    padding: 6px 12px;
+    padding: 36px 12px;
     font-size: 45px;
     line-height: 1.5em;
     font-family: "Lora";
@@ -383,63 +383,40 @@ h4 {
         .panel .panel_desc .badge_case.twenty .badges .content {
           background-color: grey;
           border-radius: 5px;
-          box-shadow: 0 0 0 transparent; }
+          box-shadow: 0 0 0 transparent;
+          border: 1px solid rgba(0, 0, 0, 0.01); }
           .panel .panel_desc .badge_case.twenty .badges .content:hover {
-            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6); }
-            @media only screen and (min-width: 500px) {
-              .panel .panel_desc .badge_case.twenty .badges .content:hover .b_desc {
-                bottom: 0px;
-                opacity: 0;
-                font-size: 1.8em !important;
-                transition: font-size .2s ease, opacity .3s ease; }
-              .panel .panel_desc .badge_case.twenty .badges .content:hover .img {
-                transition: opacity .4s ease .15s, background-size .15s ease-out;
-                opacity: 1;
-                background-size: 110%;
-                -webkit-filter: blur(0px); } }
+            box-shadow: 0 0 0 transparent; }
         .panel .panel_desc .badge_case.twenty .badges .content .img {
-          height: 130px;
+          height: 250px;
           border-radius: 5px;
-          opacity: .6;
+          opacity: 1;
+          background-size: cover;
           transition: opacity .4s ease , background-size .15s ease-out .15s;
-          -webkit-filter: blur(1px); }
+          -webkit-filter: blur(0px); }
         .panel .panel_desc .badge_case.twenty .badges .content .b_desc {
-          font-size: 22px !important;
-          top: calc(50% - (22px/2));
-          line-height: 30px;
-          height: 30px;
-          font-weight: 600;
-          text-shadow: 0px 0px 6px black;
+          font-size: 18px !important;
+          bottom: calc(30px);
+          line-height: 1.5em;
+          height: auto;
+          font-weight: 300;
           color: white;
-          background-color: transparent;
-          padding: 0;
-          text-align: center;
+          background-color: rgba(77, 72, 67, 0.8);
+          padding: 12px;
+          text-align: left;
           transition: opacity .4s ease;
           opacity: 1; }
+          .panel .panel_desc .badge_case.twenty .badges .content .b_desc .job {
+            float: left;
+            width: 100%;
+            font-weight: 400;
+            font-size: .7em; }
         @media only screen and (max-width: 800px) {
           .panel .panel_desc .badge_case.twenty .badges {
             width: calc(50%); } }
         @media only screen and (max-width: 500px) {
           .panel .panel_desc .badge_case.twenty .badges {
-            width: calc(100%); }
-            .panel .panel_desc .badge_case.twenty .badges .content {
-              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-              background-color: white; }
-            .panel .panel_desc .badge_case.twenty .badges .content .img {
-              height: 130px;
-              opacity: 1;
-              background-size: cover;
-              border-radius: 0;
-              -webkit-filter: blur(0px); }
-            .panel .panel_desc .badge_case.twenty .badges .content .b_desc {
-              font-size: 16px !important;
-              top: calc(50% - (16px));
-              font-weight: 500;
-              background-color: transparent;
-              padding: 0 12px;
-              text-align: left;
-              text-shadow: none;
-              color: black; } }
+            width: calc(100%); } }
       .panel .panel_desc .badge_case.logos .badges .content {
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
       .panel .panel_desc .badge_case .badges {
@@ -469,7 +446,6 @@ h4 {
           overflow: hidden;
           border-radius: 5px;
           box-shadow: 0 0px 2px rgba(0, 0, 0, 0.2);
-          cursor: pointer;
           transition: all .2s ease;
           background-color: transparent;
           overflow: hidden;
@@ -480,29 +456,14 @@ h4 {
               border-radius: 2px; } }
           .panel .panel_desc .badge_case .badges .content:hover {
             box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6); }
-            .panel .panel_desc .badge_case .badges .content:hover .b_desc {
-              bottom: -36px;
-              opacity: 0; }
-              @media only screen and (max-width: 500px) {
-                .panel .panel_desc .badge_case .badges .content:hover .b_desc {
-                  bottom: 0px;
-                  opacity: 1; } }
-              @media only screen and (max-width: 800px) {
-                .panel .panel_desc .badge_case .badges .content:hover .b_desc {
-                  bottom: 0px; } }
           .panel .panel_desc .badge_case .badges .content .img {
             width: 100%;
             height: 130px;
             background-size: 100%;
-            background-position: center center;
+            background-position: top center;
             background-repeat: no-repeat;
             overflow: hidden;
             position: relative; }
-            @media only screen and (max-width: 500px) {
-              .panel .panel_desc .badge_case .badges .content .img {
-                width: 50px;
-                max-height: 50px;
-                overflow: visible; } }
             .panel .panel_desc .badge_case .badges .content .img.logo {
               background-color: white;
               background-size: 60%;
@@ -525,19 +486,6 @@ h4 {
               .panel .panel_desc .badge_case .badges .content .b_desc {
                 bottom: 0px;
                 opacity: 0; } }
-            @media only screen and (max-width: 500px) {
-              .panel .panel_desc .badge_case .badges .content .b_desc {
-                height: 50px;
-                line-height: 50px;
-                padding: 0;
-                opacity: 1;
-                padding-left: 12px;
-                font-size: 18px;
-                left: 50px;
-                width: calc(100%-$mobile-img-size);
-                background-color: rgba(0, 0, 0, 0.02);
-                color: black;
-                border-left: 1px solid rgba(0, 0, 0, 0.1); } }
     .panel .panel_desc p {
       font-size: 13px;
       letter-spacing: .6px;
@@ -869,7 +817,7 @@ h4 {
 
 textarea {
   resize: none;
-  padding: 8px;
+  padding: 8px 16px;
   margin: 4px 0;
   font-size: 15px;
   line-height: 1.5em;
