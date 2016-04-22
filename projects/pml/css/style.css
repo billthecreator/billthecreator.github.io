@@ -265,7 +265,7 @@ h4 {
     position: relative;
     min-height: 128px;
     text-align: center;
-    background-color: rgba(87, 35, 119, 0.1); }
+    background-color: #572377; }
     @media only screen and (max-width: 800px) {
       .panel.fullscreen {
         width: calc(100%); } }
@@ -273,8 +273,8 @@ h4 {
       margin-bottom: 0 !important;
       padding-bottom: 0; }
   .panel.with_banner {
-    background-color: rgba(87, 35, 119, 0);
-    color: black;
+    background-color: #572377;
+    color: white;
     -webkit-transform: translate3d(0, 0, 0);
     overflow: hidden;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
@@ -308,10 +308,12 @@ h4 {
     font-weight: 700;
     font-style: normal;
     font-family: 'Titillium Web';
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 3px;
     width: auto;
     display: inline-block; }
+    .panel .page_title p {
+      color: white !important; }
   .panel .panel_title {
     padding: 6px 12px;
     font-size: 18px;
@@ -323,7 +325,7 @@ h4 {
       padding: 0 4px; }
   .panel .panel_desc {
     padding: 0px 12px;
-    color: rgba(0, 0, 0, 0.95); }
+    color: rgba(255, 255, 255, 0.95); }
     .panel .panel_desc .social {
       list-style: none;
       padding: 0; }
