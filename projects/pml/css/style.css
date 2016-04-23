@@ -63,7 +63,6 @@ h4 {
     top: 0;
     display: inline-block;
     padding: 24px;
-    background-color: #1cad7e;
     width: calc(100%);
     max-width: 100%;
     z-index: 20000;
@@ -187,6 +186,14 @@ h4 {
       .header .nav .more a {
         color: white;
         cursor: pointer; }
+    @media only screen and (min-width: 500px) {
+      .header .nav.dark {
+        box-shadow: none;
+        color: rgba(0, 0, 0, 0.9); }
+        .header .nav.dark ul li a {
+          color: rgba(0, 0, 0, 0.7); }
+          .header .nav.dark ul li a:hover {
+            color: black; } }
     .header .nav ul {
       display: inline;
       list-style: none;
@@ -209,7 +216,7 @@ h4 {
           transition: height .2s ease; } }
       .header .nav ul li {
         float: left;
-        margin: 0 0 0 10px; }
+        margin: 0 0 0 12px; }
         @media only screen and (max-width: 500px) {
           .header .nav ul li {
             margin: 0px;
@@ -223,7 +230,8 @@ h4 {
               background-color: rgba(0, 0, 0, 0.075); } }
         .header .nav ul li a {
           color: rgba(255, 255, 255, 0.7);
-          transition: color .1s ease; }
+          transition: color .1s ease;
+          font-weight: bold; }
           .header .nav ul li a:hover {
             color: white; }
           @media only screen and (max-width: 500px) {
@@ -316,11 +324,11 @@ h4 {
     z-index: 2;
     margin: 0;
     padding: 0;
-    font-size: 28px;
+    font-size: 45px;
     font-weight: 700;
     font-style: normal;
-    font-family: 'Titillium Web';
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-family: 'Lora';
+    max-width: 900px;
     padding-bottom: 3px;
     width: auto;
     display: inline-block; }
@@ -504,6 +512,16 @@ h4 {
       list-style: none;
       color: black;
       padding: 24px 0; }
+      .panel .panel_desc ul.company-logos li {
+        color: rgba(0, 0, 0, 0.3);
+        transition: color .3s ease;
+        margin: 0 0;
+        text-align: center;
+        width: 20%;
+        float: left;
+        display: inline-block; }
+        .panel .panel_desc ul.company-logos li:hover {
+          color: rgba(0, 0, 0, 0.87); }
       .panel .panel_desc ul.listed {
         padding: 0 24px;
         list-style: inside;
