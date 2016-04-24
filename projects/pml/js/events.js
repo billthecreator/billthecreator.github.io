@@ -4,6 +4,8 @@ $(document).ready(function(){
 
     var themecolor = '#1cad7e';
     var _navTop;
+    var _aboutTop, _serviceTop, _contactTop;
+    var _aboutBottom, _serviceBottom, _contactBottom, scrollPos;
 
     $('.header .nav .more a').click(function(){
         value = $('.more').text().toLowerCase();
@@ -51,6 +53,43 @@ $(document).ready(function(){
             $('#nav').addClass('dark');
 
         }
+
+
+        scrollPos         = $(document).scrollTop();
+        _aboutTop         = $("#about").offset().top - $("#nav").innerHeight() - 1;
+        _aboutBottom     = (_aboutTop + ($("#about").height()));
+
+        _serviceTop         = $("#specialties").offset().top - $("#nav").innerHeight() - 1;
+        _serviceBottom     = (_serviceTop + ($("#specialties").height()));
+
+        _contactTop         = $("#message").offset().top - $("#nav").innerHeight() - 1;
+        _contactBottom     = (_contactTop + ($("#message").height()));
+
+
+        if (_aboutTop < scrollPos && scrollPos < _aboutBottom){
+            $("#nav .about").addClass("selected");
+        }else{
+            $("#nav .about").removeClass("selected");
+        }
+
+
+        if (_serviceTop < scrollPos && scrollPos < _serviceBottom){
+            $("#nav .services").addClass("selected");
+        }else{
+            $("#nav .services").removeClass("selected");
+        }
+
+
+        if (_contactTop < scrollPos && scrollPos < _contactBottom){
+            $("#nav .contact").addClass("selected");
+        }else{
+            $("#nav .contact").removeClass("selected");
+        }
+//
+//        alert(_aboutTop);
+//        alert(_serviceTop);
+//        alert(_contactTop);
+
     })
 
     $(".scrollTo").click(function(event){
