@@ -16,10 +16,7 @@ $(document).ready(function(){
         }
     })
 
-    $('.nav .title').click(function(){
-//        document.location.href= "index.html";
-        $('html, body').animate({scrollTop:0}, 200);
-    })
+
 
     $('.nav .search a').click(function(){
         $('.nav').toggleClass('showSearch');
@@ -53,6 +50,22 @@ $(document).ready(function(){
             $('#nav').css('background-color', 'rgba(28, 173, 126, ' + ($(document).scrollTop()/ _navTop) + ')');
             $('#nav').addClass('dark');
 
+        }
+    })
+
+    $(".scrollTo").click(function(event){
+        event.preventDefault();
+        var offset = $($(this).attr('href')).offset().top;
+        $('html, body').animate({scrollTop:offset - ($('#nav').innerHeight()*1)}, 1000, 'easeInOutExpo');
+
+        $('.header .nav ul').css('height', '0');
+        $('.more a').empty().append("menu <i class='fa fa-chevron-down'></i>");
+
+    });
+
+    $('.nav .title').click(function(){
+        if ($(window).scrollTop() > 0){
+            $('html, body').animate({scrollTop:0}, 1000, 'easeOutBounce');
         }
     })
 
