@@ -882,6 +882,9 @@ h4 {
   vertical-align: top;
   padding: 0 2px; }
 
+.pointer {
+  cursor: pointer; }
+
 textarea {
   resize: none;
   padding: 8px 16px;
