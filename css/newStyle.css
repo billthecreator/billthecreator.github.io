@@ -571,7 +571,7 @@ h4 {
       .panel .panel_desc ul.inline li {
         display: inline; }
       .panel .panel_desc ul.bubble li {
-        padding: 24px;
+        padding: 12px 24px;
         position: relative;
         display: inline-block;
         margin: 0 0 4px 0;
@@ -747,6 +747,7 @@ h4 {
         .panel .panel_desc .panel_envelope p.media {
           display: inline;
           width: calc(100% - 450px);
+          width: calc(100%);
           float: left;
           margin: 0 0 1.5em;
           padding: 0 8px;
@@ -760,11 +761,13 @@ h4 {
               width: 100%; } }
       .panel .panel_desc .panel_envelope a {
         float: left;
+        text-align: center;
         background-color: rgba(128, 128, 128, 0.3);
-        padding: 8px 12px;
-        border-radius: 3px;
+        padding: 8px 24px;
+        border-radius: 30px;
         color: rgba(0, 0, 0, 0.87);
-        transition: all .3s ease; }
+        transition: all .3s ease;
+        margin: 0 8px; }
         .panel .panel_desc .panel_envelope a:hover {
           background-color: #1e77d0;
           color: white; }
@@ -781,6 +784,12 @@ h4 {
           float: left; }
         .panel .panel_desc .panel_envelope img.media.right {
           float: right; }
+        .panel .panel_desc .panel_envelope img.media.center {
+          clear: both;
+          float: none;
+          text-align: center; }
+        .panel .panel_desc .panel_envelope img.media.fit {
+          max-width: 100%; }
         @media only screen and (max-width: 800px) {
           .panel .panel_desc .panel_envelope img.media {
             margin: 0 0 12px;
