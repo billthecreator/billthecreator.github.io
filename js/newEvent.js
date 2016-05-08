@@ -80,11 +80,13 @@ $(document).ready(function(){
 
     $(".scrollTo").click(function(event){
         event.preventDefault();
-        var offset = $($(this).attr('href')).offset().top;
-        $('html, body').animate({scrollTop:offset - ($('#nav').innerHeight()*1)}, 1000, 'easeInOutExpo');
-
         $('.header .nav ul').css('height', '0');
         $('.more a').empty().append("menu <i class='fa fa-chevron-down'></i>");
+
+        var offset = $($(this).attr('href')).offset().top;
+        $('html, body').animate({scrollTop:offset - ($('#nav').innerHeight()*1) +1}, 1000, 'easeInOutExpo');
+
+
 
     });
 
