@@ -4,6 +4,11 @@ var linkArray = ["portfolio", "skills", "about", "contact"];
 var sectionHeights = new Array();
 
 $(document).ready(function(){
+    $("#stickyPort").pin({
+        minWidth: 940,
+        padding: {top: $("#nav").innerHeight()},
+        containerSelector: "#subPort"
+    });
 
     var themecolor = '#1cad7e';
     var _navTop, navHeight;

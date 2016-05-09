@@ -13,6 +13,7 @@
     <script src='//code.jquery.com/jquery-migrate-1.2.1.min.js'></script>
     <script src='//code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
     <script src='js/newEvent.js' type='text/javascript'></script>
+    <script src='js/jquery.pin.js' type='text/javascript'></script>
     <meta content='#572377' name='theme-color'>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport'>
     <script>
@@ -57,7 +58,7 @@
     <div class='container' id='bdCont'>
       <div class='panel fullscreen with_banner dark'>
         <div class='banner' style="background-image: url('images/seneca.jpg');"></div>
-        <div class='page_title'>Developer / Designer / Tech Nut</div>
+        <div class='page_title'>Developer / Designer / Techie</div>
         <div class='panel_desc'>
           <a class='button red scrollTo' href='#about'>About Me</a>
           <a class='button green scrollTo' href='#contact'>Contact Me</a>
@@ -65,9 +66,9 @@
       </div>
       <div class='panel' id='portfolio'>
         <div class='panel_title'>My work.</div>
-        <div class='panel_desc pmp_info'>
+        <div class='panel_desc pmp_info' id='subPort'>
           <h3 class='media'>Work in progress portfolio</h3>
-          <ul class='PMP inline bubble left'>
+          <ul class='PMP inline bubble left' id='stickyPort'>
             <li class='selected'>Tips</li>
             <li>Raspberry_Pi_Server</li>
             <li>BottomsUp</li>
