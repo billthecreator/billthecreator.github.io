@@ -12,12 +12,11 @@ body {
   padding: 0;
   font-family: "Open Sans";
   font-weight: 400;
-  background: url("../images/seneca.jpg");
-  background-origin: 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-attachment: fixed; }
+  background: -moz-linear-gradient(45deg, #32db8d, #1f3d5c);
+  background: -webkit-linear-gradient(45deg, #32db8d, #1f3d5c);
+  background: linear-gradient(45deg, #32db8d, #1f3d5c);
+  background-size: 100% 100% !important;
+  background-position: 50% 0% !important; }
 
 a {
   color: #1e77d0;
@@ -291,7 +290,7 @@ h4 {
     padding: 60px 12px;
     display: block;
     position: relative;
-    min-height: 200px;
+    min-height: 100px;
     text-align: center;
     background-color: #1f3d5c; }
     @media only screen and (max-width: 800px) {
@@ -316,6 +315,11 @@ h4 {
   .panel.with_banner {
     background-color: rgba(77, 72, 67, 0.4);
     background-color: rgba(255, 255, 255, 0.4);
+    background: -moz-linear-gradient(45deg, rgba(50, 219, 141, 0.34), rgba(31, 61, 92, 0.34));
+    background: -webkit-linear-gradient(45deg, rgba(50, 219, 141, 0.34), rgba(31, 61, 92, 0.34));
+    background: linear-gradient(45deg, rgba(50, 219, 141, 0.34), rgba(31, 61, 92, 0.34));
+    background-size: 100% 100% !important;
+    background-position: 50% 0% !important;
     color: white;
     -webkit-transform: translate3d(0, 0, 0);
     overflow: hidden;
@@ -328,7 +332,7 @@ h4 {
         opacity: .3 !important; }
   .panel .banner {
     z-index: -1;
-    -webkit-filter: blur(5px);
+    -webkit-filter: blur(10px);
     height: calc(100% + 10px);
     width: calc(100% + 10px);
     display: block;
@@ -354,7 +358,7 @@ h4 {
     margin: 16px auto 0; }
   .panel .page_title {
     z-index: 2;
-    margin: 0 auto 24px;
+    margin: 0 auto;
     padding: 0;
     font-size: 54px;
     line-height: 1em;
@@ -391,6 +395,8 @@ h4 {
       .panel .panel_desc .social li {
         float: left;
         margin-right: 18px; }
+    .panel .panel_desc.sqweeze {
+      padding: 0 48px; }
     .panel .panel_desc .breadcrumb {
       display: inline-block;
       float: left;
@@ -601,7 +607,7 @@ h4 {
           margin: 0 0 4px 0;
           border-radius: 3px;
           background-color: #a7a7a7;
-          box-shadow: 0 0px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0px 12px transparent;
           transition: all 0.3s ease;
           color: white;
           cursor: pointer;
@@ -617,7 +623,7 @@ h4 {
             background: -moz-linear-gradient(45deg, #7399ae, #662452);
             background: -webkit-linear-gradient(45deg, #7399ae, #662452);
             background: linear-gradient(45deg, #7399ae, #662452);
-            box-shadow: 0 0px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
             background-position: 0% !important; }
           .panel .panel_desc ul.bubble li.selected, .panel .panel_desc ul.bubble li:active {
             transform: translateY(0px);
@@ -714,7 +720,7 @@ h4 {
       height: auto;
       float: left;
       padding: 0;
-      margin: 0 0 1.5em;
+      margin: 1.5em 0;
       color: #212121; }
       .panel .panel_desc .panel_envelope.border {
         padding: 0;
@@ -732,7 +738,7 @@ h4 {
         position: relative;
         padding: 8px;
         margin: 0 0 1em;
-        line-height: 1.2em;
+        line-height: 1.5em;
         float: left;
         font-size: 1.5em;
         font-weight: bold;
@@ -833,7 +839,8 @@ h4 {
           float: none;
           text-align: center; }
         .panel .panel_desc .panel_envelope img.media.fit {
-          max-width: 100%; }
+          max-width: 100%;
+          box-shadow: 0 0 12px rgba(0, 0, 0, 0.29); }
         @media only screen and (max-width: 800px) {
           .panel .panel_desc .panel_envelope img.media {
             margin: 0 0 12px;
@@ -1001,17 +1008,18 @@ h4 {
   position: relative;
   top: 0;
   left: 0;
-  margin: 0px auto 24px;
-  width: 270px;
-  height: 270px;
+  margin: 3em auto;
+  width: 300px;
+  height: 300px;
   opacity: 1;
-  background-image: url("../images/me.jpeg");
-  background-position: 62% 30%;
+  box-shadow: 0 0px 12px rgba(0, 0, 0, 0.6);
+  background-image: url("../images/gradme.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
   display: block;
-  border-radius: 50%;
+  border-radius: 12px;
   z-index: 2;
   transition: all 0.3s ease 0s; }
 
