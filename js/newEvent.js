@@ -24,14 +24,14 @@ $(document).ready(function(){
             $('.header .nav ul').css('height', '0');
             $('.more a').empty().append("menu <i class='fa fa-chevron-down'></i>");
         }
-    })
+    });
 
 
 
     $('.nav .search a').click(function(){
         $('.nav').toggleClass('showSearch');
         $('.nav .search input').select();
-    })
+    });
 
     $(".pmp_info .PMP li").click(function(){
 
@@ -47,8 +47,28 @@ $(document).ready(function(){
         $("#" + liName).show();
 
 
-    })
+    });
+    $(window).resize(function () {
+        for(var m=0; m < linkArray.length; m++){
+            sectionHeights[m] = new Array();
+            sectionHeights[m][0] = $("#" + linkArray[m]).offset().top - navHeight - 1;
+            sectionHeights[m][1] = sectionHeights[m][0] + $("#" + linkArray[m]).height();
+        }
 
+        for(var m = 0; m < linkArray.length; m++){
+            if ( sectionHeights[m][0] < scrollPos && scrollPos < sectionHeights[m][1]){
+                if ( window.innerWidth > 600){
+                    $("#nav ." + linkArray[m]).addClass("selected");
+                    _moveIndicator(linkArray[m], 0);
+                }else {_moveIndicator(0);}
+            }else{
+                $("#nav ." + linkArray[m]).removeClass("selected");
+            }
+        }
+        if ( sectionHeights[0][0] >= scrollPos ){
+            _moveIndicator(0);
+        }
+    });
 
     $(window).scroll(function () {
         _navTop = $(".header .photo").innerHeight() * 1;
@@ -79,18 +99,19 @@ $(document).ready(function(){
             if ( sectionHeights[m][0] < scrollPos && scrollPos < sectionHeights[m][1]){
                 if ( window.innerWidth > 600){
                     $("#nav ." + linkArray[m]).addClass("selected");
-//                    $('.navIndicator').animate(
-//                        {left: $("#nav ." + linkArray[m]).offset().left +12,
-//                         width: $("#nav ." + linkArray[m]).width()},
-//                        0,
-//                        "easeInOutExpo")
-                }
+                    _moveIndicator(linkArray[m]);
+                }else {_moveIndicator(0);}
+
             }else{
                 $("#nav ." + linkArray[m]).removeClass("selected");
             }
         }
+        if ( sectionHeights[0][0] >= scrollPos ){
+            _moveIndicator(0);
+        }
 
     })
+
 
     $(".scrollTo").click(function(event){
         event.preventDefault();
@@ -98,7 +119,7 @@ $(document).ready(function(){
         $('.more a').empty().append("menu <i class='fa fa-chevron-down'></i>");
 
         var offset = $($(this).attr('href')).offset().top;
-        $('html, body').animate({scrollTop:offset - ($('#nav').innerHeight()*1) +1}, 1000, 'easeInOutExpo');
+        $('html, body').animate({scrollTop:offset - ($('#nav').innerHeight()*1) +1}, { duration: 200, queue: false }, 'easeInOutExpo');
 
 
 
@@ -106,10 +127,28 @@ $(document).ready(function(){
 
     $('.nav .title').click(function(){
         if ($(window).scrollTop() > 0){
-            $('html, body').animate({scrollTop:0}, 1000, 'easeOutBounce');
+            $('html, body').animate({scrollTop:0}, { duration: 500, queue: false }, 'easeInOutExpo');
         }
-    })
+    });
 
 
 
 });
+function _moveIndicator(link, speed = 500){
+
+    if (link == 0){
+        $('.navIndicator').hide();
+    }else{
+        $('.navIndicator').show();
+
+        if  ($("#nav ." + link).offset().left != $('.navIndicator').offset().left){
+            $('.navIndicator').animate(
+                {
+                    left: $("#nav ." + link).offset().left +0,
+                    width: $("#nav ." + link).width()
+                },
+                 { duration: speed, queue: false },
+                "easeInOutExpo")
+        }
+    }
+}

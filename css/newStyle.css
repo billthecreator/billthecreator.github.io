@@ -88,12 +88,18 @@ h4 {
     /* Change the background color of the dropdown button when the dropdown content is shown */ }
     @media only screen and (max-width: 500px) {
       .header .nav {
+        background: -moz-linear-gradient(45deg, #662452, #662452);
+        background: -webkit-linear-gradient(45deg, #662452, #662452);
+        background: linear-gradient(45deg, #662452, #662452);
         position: fixed;
-        background-color: #1f3d5c !important;
         padding: 0;
         max-height: 100%; }
         .header .nav .container {
-          background-color: #1f3d5c; } }
+          background: -moz-linear-gradient(45deg, #7399ae, #662452);
+          background: -webkit-linear-gradient(45deg, #7399ae, #662452);
+          background: linear-gradient(45deg, #7399ae, #662452);
+          background-size: 100% 100% !important;
+          background-position: 50% 0% !important; } }
     .header .nav .dropdown {
       position: relative;
       display: inline-block; }
@@ -217,6 +223,14 @@ h4 {
     @media only screen and (min-width: 500px) {
       .header .nav.dark {
         box-shadow: none; } }
+    .header .nav .navIndicator {
+      display: block;
+      position: absolute;
+      height: 6px;
+      top: 60px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 0px rgba(0, 0, 0, 0.2); }
     .header .nav ul {
       display: inline;
       list-style: none;
@@ -259,7 +273,7 @@ h4 {
           transition: color .1s ease;
           font-weight: bold; }
           .header .nav ul li a:hover {
-            color: white; }
+            color: rgba(255, 255, 255, 0.8); }
           @media only screen and (max-width: 500px) {
             .header .nav ul li a {
               color: white;
@@ -268,7 +282,7 @@ h4 {
               padding: 12px; } }
           .header .nav ul li a.selected {
             color: white;
-            border-bottom: 4px solid white; }
+            text-shadow: 0 0 7px rgba(255, 255, 255, 0.6); }
 
 .container {
   margin: 0;
