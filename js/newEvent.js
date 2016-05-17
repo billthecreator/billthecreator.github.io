@@ -51,14 +51,16 @@ $(document).ready(function(){
 
 
     $(window).scroll(function () {
-        _navTop = window.innerHeight * .5;
+        _navTop = $(".header .photo").innerHeight() * 1;
 //        alert(_navTop);
 
         if ($(document).scrollTop() > (_navTop) ) {
-            $('#nav').css('background-color', 'rgba(31, 61, 92, 1)');
+//            $('#nav').css('background-color', 'rgba(31, 61, 92, 1)');
+            $('#nav .background').css('opacity', '1');
             $('#nav').removeClass('dark');
         }else{
-            $('#nav').css('background-color', 'rgba(31, 61, 92, ' + ($(document).scrollTop()/ _navTop) + ')');
+//            $('#nav').css('background-color', 'rgba(31, 61, 92, ' + ($(document).scrollTop()/ _navTop) + ')');
+            $('#nav .background').css('opacity', ($(document).scrollTop()/ _navTop));
             $('#nav').addClass('dark');
 
         }
@@ -75,7 +77,14 @@ $(document).ready(function(){
 
         for(var m = 0; m < linkArray.length; m++){
             if ( sectionHeights[m][0] < scrollPos && scrollPos < sectionHeights[m][1]){
-                $("#nav ." + linkArray[m]).addClass("selected");
+                if ( window.innerWidth > 600){
+                    $("#nav ." + linkArray[m]).addClass("selected");
+//                    $('.navIndicator').animate(
+//                        {left: $("#nav ." + linkArray[m]).offset().left +12,
+//                         width: $("#nav ." + linkArray[m]).width()},
+//                        0,
+//                        "easeInOutExpo")
+                }
             }else{
                 $("#nav ." + linkArray[m]).removeClass("selected");
             }
