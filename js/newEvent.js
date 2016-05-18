@@ -119,7 +119,7 @@ $(document).ready(function(){
         $('.more a').empty().append("menu <i class='fa fa-chevron-down'></i>");
 
         var offset = $($(this).attr('href')).offset().top;
-        $('html, body').animate({scrollTop:offset - ($('#nav').innerHeight()*1) +1}, { duration: 200, queue: false }, 'easeInOutExpo');
+        $('html, body').animate({scrollTop:offset - ($('#nav').innerHeight()*1) +1}, { duration: 1000, queue: false }, 'easeInOutExpo');
 
 
 
@@ -127,7 +127,7 @@ $(document).ready(function(){
 
     $('.nav .title').click(function(){
         if ($(window).scrollTop() > 0){
-            $('html, body').animate({scrollTop:0}, { duration: 500, queue: false }, 'easeInOutExpo');
+            $('html, body').animate({scrollTop:0}, { duration: 800, queue: false }, 'easeInOutExpo');
         }
     });
 
