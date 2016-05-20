@@ -3,7 +3,13 @@ var value;
 var linkArray = ["portfolio", "skills", "about", "contact"];
 var sectionHeights = new Array();
 
+
 $(document).ready(function(){
+
+
+    _moveIndicator(linkArray[0], 0);
+    _moveIndicator(0);
+
     $("#stickyPort").pin({
         minWidth: 940,
         padding: {top: $("#nav").innerHeight()},
@@ -85,6 +91,36 @@ $(document).ready(function(){
 
         }
 
+        _animateIndicator();
+
+
+    })
+
+
+    $(".scrollTo").click(function(event){
+        event.preventDefault();
+        $('.header .nav ul').css('height', '0');
+        $('.more a').empty().append("menu <i class='fa fa-chevron-down'></i>");
+
+        var offset = $($(this).attr('href')).offset().top;
+        $('html, body').animate({scrollTop:offset - ($('#nav').innerHeight()*1) +1}, { duration: 700, queue: false }, 'easeInOutExpo');
+
+
+
+
+    });
+
+    $('.nav .title').click(function(){
+        if ($(window).scrollTop() > 0){
+            $('html, body').animate({scrollTop:0}, { duration: 800, queue: true }, 'easeInOutExpo');
+        }
+    });
+
+
+
+});
+
+function _animateIndicator(){
 
         scrollPos         = $(document).scrollTop();
         navHeight         = $("#nav").innerHeight();
@@ -100,6 +136,7 @@ $(document).ready(function(){
                 if ( window.innerWidth > 600){
                     $("#nav ." + linkArray[m]).addClass("selected");
                     _moveIndicator(linkArray[m]);
+                    return false;
                 }else {_moveIndicator(0);}
 
             }else{
@@ -109,31 +146,8 @@ $(document).ready(function(){
         if ( sectionHeights[0][0] >= scrollPos ){
             _moveIndicator(0);
         }
+}
 
-    })
-
-
-    $(".scrollTo").click(function(event){
-        event.preventDefault();
-        $('.header .nav ul').css('height', '0');
-        $('.more a').empty().append("menu <i class='fa fa-chevron-down'></i>");
-
-        var offset = $($(this).attr('href')).offset().top;
-        $('html, body').animate({scrollTop:offset - ($('#nav').innerHeight()*1) +1}, { duration: 1000, queue: false }, 'easeInOutExpo');
-
-
-
-    });
-
-    $('.nav .title').click(function(){
-        if ($(window).scrollTop() > 0){
-            $('html, body').animate({scrollTop:0}, { duration: 800, queue: false }, 'easeInOutExpo');
-        }
-    });
-
-
-
-});
 function _moveIndicator(link, speed = 500){
 
     if (link == 0){
@@ -148,7 +162,7 @@ function _moveIndicator(link, speed = 500){
                     width: $("#nav ." + link).width()
                 },
                  { duration: speed, queue: false },
-                "easeInOutExpo")
+                "easeInOutCubic")
         }
     }
 }

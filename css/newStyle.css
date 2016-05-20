@@ -281,8 +281,7 @@ h4 {
               display: block;
               padding: 12px; } }
           .header .nav ul li a.selected {
-            color: white;
-            text-shadow: 0 0 7px rgba(255, 255, 255, 0.6); }
+            color: white; }
 
 .container {
   margin: 0;
@@ -605,6 +604,11 @@ h4 {
           @media only screen and (max-width: 500px) {
             .panel .panel_desc ul.company-logos.thirdW li a {
               width: 100%; } }
+        .panel .panel_desc ul.company-logos.quartW li a {
+          width: 25%; }
+          @media only screen and (max-width: 500px) {
+            .panel .panel_desc ul.company-logos.quartW li a {
+              width: 100%; } }
         .panel .panel_desc ul.company-logos li a {
           color: rgba(0, 0, 0, 0.5);
           transition: color .3s ease;
@@ -619,12 +623,14 @@ h4 {
             color: rgba(0, 0, 0, 0.87); }
             .panel .panel_desc ul.company-logos li a:hover.tw {
               color: #00aced; }
+            .panel .panel_desc ul.company-logos li a:hover.fb {
+              color: #3b5998; }
             .panel .panel_desc ul.company-logos li a:hover.li {
               color: #007bb6; }
             .panel .panel_desc ul.company-logos li a:hover.gp {
               color: #dd4b39; }
             .panel .panel_desc ul.company-logos li a:hover.gh {
-              color: #000; }
+              color: #000000; }
             .panel .panel_desc ul.company-logos li a:hover.in {
               color: #517fa4; }
           @media only screen and (max-width: 500px) {
@@ -671,7 +677,7 @@ h4 {
             background: -moz-linear-gradient(45deg, #7399ae, #662452);
             background: -webkit-linear-gradient(45deg, #7399ae, #662452);
             background: linear-gradient(45deg, #7399ae, #662452);
-            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
             transition: all 0.15s ease;
             cursor: default; }
       .panel .panel_desc ul.copy li:after {
