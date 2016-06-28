@@ -1123,7 +1123,7 @@ input {
 .footer {
   font-size: 12px;
   background-color: #171717;
-  color: #d6d6d6;
+  color: #c7c7c7;
   max-width: 100%;
   width: 100%;
   height: auto;
@@ -1132,8 +1132,12 @@ input {
   padding: 80px 12px;
   float: left; }
   .footer a {
-    color: #1f3d5c;
-    font-weight: bold; }
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+    letter-spacing: .3px;
+    transition: color .3s ease; }
+    .footer a:hover {
+      color: white; }
   .footer .nav {
     width: calc(100% - 24px);
     max-width: 1000px;
