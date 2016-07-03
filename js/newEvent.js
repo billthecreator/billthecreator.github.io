@@ -12,11 +12,14 @@ var portfolioSelected;
 $('head').append('<meta content="#7399ae" name="theme-color">');
 
 
-$(document).ready(function(){
+$(document).ready(function () {
 
     // initiate indicator
     _moveIndicator(linkArray[0], 0);
     _moveIndicator(0);
+
+    // list or tab portfolio depending on window size
+    _fixPortfolio();
 
     // create a sticky header
     $("#stickyPort").pin({
@@ -36,7 +39,7 @@ $(document).ready(function(){
         if (value.indexOf("menu") >= 0) {
             $('.header .nav ul').css('height', 'auto');
             $('.more a').empty().append("hide <i class='fa fa-chevron-up'></i>");
-        }else{
+        }else {
             $('.header .nav ul').css('height', '0');
             $('.more a').empty().append("menu <i class='fa fa-chevron-down'></i>");
         }
@@ -46,7 +49,7 @@ $(document).ready(function(){
     $(".pmp_info .PMP li").click(function(){
 
         // strip all whitespace from .li text
-        var liName = $(this).text().replace(/ /g,'');
+        var liName = $(this).text().replace(/ /g, '');
 
         // hide all elements
         $(".pmp_info .panel_envelope.pmpHide").hide();
@@ -63,20 +66,9 @@ $(document).ready(function(){
     // WINDOW RESIZE EVENT
     $(window).resize(function () {
         // on screen resize, move the indicator to the correct spot
-        _animateIndicator()
+        _animateIndicator();
 
-        // on mobile, show all work, not a tabbed section
-        if (window.innerWidth < 500){
-            $(".pmp_info .panel_envelope.pmpHide").show();
-        } else{
-            // if user changes window size, this prevents
-            // hiding of all elements and not showing the
-            // original.
-            if (portfolioSelected != null){
-                $(".pmp_info .panel_envelope.pmpHide").hide();
-                portfolioSelected.click();
-            }
-        }
+        _fixPortfolio();
     });
 
     // WINDOW SCROLL EVENT
@@ -95,7 +87,7 @@ $(document).ready(function(){
 
         // reposition the indicator
         _animateIndicator();
-    })
+    });
 
 
     // scroll to the spots on the page event
@@ -130,9 +122,9 @@ function _animateIndicator(){
         sectionHeights[m][1] = sectionHeights[m][0] + $("#" + linkArray[m]).height();
     }
 
-    for(var m = 0; m < linkArray.length; m++){
+    for(m = 0; m < linkArray.length; m++){
         if ( sectionHeights[m][0] < scrollPos && scrollPos < sectionHeights[m][1]){
-            if ( window.innerWidth > 600){
+            if ( window.innerWidth > 775){
                 $("#nav ." + linkArray[m]).addClass("selected");
                 _moveIndicator(linkArray[m]);
                 return false;
@@ -145,6 +137,23 @@ function _animateIndicator(){
     if ( sectionHeights[0][0] >= scrollPos ){
         // after all that, let's move it
         _moveIndicator(0);
+    }
+}
+
+function _fixPortfolio(){
+    // on mobile, show all work, not a tabbed section
+    if (window.innerWidth <= 775){
+        $(".pmp_info .panel_envelope.pmpHide").show();
+    } else{
+        // if user changes window size, this prevents
+        // hiding of all elements and not showing the
+        // original.
+        if (portfolioSelected != null){
+            $(".pmp_info .panel_envelope.pmpHide").hide();
+            portfolioSelected.click();
+        } else {
+            $(".PMP li:first-child").click();
+        }
     }
 }
 
