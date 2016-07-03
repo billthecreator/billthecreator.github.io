@@ -5,6 +5,12 @@ var value;
 var linkArray = ["portfolio", "skills", "about", "contact"];
 var sectionHeights = new Array();
 
+// selected work
+var portfolioSelected;
+
+// chrome mobile color
+$('head').append('<meta content="#7399ae" name="theme-color">');
+
 
 $(document).ready(function(){
 
@@ -49,12 +55,28 @@ $(document).ready(function(){
         $(".PMP li").removeClass("selected");
         $(this).addClass("selected");
         $("#" + liName).show();
+
+        // save selected for resizing purposes
+        portfolioSelected = $(this);
     });
 
     // WINDOW RESIZE EVENT
     $(window).resize(function () {
         // on screen resize, move the indicator to the correct spot
         _animateIndicator()
+
+        // on mobile, show all work, not a tabbed section
+        if (window.innerWidth < 500){
+            $(".pmp_info .panel_envelope.pmpHide").show();
+        } else{
+            // if user changes window size, this prevents
+            // hiding of all elements and not showing the
+            // original.
+            if (portfolioSelected != null){
+                $(".pmp_info .panel_envelope.pmpHide").hide();
+                portfolioSelected.click();
+            }
+        }
     });
 
     // WINDOW SCROLL EVENT
@@ -144,3 +166,9 @@ function _moveIndicator(link, speed = 500){
         }
     }
 }
+
+// are you reading this?
+// if so, awesome!
+
+// if you're intersesting in my work,
+// please consider emailing me
