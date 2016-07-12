@@ -12,7 +12,7 @@ var portfolioSelected;
 $('head').append('<meta content="#7399ae" name="theme-color">');
 
 
-$(document).ready(function () {
+$(document).ready(function (e) {
 
     // initiate indicator
     _moveIndicator(linkArray[0], 0);
