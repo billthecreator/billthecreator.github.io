@@ -78,11 +78,11 @@ $(document).ready(function (e) {
         _navTop = $(".header .photo").innerHeight() * 1;
 
         if ($(document).scrollTop() > (_navTop) ) {
-            $('#nav .background').css('opacity', '1');
-            $('#nav').removeClass('dark');
+//            $('#nav .background').css('opacity', '1');
+//            $('#nav').removeClass('dark');
         }else{
-            $('#nav .background').css('opacity', ($(document).scrollTop()/ _navTop));
-            $('#nav').addClass('dark');
+//            $('#nav .background').css('opacity', ($(document).scrollTop()/ _navTop));
+//            $('#nav').addClass('dark');
         }
 
         // reposition the indicator
@@ -158,20 +158,23 @@ function _fixPortfolio(){
 }
 
 function _moveIndicator(link, speed = 500){
-    // "MOVE THAT INDICATOR!"
-    if (link == 0){
-        $('.navIndicator').hide();
-    }else{
-        $('.navIndicator').show();
 
-        if  ($("#nav ." + link).offset().left != $('.navIndicator').offset().left){
-            $('.navIndicator').animate(
-                {
-                    left: $("#nav ." + link).offset().left +0,
-                    width: $("#nav ." + link).width()
-                },
-                 { duration: speed, queue: false },
-                "easeInOutCubic")
+    if ($('.navIndicator').length){
+        // "MOVE THAT INDICATOR!"
+        if (link == 0){
+            $('.navIndicator').hide();
+        }else{
+            $('.navIndicator').show();
+
+            if  ($("#nav ." + link).offset().left != $('.navIndicator').offset().left){
+                $('.navIndicator').animate(
+                    {
+                        left: $("#nav ." + link).offset().left +0,
+                        width: $("#nav ." + link).width()
+                    },
+                     { duration: speed, queue: false },
+                    "easeInOutCubic")
+            }
         }
     }
 }
