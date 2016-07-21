@@ -9,7 +9,7 @@ var sectionHeights = new Array();
 var portfolioSelected;
 
 // chrome mobile color
-$('head').append('<meta content="#7399ae" name="theme-color">');
+$('head').append('<meta content="#15233C" name="theme-color">');
 
 
 $(document).ready(function (e) {
