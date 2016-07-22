@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html class="" xmlns="http://www.w3.org/1999/xhtml">
 
@@ -435,4 +436,273 @@
             </section>
         </section>
     </body>
+=======
+<!-- / Created by William Reithmeyer -->
+<!-- / Designed by William Reithmeyer -->
+<!-- /    with help from: -->
+<!-- /        Font Awesome -->
+<!-- /        Sass Bourbon -->
+<!-- / Programming by William Reithmeyer -->
+<!-- / williamreithmeyer.com -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>William Reithmeyer | Home</title>
+    <link href='images/icon/wrIcon.png' rel='icon' type='image/png'>
+    <link href='images/icon/wrIcon.png' rel='apple-touch-icon'>
+    <link href='css/newStyle.css' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet'>
+    <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+    <script src='https://code.jquery.com/jquery-migrate-1.2.1.min.js'></script>
+    <script src='https://code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport'>
+    <script src='js/jquery.pin.js' type='text/javascript'></script>
+    <script>
+      function calcAge(dateString) {
+          var birthday = +new Date(dateString);
+          return~~ ((Date.now() - birthday) / (31557600000));
+      }
+    </script>
+    <script src='js/newEvent.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <div class='header'>
+      <div class='photo'></div>
+      <div class='nav dark' id='nav'>
+        <div class='background'></div>
+        <div class='container'>
+          <div class='title'>
+            <!-- /%img{ :src => "images/icon/logo.png" } -->
+            William Reithmeyer
+          </div>
+          <div class='more'>
+            <a>
+              menu
+              <i class='fa fa-chevron-down'></i>
+            </a>
+          </div>
+          <ul>
+            <li>
+              <a href='https://www.linkedin.com/in/williamreithmeyer' target='_blank'>
+                <i class='fa fa-linkedin'></i>
+              </a>
+            </li>
+            <li>
+              <a href='https://www.facebook.com/william.reithmeyer.5' target='_blank'>
+                <i class='fa fa-facebook'></i>
+              </a>
+            </li>
+            <li>
+              <a href='https://www.twitter.com/breithmeyer' target='_blank'>
+                <i class='fa fa-twitter'></i>
+              </a>
+            </li>
+            <li>
+              <a class='scrollTo contact' href='#contact'>Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='container' id='bdCont'>
+      <div class='panel fullscreen with_banner dark fit'>
+        <div class='panel_title headerResize'>Developer &middot; Designer &middot; Techie</div>
+      </div>
+      <div class='panel' id='portfolio'>
+        <div class='panel_title'>My work.</div>
+        <div class='panel_desc pmp_info'>
+          <p class='big center'>Work in progress portfolio</p>
+          <div class='subPort' id='subPort'>
+            <ul class='PMP inline bubble left' id='stickyPort'>
+              <li class='selected'>Tips</li>
+              <li>Raspberry Pi Server</li>
+              <li>BottomsUp</li>
+              <li>CKS</li>
+              <li>DVD</li>
+              <li>PML</li>
+            </ul>
+            <div class='panel_envelope pmpHide' id='Tips' style='display: block;'>
+              <img class='media center fit' src='images/tips.png'>
+              <h3 class='media'>Tip$ Calculator</h3>
+              <p class='media'>Android only (for now) tip calculator app. The app will display the tip of the bill. Also rounds up to the closest total dollar. Future plans to add iPhone support.</p>
+              <a href='https://play.google.com/store/apps/details?id=com.billthecreator.tips' target='_blank'>
+                <i class='fa fa-play'></i>
+                Play Store
+              </a>
+            </div>
+            <div class='panel_envelope pmpHide' id='RaspberryPiServer' style='display: none;'>
+              <img class='media center fit' src='images/rasp.png'>
+              <h3 class='media'>Raspberry Pi Server</h3>
+              <p class='media'>Currently being worked on now. Will host some Python apps that can work on Android and iPhone.</p>
+              <a href='https://github.com/billthecreator/RPIapp' target='_blank'>
+                <i class='fa fa-github'></i>
+                Repository
+              </a>
+            </div>
+            <div class='panel_envelope pmpHide' id='BottomsUp' style='display: none;'>
+              <img class='media center fit' src='images/bottomsUp.png'>
+              <h3 class='media'>BottomsUp Website</h3>
+              <p class='media'>Website created for (fake) local beer store. The site shows company information.</p>
+              <a href='/projects/group11Project/' target='_blank'>
+                <i class='fa fa-external-link-square'></i>
+                View Project
+              </a>
+            </div>
+            <div class='panel_envelope pmpHide' id='CKS' style='display: none;'>
+              <img class='media center fit' src='images/cks.png'>
+              <h3 class='media'>Custom Kitchen Solutions Website</h3>
+              <p class='media'>Website for graduation class. Kitchen remodeling company lacked website to show company information including store hours, locations, FAQs, and services.</p>
+              <a href='/projects/cks/' target='_blank'>
+                <i class='fa fa-external-link-square'></i>
+                View Project
+              </a>
+            </div>
+            <div class='panel_envelope pmpHide' id='DVD' style='display: none;'>
+              <img class='media center fit' src='images/dvd.png'>
+              <h3 class='media'>Delectable Video Delicatessen Website</h3>
+              <p class='media'>Website created for (fake) rare DVD company. Company sells rare DVDs both in physical form and digital form. Website is incomplete.</p>
+              <a href='/projects/DVD/' target='_blank'>
+                <i class='fa fa-external-link-square'></i>
+                View Project
+              </a>
+            </div>
+            <div class='panel_envelope pmpHide' id='PML' style='display: none;'>
+              <img class='media center fit' src='images/pml.png'>
+              <h3 class='media'>Project Managers Limited Website</h3>
+              <p class='media'>Website created for project managers too busy to create their own. I liked this design so much, I changed this site to mirror it!</p>
+              <a href='/projects/pml/' target='_blank'>
+                <i class='fa fa-external-link-square'></i>
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='panel fullscreen with_banner fit dark' id='skills'>
+        <div class='banner'></div>
+        <div class='panel_title'>The skills in which I excel.</div>
+        <div class='panel_desc'>
+          <h3 class='media'>Below are the major skills I possess, but there's too many to list them all!</h3>
+          <div class='badge_case twenty flex-container flex-start wrap'>
+            <div class='badges flex-item'>
+              <div class='content'>
+                <i class='fa fa-5x fa-globe purple shadow'></i>
+                <p class='b big'>Web</p>
+                <p>Design</p>
+                <p>CSS / Sass</p>
+                <p>HTML / Haml</p>
+                <p>jQuery</p>
+                <p>Responsive Design</p>
+                <p>Servlets / JSP</p>
+                <p>Flask / Python</p>
+              </div>
+            </div>
+            <div class='badges flex-item'>
+              <div class='content'>
+                <i class='fa fa-5x fa-keyboard-o red shadow'></i>
+                <p class='b big'>Programming</p>
+                <p>Autoit Script</p>
+                <p>Java</p>
+                <p>SQL</p>
+                <p>Visual Basic</p>
+                <p>Python</p>
+              </div>
+            </div>
+            <div class='badges flex-item'>
+              <div class='content'>
+                <i class='fa fa-5x fa-desktop green shadow'></i>
+                <p class='b big'>Other</p>
+                <p>Android Studio</p>
+                <p>Github</p>
+                <p>Microsoft Office</p>
+                <p>Photoshop</p>
+                <p>Database Design</p>
+                <p>Win XP / Vista / 7 / 8 / 10</p>
+                <p>Networking</p>
+                <p>Linux</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='panel fullscreen with_banner fit' id='about'>
+        <div class='banner' style="background-image: url('images/gradme.jpg');"></div>
+        <div class='panel_title'>About me.</div>
+        <div class='panel_desc sqweeze'>
+          <div class='myFace'>
+            <div class='round'></div>
+          </div>
+          <p class='bigger center'>
+            Hello, I'm William.
+          </p>
+          <p class='media center'>
+            I'm a
+            <script>
+              document.write(calcAge("1989-08-29"));
+            </script>
+            year old web designer, programmer, and I love everything tech!
+          </p>
+          <p class='media'>I am highly focused and a hard worker with a passion to do only the best.  I have the ability to train and lead effectively.  I am known for increasing workflow that will affect company efficiency.  I can easily adapt to small and large changes and I am also able to meet deadlines and handle multiple tasks.</p>
+        </div>
+      </div>
+      <div class='panel' id='contact'>
+        <div class='panel_title'>Get in touch.</div>
+        <div class='panel_desc'>
+          <p class='big center'>
+            I'm available for work
+          </p>
+          <p class='big center'>
+            <a class='button wire' href='mailto:contact@williamreithmeyer.com'>
+              Email Me
+            </a>
+          </p>
+          <p class='big center'>267.994.8612</p>
+          <ul class='inline company-logos quartW'>
+            <li>
+              <a class='li' href='https://www.linkedin.com/in/williamreithmeyer' target='_blank'>
+                <i class='fa fa-5x fa-linkedin'></i>
+              </a>
+            </li>
+            <li>
+              <a class='fb' href='https://www.facebook.com/william.reithmeyer.5' target='_blank'>
+                <i class='fa fa-5x fa-facebook'></i>
+              </a>
+            </li>
+            <li>
+              <a class='tw' href='https://www.twitter.com/breithmeyer' target='_blank'>
+                <i class='fa fa-5x fa-twitter'></i>
+              </a>
+            </li>
+            <li>
+              <a class='gh' href='https://github.com/billthecreator' target='_blank'>
+                <i class='fa fa-5x fa-github-alt'></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- / footer -->
+    <div class='footer'>
+      <div class='nav'>
+        <ul class='left'>
+          <li>
+            &copy; williamreithmeyer 2016
+          </li>
+          <li>
+            <a href='../docs/resume.pdf' target='_blank'>
+              <i class='fa fa-file-pdf-o'></i>
+              Resume
+            </a>
+          </li>
+        </ul>
+        <ul class='right'>
+          <li>
+            contact@williamreithmeyer.com
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+>>>>>>> origin/master
 </html>

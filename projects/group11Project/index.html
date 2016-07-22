@@ -1,0 +1,413 @@
+<!--
+
+    Created by William Reithmeyer
+    No templates, all from scratch!!
+
+    Images were from the internet, not mine.
+    Fonts from Google, and one from an thirdparty.
+
+
+ -->
+
+<html>
+<head>
+    <title>BottomsUp</title>
+    <link type="image/ico" rel="icon" href="images/BottomsUp.ico">
+    <link type="image/ico" rel="shortcut icon" href="images/BottomsUp.ico">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/time.js"></script>
+    <script src="js/directorySlider.js"></script>
+    <script src="js/scroll.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#0084ff" />
+
+    <script>
+        $(document).ready(function(){
+            $('.directorySlider').directorySlider({
+                filebase: 'craft-beer-store-ratsherrn-bild-0',
+                directory: 'images/storePics/',
+                extension: 'jpg',
+                animation: 'slide', //fade or slide
+                speed: 500,
+                timeout: 10000, // dont change
+                numslides: 9
+            });
+        });
+    </script>
+</head>
+<body>
+
+<!-- titleBanner is the top bar
+    that holds the store name and
+    the navigation links-->
+
+    <div class="titleBanner">
+
+        <div class="container">
+            <div class="logoText">
+                <span class="text">Bottoms<span class="blue" >Up</span></span>
+            </div>
+        </div>
+    </div>
+
+
+<!-- image of the "store" the
+    source file for the picture
+    is found in the css.   -->
+    <div class="imageBanner" id="home">
+        <div class="importantMessage">
+            <div class="container">
+
+                <div class="full">
+                    <h6>Sign up now to recieve special offers including:</h6>
+                </div>
+                <div class="full">
+                    <div class="third">
+                        <div class="beerLogo" style="background-image:url('images/beerLogos/bluemoon.jpg');"></div>
+                        <h6>Blue Moon</h6>
+                        <h6 style="font-size:.7em; color: rgba(0,0,0,.5);">50% off</h6>
+                    </div>
+                    <div class="third">
+                        <div class="beerLogo" style="background-image:url('images/beerLogos/newcastle.jpg');"></div>
+                        <h6>Newcastle</h6>
+                        <h6 style="font-size:.7em; color: rgba(0,0,0,.5);">60% off</h6>
+                    </div>
+                    <div class="third">
+                        <div class="beerLogo" style="background-image:url('images/beerLogos/cigarcity.jpg');"></div>
+                        <h6>Cigar City</h6>
+                        <h6 style="font-size:.7em; color: rgba(0,0,0,.5);">50% off</h6>
+                    </div>
+                </div>
+                <h6><a class="no-border" href="#"><i class="fa fa-facebook-square"></i> Like us on Facebook</a></h6>
+                <h6><a class="no-border" href="#"><i class="fa fa-twitter-square"></i> Follow us on Twitter</a></h6>
+                <a class="button flat" href='#contact' >Join our newsletter now</a>
+
+            </div>
+        </div>
+    </div>
+
+
+<!--    start of the content material -->
+
+<!--    Info Board-->
+
+    <div class="infoPane" id="welcome">
+        <div class="container">
+            <div class="paneTitle">We're re-opening!</div>
+            <div class="paneDiscription">
+                <span class="nextLine">Come experience the re-opening of BottomsUp the first week and recieve 15% off your entire purchase.<sub><a href="#dis1">[1]</a></sub></span>
+
+                <span class="nextLine">Valid only between 8/03/2015 &amp; 8/09/2015</span>
+
+                <span class="nextLine"><h5>We're hiring too.</h5></span>
+                <span class="nextLine">Come in to fill out an application, or click <a href="#">here</a> to fill one out online.</span>
+
+            </div>
+        </div>
+    </div>
+
+<!--    Customer feedback-->
+
+    <div class="infoPane">
+        <div class="container">
+            <div class="paneTitle">What are the people saying...</div>
+            <div class="paneDiscription">
+                <span class="nextLine">
+
+                  <!-- copy the "quoteBox" div group to make more quotes -->
+                  <div class="centerAll">
+                      <div class="quoteBox">
+                          <div class="avatar"></div>
+                          <div class="quote">This place has everything I need!</div>
+                          <div class="byWhom">Jim</div>
+                      </div>
+                      <div class="quoteBox">
+                          <div class="avatar"></div>
+                          <div class="quote">The staff is super friendly and very helpful.</div>
+                          <div class="byWhom">Linda</div>
+                      </div>
+                      <div class="quoteBox">
+                          <div class="avatar"></div>
+                          <div class="quote">I come here every week, and never once had a problem!</div>
+                          <div class="byWhom">William</div>
+                      </div>
+                      <div class="quoteBox">
+                          <div class="avatar"></div>
+                          <div class="quote">Fantastic staff!!</div>
+                          <div class="byWhom">Clive</div>
+                      </div>
+                  </div>
+
+                </span>
+            </div>
+        </div>
+    </div>
+
+<!--    beer logos-->
+
+    <div class="infoPane">
+        <div class="container">
+            <div class="paneTitle">What we stock</div>
+            <div class="paneDiscription">
+                <div class="beerLogoContainer">
+                    <div class="subNav">
+                        <ul>
+                            <li class="selected">Drafts</li>
+                            <li>Crafts</li>
+                            <li>Wines</li>
+                            <li>Kegs</li>
+                            <li>Mystery Boxes</li>
+                        </ul>
+                    </div>
+                    <div class="beerLogo" style="background-image:url('images/beerLogos/duff.jpg');"></div>
+                    <div class="beerLogo" style="background-image:url('images/beerLogos/bluemoon.jpg');"></div>
+                    <div class="beerLogo" style="background-image:url('images/beerLogos/guinness.jpg');"></div>
+                    <div class="beerLogo" style="background-image:url('images/beerLogos/heineken.jpg');"></div>
+                    <div class="beerLogo" style="background-image:url('images/beerLogos/stellaartois.jpg');"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    About us-->
+
+    <div class="infoPane" id="about">
+        <div class="container">
+            <div class="paneTitle">About us</div>
+            <div class="paneDiscription">
+                <span class="nextLine">
+                    Founded in 2005, BottomsUp, your exclusive neighborhood beer
+                    and wine boutique, proudly sells quality beer and wine from
+                    all over the world. With over 25 years of experience our
+                    team is passionate about beer and wine and is committed to
+                    making sure our customers are satisfied. Special orders are
+                    always welcome. BottomsUp has a deep sense of responsibility
+                    to our community and our customers.
+                </span>
+                <span class="nextLine">
+
+                </span>
+            </div>
+        </div>
+    </div>
+
+<!--    Our mission-->
+
+    <div class="infoPane">
+        <div class="container">
+            <div class="paneTitle">Our mission</div>
+            <div class="paneDiscription">
+                <span class="nextLine">
+                     We, at BottomsUp strive to promote and distribute the highest quality of beer and wine. We pride ourselves on our customers and our community. BottomsUp is dedicated to excellence and promises to never compromise quality. We create a fun environment for all of our customers and staff, while also being environmentally friendly and socially responsible.
+                </span>
+            </div>
+        </div>
+    </div>
+
+<!--    Images Banner-->
+
+    <div class="galleryBanner" id="home">
+        <div class="container">
+            <div class="directorySlider">
+                <div class="timer" style="width: 0%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            timer();
+        });
+
+        function timer() {
+            $('.timer').animate({width: "100%"}, 10000,
+                function(){
+                    $('.timer').animate({width: "0%"}, 0, timer)
+                });
+        };
+    </script>
+
+<!--    Contact us-->
+
+    <div class="infoPane" id="contact">
+        <div class="container">
+            <div class="paneTitle">Contact us</div>
+            <div class="paneDiscription">
+
+                <i class="fa fa-phone"> (555) 648-5151</i>
+                <br><br>
+
+                <table border="0" class="hours">
+                    <tr>
+                        <td>Monday &dash; Thursday</td>
+                        <td>11am &dash; 1am</td>
+                    </tr>
+                    <tr>
+                        <td>Friday &dash; Saturday</td>
+                        <td>11am &dash; 2am</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>12pm &dash; 12am</td>
+                    </tr>
+                </table>
+
+                <!-- This script shows the user if the store is opened.
+                    This will only be true at the time they refresh
+                    the page. It is not dynamic. It only runs when the
+                    page loads
+
+                    but that doesn't mean it can't be. Just for purpose
+                    of the project.
+                -->
+
+                <div class="nextLine">
+                        <script>
+                            // var hour = today("h"); // used for testing
+                            var hour = today("h");
+                            var day = today("d");
+                            var x = 0, y = 0
+                            var z=0
+
+                            switch (day) {
+                                case 1: //mon
+                                    x = isBetween(11, 24, hour);
+                                    break;
+                                case 2: //tue
+                                case 3: //wed
+                                case 4: //thur
+                                default:
+                                    x = isBetween(11, 24, hour);
+                                    y = isBetween(0, 1, hour);
+                                    break;
+
+                                case 5: //fri
+                                    x = isBetween(11, 24, hour);
+                                    y = isBetween(0, 1, hour);
+                                    break;
+                                case 6: //sat
+                                    x = isBetween(11, 24, hour);
+                                    y = isBetween(0, 2, hour);
+                                    break;
+                                case 0: //sun
+                                    x = isBetween(12, 24, hour);
+                                    y = isBetween(0, 2, hour);
+                                    break
+                            }
+
+                            if (x == 1 || y == 1){
+                                z = 1;
+                                document.write('<div class="storeStatus opened">');
+                                document.write("The store is open, come on in!");
+                            }else {
+                                z = 0;
+                                document.write('<div class="storeStatus closed">');
+                                document.write("The store is closed right now");
+                            }
+
+                            document.write('</div>');
+                        </script>
+                </div>
+
+                <address>
+                    <span class="street">41000 Red Bug Lake Road</span>
+                    Winter Springs, Fl, 32708
+                </address>
+
+                <div class="nextLine">
+                    <label>Enter your email for weekly promotions
+                    <br><input class="emailInput" type="email" name="email" value="" placeholder="Email..."/>
+                    </label>
+                    <button class="emailSubmit button flat" type="submit" value="Submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    Team Members-->
+
+    <div class="infoPane">
+        <div class="container">
+            <div class="paneTitle">Meet our Team</div>
+            <div class="paneDiscription">
+                <div class="container">
+
+                    <div class="person">
+                        <div class="face" style="background-image:url('images/faces/owner.jpg');"></div>
+                        <h6>James Smith</h6>
+                        <h6 style="font-size:.7em; color: rgba(0,0,0,.5);">Owner</h6>
+                    </div>
+
+                    <div class="person">
+                        <div class="face" style="background-image:url('images/faces/gm.jpg');"></div>
+                        <h6>Lindsay Finkle</h6>
+                        <h6 style="font-size:.7em; color: rgba(0,0,0,.5);">General Manager</h6>
+                    </div>
+
+                    <div class="person">
+                        <div class="face" style="background-image:url('images/faces/sales.jpg');"></div>
+                        <h6>Lenard King</h6>
+                        <h6 style="font-size:.7em; color: rgba(0,0,0,.5);">Sales Associate</h6>
+                    </div>
+                    <span class="nextLine"><h6 style="text-transform:uppercase; letter-spacing:0;">We have the best trained team in the industry</h6></span>
+                    <span class="nextLine">Think of them as tour guides, guiding you through the
+                        great beer and wine regions of the world. When in doubt,
+                        look for a Team Member in a white shirt. They are committed
+                        and dedicated to bringing you the <i>BottomsUp Experience</i>.</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        <div class="footerSubContainer">
+            <div class="footerNavLeft">
+                <h3>BottomsUp</h3>
+                <h6>Copyright (c) 2015 BottomsUp All Rights Reserved.</h6>
+            </div>
+            <div class="footerNavRight">
+                <ul>
+
+                    <!-- Add how ever many social links here -->
+
+                    <li>
+                        <div class="socialLabel">View all the code on GitHub</div>
+                        <a href="https://github.com/group11Project/group11Project.github.io" target="_blank"><i class="fa fa-github-square"></i></a>
+                    </li>
+                    <li>
+                        <div class="socialLabel">Facebook</div>
+                        <i class="fa fa-facebook-square"></i>
+                    </li>
+                    <li>
+                        <div class="socialLabel">LinkedIn</div>
+                        <i class="fa fa-linkedin-square"></i>
+                    </li>
+                    <li>
+                        <div class="socialLabel">Instagram</div>
+                        <i class="fa fa-instagram"></i>
+                    </li>
+                    <li>
+                        <div class="socialLabel">Twitter</div>
+                        <i class="fa fa-twitter-square"></i>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="disclaimer">
+            <span id="dis1">[1] Voids all separate discount prices.</span><br>
+
+        </div>
+    </div>
+
+</body>
+</html>

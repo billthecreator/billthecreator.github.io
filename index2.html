@@ -1,0 +1,255 @@
+<!-- / Created by William Reithmeyer -->
+<!-- / Designed by William Reithmeyer -->
+<!-- / Programming by William Reithmeyer -->
+<!-- / billthecreator.com -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>William Reithmeyer | Home</title>
+    <link href='images/icon/logo.png' rel='icon' type='image/png'>
+    <link href='css/newStyle.css' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' rel='stylesheet'>
+    <script src='//code.jquery.com/jquery-1.11.0.min.js'></script>
+    <script src='//code.jquery.com/jquery-migrate-1.2.1.min.js'></script>
+    <script src='//code.jquery.com/ui/1.10.3/jquery-ui.js'></script>
+    <script src='js/newEvent.js' type='text/javascript'></script>
+    <meta content='#572377' name='theme-color'>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport'>
+    <script>
+      function calcAge(dateString) {
+          var birthday = +new Date(dateString);
+          return~~ ((Date.now() - birthday) / (31557600000));
+      }
+    </script>
+  </head>
+  <body>
+    <div class='header'>
+      <div class='photo'></div>
+      <div class='nav dark' id='nav'>
+        <div class='container'>
+          <div class='title'>
+            <!-- /%img{ :src => "images/icon/logo.png" } -->
+            William Reithmeyer
+          </div>
+          <div class='more'>
+            <a>
+              menu
+              <i class='fa fa-chevron-down'></i>
+            </a>
+          </div>
+          <ul>
+            <li>
+              <a class='scrollTo portfolio' href='#portfolio'>Portfolio</a>
+            </li>
+            <li>
+              <a class='scrollTo skills' href='#skills'>Skills</a>
+            </li>
+            <li>
+              <a class='scrollTo about' href='#about'>About</a>
+            </li>
+            <li>
+              <a class='scrollTo contact' href='#contact'>Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='container' id='bdCont'>
+      <div class='panel fullscreen with_banner dark'>
+        <div class='banner' style="background-image: url('images/seneca.jpg');"></div>
+        <div class='page_title'>Developer / Designer / Tech Nut</div>
+        <div class='panel_desc'>
+          <a class='button scrollTo' href='#about'>About Me</a>
+          <a class='button alt scrollTo' href='#contact'>Contact Me</a>
+        </div>
+      </div>
+      <div class='panel' id='portfolio'>
+        <div class='panel_title'>My work.</div>
+        <div class='panel_desc pmp_info'>
+          <h3 class='media'>Work in progress portfolio</h3>
+          <ul class='PMP inline bubble left'>
+            <li class='selected'>Tips</li>
+            <li>Raspberry_Pi_Server</li>
+            <li>BottomsUp</li>
+            <li>CKS</li>
+            <li>DVD</li>
+            <li>PML</li>
+          </ul>
+          <div class='panel_envelope pmpHide' id='Tips' style='display: block;'>
+            <img class='media center fit' src='images/largebanner.png'>
+            <h3 class='media'>Tip$ Calculator</h3>
+            <p class='media'>Android only (for now) tip calculator app. The app will display the tip of the bill. Also rounds up to the closet total dollar. Future plans to add iPhone support.</p>
+            <a href='https://play.google.com/store/apps/details?id=com.billthecreator.tips' target='_blank'>
+              <i class='fa fa-play'></i>
+              Store
+            </a>
+          </div>
+          <div class='panel_envelope pmpHide' id='Raspberry_Pi_Server' style='display: none;'>
+            <img class='media center fit' src='images/rasp.png'>
+            <h3 class='media'>Raspberry Pi Server</h3>
+            <p class='media'>Currently being worked on now. Will host some Python apps that can work on Android and iPhone.</p>
+            <a href='https://github.com/billthecreator/RPIapp' target='_blank'>
+              <i class='fa fa-github'></i>
+              Repository
+            </a>
+          </div>
+          <div class='panel_envelope pmpHide' id='BottomsUp' style='display: none;'>
+            <img class='media center fit' src='images/bottomsUp.png'>
+            <h3 class='media'>BottomsUp Website</h3>
+            <p class='media'>Website created for (fake) local beer store. The site shows company information.</p>
+            <a href='http://billthecreator.com/projects/group11Project/' target='_blank'>
+              <i class='fa fa-external-link-square'></i>
+              Visit
+            </a>
+          </div>
+          <div class='panel_envelope pmpHide' id='CKS' style='display: none;'>
+            <img class='media center fit' src='images/cks.png'>
+            <h3 class='media'>Custom Kitchen Solutions Website</h3>
+            <p class='media'>Website for graduation class. Kitchen remodeling company lacked website to show company information including store hours, locations, FAQs, and services.</p>
+            <a href='http://billthecreator.github.io/projects/cks/' target='_blank'>
+              <i class='fa fa-external-link-square'></i>
+              Visit
+            </a>
+          </div>
+          <div class='panel_envelope pmpHide' id='DVD' style='display: none;'>
+            <img class='media center fit' src='images/dvd.png'>
+            <h3 class='media'>Delectable Video Delicatessen Website</h3>
+            <p class='media'>Website created for (fake) rare DVD company. Company sells rare DVDs both in physical form and digital form. Website is incomplete.</p>
+            <a href='http://billthecreator.github.io/projects/DVD/' target='_blank'>
+              <i class='fa fa-external-link-square'></i>
+              Visit
+            </a>
+          </div>
+          <div class='panel_envelope pmpHide' id='PML' style='display: none;'>
+            <img class='media center fit' src='images/pml.png'>
+            <h3 class='media'>Project Managers Limited Website</h3>
+            <p class='media'>Website created for project managers too busy to create their own. I liked this design so much, I changed this site to mirror it!</p>
+            <a href='http://billthecreator.github.io/projects/pml/' target='_blank'>
+              <i class='fa fa-external-link-square'></i>
+              Visit
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class='panel fullscreen with_banner fit dark' id='skills'>
+        <div class='banner' style="background-image: url('images/golf.jpg');"></div>
+        <div class='panel_title'>The skills in which I excel.</div>
+        <div class='panel_desc'>
+          <h3 class='media'>Below are the major skills I possess, but there's too many to list them all!</h3>
+          <div class='badge_case twenty flex-container flex-start wrap'>
+            <div class='badges flex-item'>
+              <div class='content'>
+                <i class='fa fa-5x fa-globe purple'></i>
+                <p class='b big'>Web</p>
+                <p>Design</p>
+                <p>CSS / Sass</p>
+                <p>HTML / Haml</p>
+                <p>jQuery</p>
+                <p>Responsive Design</p>
+                <p>Servlets / JSP</p>
+                <p>Flask / Python</p>
+              </div>
+            </div>
+            <div class='badges flex-item'>
+              <div class='content'>
+                <i class='fa fa-5x fa-keyboard-o red'></i>
+                <p class='b big'>Programming</p>
+                <p>Autoit Script</p>
+                <p>Java</p>
+                <p>SQL</p>
+                <p>Visual Basic</p>
+                <p>Python</p>
+              </div>
+            </div>
+            <div class='badges flex-item'>
+              <div class='content'>
+                <i class='fa fa-5x fa-desktop green'></i>
+                <p class='b big'>Other</p>
+                <p>Android Studio</p>
+                <p>Github</p>
+                <p>Miscrosoft Office</p>
+                <p>Photoshop</p>
+                <p>Database Design</p>
+                <p>Win XP / Vista / 7 / 8 / 10</p>
+                <p>Networking</p>
+                <p>Linux</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='panel' id='about'>
+        <div class='panel_title'>About me.</div>
+        <div class='panel_desc'>
+          <div class='myFace'></div>
+          <h3 class='media'>
+            Hey there! My name is William Reithmeyer and I'm a
+            <script>
+              document.write(calcAge("1989-08-29"));
+            </script>
+            year old web designer, programmer, and now an Android Developer.
+          </h3>
+          <h3>My strongest memory as a child is my curiosity for how things worked. I spent many hours taking things apart and reassembling them. In high school I was introduced to Autoit Script and became interested in computer programming. I began writing programs, designing web pages and working in Photoshop before going away to college.</h3>
+          <h3>My college career started in the Engineering department at the University of Pittsburgh. While I did well in engineering courses, I quickly realized that my early passion for computer programming was still very strong. I then made Computer Science the focus of my education.</h3>
+          <h3>I earned an Associate of Arts degree in Computer Science in 2011. I later moved and established residency in Florida where I am now finishing my BS in Information  and expect to have that completed this year.</h3>
+          <h3>I've worked as a cook most of my college years to support myself. I consider myself a fair golfer and I truly enjoy playing my guitar whenever I get a chance.</h3>
+          <h3>I am an honest hard worker and would be an asset to any organization. The following is a list of my skills;</h3>
+        </div>
+      </div>
+      <div class='panel' id='contact'>
+        <div class='panel_title'>Get in Touch.</div>
+        <div class='panel_desc'>
+          <p class='big center'>
+            For hire!
+          </p>
+          <p class='big center'>
+            <a href='mailto:contact@williamreithmeyer.com'>
+              Email Me
+            </a>
+          </p>
+          <p class='big center b'>Social Media</p>
+          <ul class='inline company-logos'>
+            <li>
+              <a href='https://www.twitter.com/breithmeyer' target='_blank'>
+                <i class='fa fa-5x fa-twitter'></i>
+              </a>
+            </li>
+            <li>
+              <a href='https://www.linkedin.com/in/williamreithmeyer' target='_blank'>
+                <i class='fa fa-5x fa-linkedin'></i>
+              </a>
+            </li>
+            <li>
+              <a href='https://plus.google.com/100576085101917235918' target='_blank'>
+                <i class='fa fa-5x fa-google-plus'></i>
+              </a>
+            </li>
+            <li>
+              <a href='https://github.com/billthecreator' target='_blank'>
+                <i class='fa fa-5x fa-github'></i>
+              </a>
+            </li>
+            <li>
+              <a href='http://instagram.com/william.reithmeyer' target='_blank'>
+                <i class='fa fa-5x fa-instagram'></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- / footer -->
+    <div class='footer'>
+      <div class='nav'>
+        <ul class='left'>
+          <li>
+            &copy; billthecreator (william reithmeyer) 2016
+          </li>
+        </ul>
+        <ul class='right'>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

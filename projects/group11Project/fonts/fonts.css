@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "BIG JOHN";
+    src: url("BIG JOHN.otf");
+}
+@font-face {
+    font-family: "Moderne Sans";
+    src: url("MODERNE SANS.ttf") ;
+}
+@font-face {
+    font-family: "San Francisco";
+    src: url("SFUIText-Light.ttf") ;
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("SFUIText-Regular.ttf") ;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("SFUIText-Medium.ttf") ;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("SFUIText-Semibold.ttf") ;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("SFUIText-Bold.ttf") ;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SanFrancisco";
+    src: url("SFUIText-Heavy.ttf") ;
+    font-weight: 800;
+    font-style: normal;
+}
