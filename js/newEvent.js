@@ -49,7 +49,7 @@ $(document).ready(function (e) {
     $(".pmp_info .PMP li").click(function(){
 
         // strip all whitespace from .li text
-        var liName = $(this).text().replace(/ /g, '');
+        var liName = $(this).text().replace(/ /g, '').replace('$', 's');
 
         // hide all elements
         $(".pmp_info .panel_envelope.pmpHide").hide();
