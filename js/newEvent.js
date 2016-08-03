@@ -5,6 +5,7 @@ var value;
 var linkArray = ["portfolio", "skills", "about", "contact"];
 var sectionHeights = new Array();
 
+
 // selected work
 var portfolioSelected;
 
@@ -19,6 +20,7 @@ $(document).ready(function (e) {
     _moveIndicator(0);
 
     // list or tab portfolio depending on window size
+    $("#Tips").addClass('fadeIn');
     _fixPortfolio();
 
     // create a sticky header
@@ -52,12 +54,14 @@ $(document).ready(function (e) {
         var liName = $(this).text().replace(/ /g, '').replace('$', 's');
 
         // hide all elements
-        $(".pmp_info .panel_envelope.pmpHide").hide();
+//        $(".pmp_info .panel_envelope.pmpHide").hide();
+        $(".pmp_info .panel_envelope.pmpHide").removeClass('fadeIn');
 
         // only show the one
         $(".PMP li").removeClass("selected");
         $(this).addClass("selected");
-        $("#" + liName).show();
+//        $("#" + liName).show();
+        $("#" + liName).addClass('fadeIn');
 
         // save selected for resizing purposes
         portfolioSelected = $(this);
@@ -143,13 +147,13 @@ function _animateIndicator(){
 function _fixPortfolio(){
     // on mobile, show all work, not a tabbed section
     if (window.innerWidth <= 775){
-        $(".pmp_info .panel_envelope.pmpHide").show();
+        $(".pmp_info .panel_envelope.pmpHide").addClass('fadeIn');
     } else{
         // if user changes window size, this prevents
         // hiding of all elements and not showing the
         // original.
         if (portfolioSelected != null){
-            $(".pmp_info .panel_envelope.pmpHide").hide();
+            $(".pmp_info .panel_envelope.pmpHide").removeClass('fadeIn');
             portfolioSelected.click();
         } else {
             $(".PMP li:first-child").click();
