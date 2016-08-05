@@ -13,7 +13,28 @@ var portfolioSelected;
 $('head').append('<meta content="#15233C" name="theme-color">');
 
 
+var s = [
+    '█',
+    '▓',
+    '▒',
+    '░',
+    '█',
+    '▓',
+    '▒',
+    '░',
+    '█',
+    '▓',
+    '▒',
+    '░',
+    '<',
+    '>',
+    '/'
+  ];
+
 $(document).ready(function (e) {
+
+    // baffle
+    baffle('.bio .bold', {characters: s}).start().reveal(1500, 1500);
 
     // initiate indicator
     _moveIndicator(linkArray[0], 0);
