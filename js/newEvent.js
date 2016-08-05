@@ -34,7 +34,9 @@ var s = [
 $(document).ready(function (e) {
 
     // baffle
-    baffle('.bio .bold', {characters: s}).start().reveal(1500, 1500);
+    if (window.innerWidth > 940){
+        baffle('.bio .bold', {characters: s}).start().reveal(1500, 1500);
+    }
 
     // initiate indicator
     _moveIndicator(linkArray[0], 0);
