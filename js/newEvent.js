@@ -36,7 +36,18 @@ $(document).ready(function (e) {
     // baffle
     if (window.innerWidth > 940){
         baffle('.bio .bold', {characters: s}).start().reveal(1500, 1500);
+
+        $('.bio .bold').click(function(){
+            var changeText = "Front-End";
+            if( $('.bio .bold').text() == "Front-End"){
+                changeText = "Back-End";
+            }
+            baffle('.bio .bold', {characters: s}).text(currentText => changeText).start().reveal(1500);
+        })
+
     }
+
+
 
     // initiate indicator
     _moveIndicator(linkArray[0], 0);
