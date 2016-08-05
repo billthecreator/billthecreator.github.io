@@ -58,8 +58,10 @@ $(document).ready(function (e) {
             if( $('.bio .bold').text() == "Front-End"){
                 changeText = "Back-End";
                 $('.scratch').addClass('out');
+                $('.auroral-northern').addClass('dark');
             } else{
                 $('.scratch').removeClass('out');
+                $('.auroral-northern').removeClass('dark');
             }
             baffle('.bio .bold', {characters: s}).text(currentText => changeText).start().reveal(1500);
         })
