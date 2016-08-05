@@ -51,7 +51,7 @@ $(document).ready(function (e) {
 
     // baffle
     if (window.innerWidth > 940){
-        baffle('.bio .bold', {characters: t}).start().reveal(1500, 1500);
+        baffle('.bio .bold', {characters: s}).start().reveal(1500, 1500);
 
         $('.bio .bold').click(function(){
             var changeText = "Front-End";
@@ -61,7 +61,7 @@ $(document).ready(function (e) {
             } else{
                 $('.scratch').removeClass('out');
             }
-            baffle('.bio .bold', {characters: t}).text(currentText => changeText).start().reveal(1500);
+            baffle('.bio .bold', {characters: s}).text(currentText => changeText).start().reveal(1500);
         })
 
     }
