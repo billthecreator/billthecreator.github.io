@@ -12,7 +12,6 @@ var portfolioSelected;
 // chrome mobile color
 $('head').append('<meta content="#15233C" name="theme-color">');
 
-
 var s = [
     '█',
     '▓',
@@ -50,29 +49,26 @@ var s = [
 $(document).ready(function (e) {
 
     // baffle
-    if (window.innerWidth > 940){
-        baffle('.bio .bold', {characters: s}).start().reveal(1500, 500);
+    if (window.innerWidth <= 940){s=t}
 
-        $('.bio .bold').click(function(){
-            var changeText = "Front-End";
-            if( $('.bio .bold').text() == "Front-End"){
-                changeText = "Back-End";
-                $('.scratch').addClass('out');
-                $('.auroral-northern').addClass('dark');
-            } else{
-                $('.scratch').removeClass('out');
-                $('.auroral-northern').removeClass('dark');
-            }
-            baffle('.bio .bold', {characters: s}).text(currentText => changeText).start().reveal(1500);
-        })
+    baffle('.bio .bold', {characters: s}).start().reveal(1500, 500);
 
-    }
-
-
+    setInterval(function(){
+        var changeText = "Front-End";
+        if( $('.bio .bold').text() == "Front-End"){
+            changeText = "Back-End";
+            $('.scratch').addClass('out');
+            $('.auroral-northern').addClass('dark');
+        } else{
+            $('.scratch').removeClass('out');
+            $('.auroral-northern').removeClass('dark');
+        }
+        baffle('.bio .bold', {characters: s}).text(currentText => changeText).start().reveal(1500);
+    }, 5000);
 
     // initiate indicator
-    _moveIndicator(linkArray[0], 0);
-    _moveIndicator(0);
+    // _moveIndicator(linkArray[0], 0);
+    // _moveIndicator(0);
 
     // list or tab portfolio depending on window size
     $("#Tips").addClass('fadeIn');
@@ -91,7 +87,7 @@ $(document).ready(function (e) {
     var _aboutBottom, _serviceBottom, _contactBottom, scrollPos;
 
     // mobile drop down indicator
-    $('.header .nav .more a').click(function(){
+    $('.header .nav .more a').bind('click tap', function(){
         value = $('.more').text().toLowerCase();
         if (value.indexOf("menu") >= 0) {
             $('.header .nav ul').css('height', 'auto');
@@ -103,7 +99,7 @@ $(document).ready(function (e) {
     });
 
     // hide and show porfolio based on the name of the button
-    $(".pmp_info .PMP li").click(function(){
+    $(".bubble li").bind('click tap', function(){
 
         // strip all whitespace from .li text
         var liName = $(this).text().replace(/ /g, '').replace('$', 's');
@@ -125,32 +121,14 @@ $(document).ready(function (e) {
     // WINDOW RESIZE EVENT
     $(window).resize(function () {
         // on screen resize, move the indicator to the correct spot
-        _animateIndicator();
+        // _animateIndicator();
 
         _fixPortfolio();
     });
 
-    // WINDOW SCROLL EVENT
-    $(window).scroll(function () {
-
-        // on scroll event that changes the header's background
-        _navTop = $(".header .photo").innerHeight() * 1;
-
-        if ($(document).scrollTop() > (_navTop) ) {
-//            $('#nav .background').css('opacity', '1');
-//            $('#nav').removeClass('dark');
-        }else{
-//            $('#nav .background').css('opacity', ($(document).scrollTop()/ _navTop));
-//            $('#nav').addClass('dark');
-        }
-
-        // reposition the indicator
-        _animateIndicator();
-    });
-
 
     // scroll to the spots on the page event
-    $(".scrollTo").click(function(event){
+    $(".scrollTo").bind("click tap", function(event){
         event.preventDefault();
         $('.header .nav ul').css('height', '0');
         $('.more a').empty().append("menu <i class='fa fa-chevron-down'></i>");
@@ -160,48 +138,16 @@ $(document).ready(function (e) {
     });
 
     // scroll to the top event
-    $('.nav .title').click(function(){
+    $('.nav .title').bind("click tap", function(){
         if ($(window).scrollTop() > 0){
             $('html, body').animate({scrollTop:0}, { duration: 800, queue: true }, 'easeInOutExpo');
         }
     });
 });
 
-function _animateIndicator(){
-
-    // all of this moves the indicator in the nav bar.
-    // going to try to reduce it over time
-
-    scrollPos         = $(document).scrollTop();
-    navHeight         = $("#nav").innerHeight();
-
-    for(var m=0; m < linkArray.length; m++){
-        sectionHeights[m] = new Array();
-        sectionHeights[m][0] = $("#" + linkArray[m]).offset().top - navHeight - 1;
-        sectionHeights[m][1] = sectionHeights[m][0] + $("#" + linkArray[m]).height();
-    }
-
-    for(m = 0; m < linkArray.length; m++){
-        if ( sectionHeights[m][0] < scrollPos && scrollPos < sectionHeights[m][1]){
-            if ( window.innerWidth > 775){
-                $("#nav ." + linkArray[m]).addClass("selected");
-                _moveIndicator(linkArray[m]);
-                return false;
-            }else {_moveIndicator(0);}
-
-        }else{
-            $("#nav ." + linkArray[m]).removeClass("selected");
-        }
-    }
-    if ( sectionHeights[0][0] >= scrollPos ){
-        // after all that, let's move it
-        _moveIndicator(0);
-    }
-}
-
 function _fixPortfolio(){
     // on mobile, show all work, not a tabbed section
-    if (window.innerWidth <= 775){
+    if (window.innerWidth <= 940){
         $(".pmp_info .panel_envelope.pmpHide").addClass('fadeIn');
     } else{
         // if user changes window size, this prevents
@@ -216,27 +162,6 @@ function _fixPortfolio(){
     }
 }
 
-function _moveIndicator(link, speed = 500){
-
-    if ($('.navIndicator').length){
-        // "MOVE THAT INDICATOR!"
-        if (link == 0){
-            $('.navIndicator').hide();
-        }else{
-            $('.navIndicator').show();
-
-            if  ($("#nav ." + link).offset().left != $('.navIndicator').offset().left){
-                $('.navIndicator').animate(
-                    {
-                        left: $("#nav ." + link).offset().left +0,
-                        width: $("#nav ." + link).width()
-                    },
-                     { duration: speed, queue: false },
-                    "easeInOutCubic")
-            }
-        }
-    }
-}
 
 // are you reading this?
 // if so, awesome!
