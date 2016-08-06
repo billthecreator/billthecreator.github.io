@@ -149,15 +149,21 @@ function _fixPortfolio(){
     // on mobile, show all work, not a tabbed section
     if (window.innerWidth <= 940){
         $(".pmp_info .panel_envelope.pmpHide").addClass('fadeIn');
+        $('.bubble').hide();
     } else{
         // if user changes window size, this prevents
         // hiding of all elements and not showing the
         // original.
+
+        $('.bubble').show();
+
         if (portfolioSelected != null){
-            $(".pmp_info .panel_envelope.pmpHide").removeClass('fadeIn');
+            $(".pmpHide").removeClass('fadeIn');
             portfolioSelected.click();
         } else {
-            $(".PMP li:first-child").click();
+            $(".pmpHide").removeClass('fadeIn');
+            $('#Tips').addClass('fadeIn');
+            // $(".PMP li:first-child").click();
         }
     }
 }
