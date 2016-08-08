@@ -51,20 +51,18 @@ $(document).ready(function (e) {
     // baffle
     if (window.innerWidth <= 940){s=t}
 
-    baffle('.bio .bold', {characters: s}).start().reveal(1500, 500);
+    baffle('.bio', {characters: s}).start().reveal(1500, 500);
 
     setInterval(function(){
-        var changeText = "Front-End";
-        if( $('.bio .bold').text() == "Front-End"){
-            changeText = "Back-End";
-            $('.scratch').addClass('out');
+        var changeText = "Front-End Developer and Designer";
+        if( $('.bio').text().indexOf("Front-End") >= 0){
+            changeText = "Back-End Developer";
             $('.auroral-northern').addClass('dark');
         } else{
-            $('.scratch').removeClass('out');
             $('.auroral-northern').removeClass('dark');
         }
-        baffle('.bio .bold', {characters: s}).text(currentText => changeText).start().reveal(1500);
-    }, 5000);
+        baffle('.bio', {characters: s}).text(currentText => changeText).start().reveal(500);
+    }, 10000);
 
     // initiate indicator
     // _moveIndicator(linkArray[0], 0);
