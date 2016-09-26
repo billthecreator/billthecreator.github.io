@@ -124,6 +124,17 @@ $(document).ready(function (e) {
         _fixPortfolio();
     });
 
+    // WINDOW SCROLL EVENT
+    $(window).scroll(function () {
+        //
+
+        if (isScrolledIntoView('.company-logos')){
+            $('#nav ul').hide();
+        }else {
+            $('#nav ul').show();
+        }
+    });
+
 
     // scroll to the spots on the page event
     $(".scrollTo").bind("click tap", function(event){
@@ -164,6 +175,18 @@ function _fixPortfolio(){
             // $(".PMP li:first-child").click();
         }
     }
+}
+
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    // alert($(elem).offset());
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 
