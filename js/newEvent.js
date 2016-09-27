@@ -69,7 +69,7 @@ $(document).ready(function (e) {
     // _moveIndicator(0);
 
     // list or tab portfolio depending on window size
-    $("#Tips").addClass('fadeIn');
+    $("#RaspberryPiServer").addClass('fadeIn');
     _fixPortfolio();
 
     // create a sticky header
@@ -171,7 +171,7 @@ function _fixPortfolio(){
             portfolioSelected.click();
         } else {
             $(".pmpHide").removeClass('fadeIn');
-            $('#Tips').addClass('fadeIn');
+            $('#RaspberryPiServer').addClass('fadeIn');
             // $(".PMP li:first-child").click();
         }
     }
