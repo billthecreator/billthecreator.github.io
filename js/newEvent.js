@@ -50,18 +50,21 @@ $(document).ready(function (e) {
 
     // baffle
     if (window.innerWidth <= 940){s=t}
+    var baffleRun = false; // toggle baffle
 
     baffle('.bio', {characters: s}).start().reveal(1500, 500);
 
     setInterval(function(){
-        var changeText = "Front-End Developer and Designer";
-        if( $('.bio').text().indexOf("Front-End") >= 0){
-            changeText = "Back-End Developer";
-            $('.auroral-northern').addClass('dark');
-        } else{
-            $('.auroral-northern').removeClass('dark');
+        if (baffleRun){
+            var changeText = "Front-End Developer and Designer";
+            if( $('.bio').text().indexOf("Front-End") >= 0){
+                changeText = "Back-End Developer";
+                $('.auroral-northern').addClass('dark');
+            } else{
+                $('.auroral-northern').removeClass('dark');
+            }
+            baffle('.bio', {characters: s}).text(currentText => changeText).start().reveal(500);
         }
-        baffle('.bio', {characters: s}).text(currentText => changeText).start().reveal(500);
     }, 10000);
 
     // initiate indicator
@@ -129,9 +132,9 @@ $(document).ready(function (e) {
         //
 
         if (isScrolledIntoView('.company-logos')){
-            $('#nav ul').hide();
+            $('#nav ul').animate({opacity:0}, {duration: 100, queue: false}, 'easeInOutExpo').hide();
         }else {
-            $('#nav ul').show();
+            $('#nav ul').animate({opacity:1}, {duration: 100, queue: false}, 'easeInOutExpo').show();
         }
     });
 
