@@ -56,7 +56,7 @@ $(document).ready(function (e) {
 
     setInterval(function(){
         if (baffleRun){
-            var changeText = "Front-End Developer and Designer";
+            var changeText = "Graphic Designer &amp; Web Developer";
             if( $('.bio').text().indexOf("Front-End") >= 0){
                 changeText = "Back-End Developer";
                 $('.auroral-northern').addClass('dark');
